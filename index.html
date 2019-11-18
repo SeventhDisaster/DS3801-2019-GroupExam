@@ -10,10 +10,18 @@
     <title>Student Clinic</title>
 </head>
 <body>
+    <button onclick="clearTheStorage()">Clear LocalStorage</button>
     <div id="app">
-        {{ test }}
+        <router-view></router-view>
     </div>
-    <script src="app.js"></script>
-    <script src="router.js"></script>
+    <script type="module" src="./app.js"></script>
+
+    <!-- Temporary Script just for ease of clearing storage -->
+    <script>
+        function clearTheStorage(){
+            localStorage.clear();
+            console.log("Local storage cleared!");
+        }
+    </script>
 </body>
 </html>

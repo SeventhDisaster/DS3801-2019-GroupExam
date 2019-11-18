@@ -1,6 +1,7 @@
+import {router} from './router.js';
+import * as components from './components/index.js';
+
 new Vue({
-    el: "#app",
-    data: {
-        test: "Hello World!"
-    }
+    el: '#app',
+    router: router
 });
