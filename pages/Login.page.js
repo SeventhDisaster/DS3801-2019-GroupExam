@@ -1,12 +1,9 @@
 const LoginPage = {
     template: `
         <div>
-            <h1> Login </h1>
+            <h1> Logg inn </h1>
             <user-login-form @login="login"></user-login-form>
-        </div>`,
-    methods: {
-        
-    }
+        </div>`
 };
 
 export default LoginPage;

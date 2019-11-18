@@ -1,26 +1,33 @@
 /*
 
-This file handles log-in and user-sessions by
-utilizing localstorage as a way to "remember"
-what user is logged in.
+This file handles log-in and user-sessions by utilizing localstorage as a way to "remember" what user is logged in.
+
+
+============== USEFUL METHODS ===============
+* In order to check and authenticate a user, import the "confirmLogin" method and call it as a mounted method.
+* In order to upate something in the data-table (users) call "updateUsersData" method after pushing to the dataset array.
+
 
 */
 
 import * as userData from './dataset.js';
 import { router } from '../router.js';
 
-if(!getStorage("users")) {
-    setStorage("users", userData.users);
-} else {
-    userData.setUsers(getStorage("users"));
+//Used to load in all session data
+function loadSessionData(){
+    if(!getStorage("users")) {
+        setStorage("users", userData.users);
+    } else {
+        userData.setUsers(getStorage("users"));
+    }
 }
 
-let user = userData.users[getStorage("session")-1]
 
 function confirmLogin() {
+    let user = getStorage("session");
     if(!user){
-        //redirectTo('/login');
-        console.log("Tried to redirect")
+        redirectTo('/login');
+        console.log("No active session: Redirected to login!")
     }
 }
 
@@ -28,18 +35,25 @@ function confirmLogin() {
 function login(email, password) {
     if(email && password) {
         for(let user of userData.users){
+            
+            //User is logged in with email and password
             if(email === user.email && password === user.password){
                 setStorage("session", user);
-                if(user.isEmployed){
-                    redirectTo('/ansatt');
-                } else {
-                    redirectTo('/brukerside');
-                }
+                redirectToRelevantSite(user);
                 return true;
             }
         }
     }
     return false;
+}
+
+//Redirects user to either employee or client area
+function redirectToRelevantSite(user){
+    if(user.isEmployed){
+        redirectTo('/ansatt');
+    } else {
+        redirectTo('/brukerside');
+    }
 }
 
 function logout() {
@@ -49,15 +63,6 @@ function logout() {
 
 function updateUsersData() {
     setStorage("users", users)
-}
-
-//Unsecure way to checking username/password
-function getUser(name, password) {
-    for(user of users){
-        if(user.name === name && user.password === password) {
-            return user;
-        }
-    }
 }
 
 //Saves data to localstorage (Similar to Java hashmaps)
@@ -74,13 +79,7 @@ function setStorage(key, value) {
 //Retrieves data saved in localstorage (Similar to Java hashmaps)
 function getStorage(key) {
     let object = localStorage.getItem(key);
-
-    //Checks if the object starts with bracket or number
-    if(/^(\{|\}|\[|\]|[0-9])/.test(object)) {
-        return JSON.parse(object)
-    }
-
-    return object;
+    return JSON.parse(object);
 }
 
 function redirectTo(routerLink) {
@@ -93,4 +92,4 @@ function clearStorage() {
     localStorage.clear();
 }
 
-export {login, logout, clearStorage, getUser, updateUsersData, confirmLogin}
+export {loadSessionData, login, logout, clearStorage, updateUsersData, confirmLogin}

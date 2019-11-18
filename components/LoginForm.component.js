@@ -8,7 +8,7 @@ export default Vue.component('user-login-form',{
             <p>{{info}}</p>
             <input type="text" name="email" v-model="email" placeholder="E-post Adresse"></input>
             <input type="password" name="password" v-model="password" placeholder="Passord"></input>
-            <button type="button" v-on:click="loginWith()">Login</button>
+            <button type="button" v-on:click="loginWith()">Logg inn</button>
         </form>
 
         <div>
@@ -28,10 +28,8 @@ export default Vue.component('user-login-form',{
     methods:{
         loginWith(){
             console.log("Attempted login with: " + this.email + " - " + this.password)
-            if(login(this.email, this.password)){
-                this.info = "Logged in!"
-            } else {
-                this.info = "Invalid login details";
+            if(!login(this.email, this.password)){
+                this.info = "Feil Passord eller Brukernavn!";
             }
         }
     }

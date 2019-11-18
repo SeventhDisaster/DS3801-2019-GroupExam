@@ -1,9 +1,10 @@
-import {confirmLogin} from '../components/data.management.js';
+import {confirmLogin, logout} from '../components/data.management.js';
 
 const EmployeePage = {
     template: `
         <div>
             <h1>{{title}}</h1>
+            <button v-on:click="loggut()">Logg Ut</button>
         </div>`,
     data() {
         return {
@@ -12,6 +13,11 @@ const EmployeePage = {
     },
     mounted() {
         confirmLogin(); //Makes sure the user is logged in in order to access this site.
+    },
+    methods: {
+        loggut(){
+            logout();
+        }
     }
 }
 

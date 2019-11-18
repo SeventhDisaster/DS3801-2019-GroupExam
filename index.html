@@ -10,16 +10,19 @@
     <title>Student Clinic</title>
 </head>
 <body>
-    <button onclick="clearTheStorage()">Clear LocalStorage</button>
+    <!-- Remove this later -->
+    <button onclick="clearTheStorage()">TEST: Clear LocalStorage (Logs out user, Clears all updated data, Redirects to index)</button>
+
     <div id="app">
         <router-view></router-view>
     </div>
     <script type="module" src="./app.js"></script>
 
-    <!-- Temporary Script just for ease of clearing storage -->
+    <!-- Temporary Script used to clear localstorage, delete later -->
     <script>
         function clearTheStorage(){
             localStorage.clear();
+            window.location.href = '/index.html'
             console.log("Local storage cleared!");
         }
     </script>
