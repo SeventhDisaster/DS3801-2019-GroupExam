@@ -4,7 +4,7 @@ const FrontPage = {
             <div><router-link to=login>Logg inn</router-link></div>
             <div class="heroImage">
                 <h1>{{title}}</h1>
-                <button>Bestill time</button>
+                <button class="button">Bestill time</button>
             </div>
             <div class="container">
                 <div class="services"><h1>Tjenester</h1></div>
