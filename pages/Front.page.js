@@ -7,8 +7,12 @@ const FrontPage = {
                 <button>Bestill time</button>
             </div>
             <div class="container">
-            <h1>Hello fuckers</h1>
+                <div class="services"><h1>Tjenester</h1></div>
+                <div class="hours"><h1>Åpningstider</h1></div>
+                <div class="prices"><h1>Priser</h1></div>
+                <div class="adress"><h1>Adresse</h1></div>
             </div>
+            <div class="map"></div>
         </div>
         
         
