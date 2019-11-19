@@ -25,23 +25,17 @@ class User {
 }
 
 class Appointment {
-    constructor(type, date, time, comment, assigned) {
+    constructor(type, date, time, comment) {
         this.id = appointments.length;
         this.type = type; // Osteopati, Akupunktur, Kostholdsveiledning, Fysiolab
         this.date = date;
         this.time = time;
         this.comment = comment;
-
-        //Finds available workers and assigns a random worker to the appointment
-        for(let user of users) {
-            //Checks if Employee and Checks for relevant field
-            if(user.isEmployed && user.inField == type) {
-                for(let appId of user.appointmentIds) {
-
-                }
+        for(user of users){
+            if(this.type === user.inField && user.isEmployed){
+                this.assigned = user.name; //Assigned auto applies to the employee in the field
             }
         }
-        this.assigned = assigned;
     }
 }
 
@@ -96,7 +90,20 @@ let users = [
 
 let appointments = [
     {
-
+        id: 0,
+        type: "Osteopati",
+        date: "19.29.11",
+        time: "09:00",
+        comment: "Dette er en kommentar fra bruker",
+        assigned: "Kari Kroppsbrekker"
+    },
+    {
+        id: 1,
+        type: "Akupunktur",
+        date: "19.30.11",
+        time: "12:00",
+        comment: "Kommer til å bli stabbet!",
+        assigned: "James Stabsalot"
     }
 ]
 
