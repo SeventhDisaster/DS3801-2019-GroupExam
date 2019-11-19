@@ -65,7 +65,7 @@ function updateUsersData() {
 }
 
 function getCurrentUser() {
-    getStorage("session")
+    getStorage("session");
 }
 
 //Saves data to localstorage (Similar to Java hashmaps)
