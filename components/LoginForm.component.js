@@ -13,8 +13,10 @@ export default Vue.component('user-login-form',{
 
         <div>
             <p>Eksempel Bruker: bruker@epost.no - Test123</p>
-            <p>Eksempel Ansatt 1: ansatt1@clinic.no - Osteopro666</p>
+            <p>Eksempel Ansatt 1: ansatt1@clinic.no - Osteopop</p>
             <p>Eksempel Ansatt 2: ansatt2@clinic.no - ProStabber1337</p>
+            <p>Eksempel Ansatt 2: ansatt3@clinic.no - FastFud4Life</p>
+            <p>Eksempel Ansatt 2: ansatt4@clinic.no - 123456</p>
         </div>
 
     </div>`,

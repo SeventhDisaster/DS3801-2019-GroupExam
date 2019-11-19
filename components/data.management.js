@@ -35,7 +35,8 @@ function confirmLogin() {
 function login(email, password) {
     if(email && password) {
         for(let user of userData.users){
-            
+            console.log(`! -- Comparing Emails: ${email} with ${user.email}`)
+            console.log(`! -- Comparing Passwords: ${password} with ${user.password}`)
             //User is logged in with email and password
             if(email === user.email && password === user.password){
                 setStorage("session", user);
@@ -62,7 +63,7 @@ function logout() {
 }
 
 function updateUsersData() {
-    setStorage("users", users)
+    setStorage("users", userData)
 }
 
 //Saves data to localstorage (Similar to Java hashmaps)

@@ -1,8 +1,8 @@
 const LoginPage = {
     template: `
         <div>
-            <h1> Logg inn </h1>
-            <user-login-form @login="login"></user-login-form>
+            <user-login-form></user-login-form>
+            <router-link to=register>Register Deg</router-link>
         </div>`
 };
 

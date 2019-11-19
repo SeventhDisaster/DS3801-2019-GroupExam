@@ -1,7 +1,8 @@
 import FrontPage from './pages/Front.page.js'
-import LoginPage from './components/LoginForm.component.js';
+import LoginPage from './pages/Login.page.js';
 import EmployeePage from './pages/Employee.page.js';
 import ConsumerPage from './pages/Consumer.page.js';
+import RegisterPage from './pages/Register.page.js';
 
 const router = new VueRouter({
     routes: [
@@ -9,14 +10,21 @@ const router = new VueRouter({
             path: '/',
             component: FrontPage,
             meta: {
-                title: "Home"
+                title: "Hjem"
             }
         },
         {
             path: '/login',
             component: LoginPage,
             meta: {
-                title: "Login"
+                title: "Logg Inn"
+            }
+        },
+        {
+            path: '/register',
+            component: RegisterPage,
+            meta: {
+                title: "Registrering"
             }
         },
         {
