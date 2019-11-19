@@ -1,4 +1,4 @@
-import {confirmLogin, logout} from '../components/data.management.js'
+import {confirmLogin, logout} from '../components/index.js'
 
 const ConsumerPage = {
     template: `

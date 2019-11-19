@@ -105,4 +105,4 @@ function setUsers(userData) {
 }
 
 
-export {User, Appointment, users, setEmployeeAppointments, setUsers};
+export {User, Appointment, users, setUsers};
