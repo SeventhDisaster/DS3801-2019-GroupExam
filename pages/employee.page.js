@@ -1,4 +1,4 @@
-import {confirmLogin, logout} from '../components/data.management.js';
+import {confirmLogin, logout} from '../components/DataManagement.component.js/index.js';
 
 const EmployeePage = {
     template: `

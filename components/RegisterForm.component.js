@@ -1,4 +1,4 @@
-import {User, users, login, updateUsersData} from './index.js';
+import {User, users, login, updateUsersData} from './Index.js';
 
 export default Vue.component('user-register-form',{
     template: ` 

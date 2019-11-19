@@ -10,7 +10,7 @@ This file handles log-in and user-sessions by utilizing localstorage as a way to
 
 */
 
-import * as userData from './dataset.js';
+import * as userData from './Index.js';
 import { router } from '../router.js';
 
 //Used to load in all session data
@@ -64,6 +64,10 @@ function updateUsersData() {
     setStorage("users", userData)
 }
 
+function getCurrentUser() {
+    getStorage("session")
+}
+
 //Saves data to localstorage (Similar to Java hashmaps)
 function setStorage(key, value) {
     if(typeof value !== "string") {
@@ -91,4 +95,4 @@ function clearStorage() {
     localStorage.clear();
 }
 
-export {loadSessionData, login, logout, clearStorage, updateUsersData, confirmLogin}
+export {loadSessionData, login, logout, clearStorage, updateUsersData, confirmLogin, getCurrentUser}

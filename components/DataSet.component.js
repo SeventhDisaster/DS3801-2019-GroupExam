@@ -1,8 +1,9 @@
 //This file contains a sample dataset of users
 //Constructor for user object (Applicable only for regular users) Our project does not allow creating employees
 
-//Available Times
+//Available Times are hours between 8:00 and 16:00
 
+//User Class
 class User {
     constructor(name, password, phone, email) {
         this.name = name;
@@ -15,7 +16,7 @@ class User {
         this.notes = [];
     }
 
-    function addNewAppointment(type, date, time, comment) {
+    addNewAppointment(type, date, time, comment) {
         let newAppointment = new Appointment(
             type, date, time, comment
         )
@@ -24,12 +25,22 @@ class User {
 }
 
 class Appointment {
-    constructor(type, date, time, comment, assigned){
+    constructor(type, date, time, comment, assigned) {
         this.id = appointments.length;
-        this.type = type;
+        this.type = type; // Osteopati, Akupunktur, Kostholdsveiledning, Fysiolab
         this.date = date;
         this.time = time;
         this.comment = comment;
+
+        //Finds available workers and assigns a random worker to the appointment
+        for(let user of users) {
+            //Checks if Employee and Checks for relevant field
+            if(user.isEmployed && user.inField == type) {
+                for(let appId of user.appointmentIds) {
+
+                }
+            }
+        }
         this.assigned = assigned;
     }
 }
@@ -49,7 +60,7 @@ let users = [
         name: "Kari Kroppsbrekker",
         password: "Osteopop",
         isEmployed: true,
-        inField: "Osteopat",
+        inField: "Osteopati",
         phone: "11122333",
         email: "ansatt1@clinic.no",
         appointmentIds: []
@@ -58,7 +69,7 @@ let users = [
         name: "James Stabsalot",
         password: "ProStabber1337",
         isEmployed: true,
-        inField: "Akupunktør",
+        inField: "Akupunktur",
         phone: "22211333",
         email: "ansatt2@clininc.no",
         appointmentIds: []
@@ -67,7 +78,7 @@ let users = [
         name: "Sten Gomlefjes",
         password: "FastFud4Life",
         isEmployed: true,
-        inField: "Kostholdsveileder",
+        inField: "Kostholdsveiledning",
         phone: "33322111",
         email: "ansatt3@clinic.no",
         appointmentIds: []

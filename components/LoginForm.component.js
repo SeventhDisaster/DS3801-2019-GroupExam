@@ -1,4 +1,4 @@
-import {login} from './data.management.js';
+import {login} from './Index.js';
 
 export default Vue.component('user-login-form',{
     template: ` 
