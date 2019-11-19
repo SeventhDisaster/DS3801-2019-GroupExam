@@ -1,5 +1,8 @@
 //This file contains a sample dataset of users
 //Constructor for user object (Applicable only for regular users) Our project does not allow creating employees
+
+//Available Times
+
 class User {
     constructor(name, password, phone, email) {
         this.name = name;
@@ -8,16 +11,25 @@ class User {
         this.inField = null;
         this.phone = phone;
         this.email = email;
-        this.appointments = [];
+        this.appointmentIds = [];
+        this.notes = [];
+    }
+
+    function addNewAppointment(type, date, time, comment) {
+        let newAppointment = new Appointment(
+            type, date, time, comment
+        )
+        appointments.push(newAppointment);
     }
 }
 
 class Appointment {
-    constructor(type, date, time, note, assigned){
+    constructor(type, date, time, comment, assigned){
+        this.id = appointments.length;
         this.type = type;
         this.date = date;
         this.time = time;
-        this.note = note;
+        this.comment = comment;
         this.assigned = assigned;
     }
 }
@@ -31,22 +43,7 @@ let users = [
         inField: null,
         contactPhone: "12345678",
         email: "bruker@epost.no",
-        appointments: [
-            {
-                type: "Osteopati",
-                date: "12/11",
-                time: "16:00 - 17:00",
-                note: "Vondt i beina for faen",
-                assigned: "Worker1"
-            },
-            {
-                type: "Akupunktur",
-                date: "13/11",
-                time: "10:00 - 11:00",
-                note: "Stikk meg",
-                assigned: "Worker2"
-            }
-        ]
+        appointmentIds: []
     },
     {
         name: "Kari Kroppsbrekker",
@@ -55,7 +52,7 @@ let users = [
         inField: "Osteopat",
         phone: "11122333",
         email: "ansatt1@clinic.no",
-        appointments: []
+        appointmentIds: []
     },
     {
         name: "James Stabsalot",
@@ -64,7 +61,7 @@ let users = [
         inField: "Akupunktør",
         phone: "22211333",
         email: "ansatt2@clininc.no",
-        appointments: []
+        appointmentIds: []
     },
     {
         name: "Sten Gomlefjes",
@@ -73,7 +70,7 @@ let users = [
         inField: "Kostholdsveileder",
         phone: "33322111",
         email: "ansatt3@clinic.no",
-        appointments: []
+        appointmentIds: []
     },
     {
         name: "Anita Hakkekondis",
@@ -82,32 +79,19 @@ let users = [
         inField: "Fysiolab",
         phone: "33311222",
         email: "ansatt4@clinic.no",
-        appointments: []
+        appointmentIds: []
     }
 ]
 
-//Loops through user-array and assigns appointments to employees
-function setEmployeeAppointments(){
-    for(let user of users){
-        if(user.isEmployed){
-            user.appointments = [];
-            for(let user2 of users){
-                if(user2.name !== user.name){
-                    for(let appointment of user2.appointments){
-                        if(appointment.assigned == user.name){
-                            user.appointments.push(appointment);
-                        }
-                    }
-                }
-            }
-        }
+let appointments = [
+    {
+
     }
-}
+]
 
 function setUsers(userData) {
     users = userData;
 }
 
-setEmployeeAppointments();
 
 export {User, Appointment, users, setEmployeeAppointments, setUsers};
