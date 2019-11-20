@@ -1,0 +1,15 @@
+Code standard:
+- camelCasing for CSS filer
+- Kebab-casing for html klasser og vue components
+- Mellomrom mellom () {}
+- PascalCasing for Javascript klasser, sider og komponenter
+- CSS-klasser for mobil avsluttes med -m
+
+
+Farger til nettstedet:
+- #2F5350 - dark
+- #A6DBD4 - medium dark
+- #8AD0C8 - medium
+- #C5E6E0 - light
+
+

@@ -3,9 +3,11 @@
     height: 50px;
     border-radius: 25px;
     border: none;
+    font-family: 'Libre Franklin', sans-serif;
 }
 .button-dark {
-
+  background-color: #2F5350;
+  color: #C5E6E0;
 }
 
 .button-medium {
@@ -18,24 +20,7 @@
 
 #app {
     background-color: #89D0C8;
+    font-family: 'Libre Franklin', sans-serif;
 }
 
 
-/* .box {
-    width: 400px;
-    height: 30px;
-    background-color: #656565;
-  }
-  
-  #box1{
-    border-radius: 5px;
-  }
-  
-  #box2{
-    border-radius: 20px;
-  }
-  
-  #box3{
-    border-radius: 50%;
-  }
-  */
