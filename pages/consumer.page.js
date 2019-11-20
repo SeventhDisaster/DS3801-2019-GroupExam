@@ -3,11 +3,11 @@ import {confirmLogin, logout, getCurrentUser} from '../components/index.js'
 const ConsumerPage = {
     template: `
         <div>
+
             <header class="header-consumer-m">
-                <h3 >{{name}}</h3>
+                <h3>{{name}}</h3>
                 <button class="button-header-consumer-m button" v-on:click="userLoggingOut()">Logg ut</button>
-            </header<
-            <div>
+            </header>
             <div>
                 <h1>{{title}}</h1>
             </div>
