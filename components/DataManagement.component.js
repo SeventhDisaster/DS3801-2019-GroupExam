@@ -1,6 +1,6 @@
 /*
 
-This file handles log-in and user-sessions by utilizing localstorage as a way to "remember" what user is logged in.
+This file handles log-in and user-userSessios by utilizing localstorage as a way to "remember" what user is logged in.
 
 
 ============== USEFUL METHODS ===============
@@ -10,34 +10,47 @@ This file handles log-in and user-sessions by utilizing localstorage as a way to
 
 */
 
-import * as userData from './Index.js';
+import * as data from './Index.js';
 import { router } from '../router.js';
 
-//Used to load in all session data
-function loadSessionData(){
-    if(!getStorage("users")) {
-        setStorage("users", userData.users);
+//Used to load in all userSessio data
+function loadUserSessionData() {
+    if(!getStorage("userSession")) {
+        setStorage("userSession", data.users);
     } else {
-        userData.setUsers(getStorage("users"));
+        data.setUsers(getStorage("userSession"));
     }
 }
 
+function loadAppointmentSessionData() {
+    if(!getStorage("appointmentSession")) {
+        setStorage("appointmentSession", data.appointments);
+    } else {
+        data.setAppointments(getStorage("appointmentSession"));
+    }
+}
+function loadSessionData() {
+    loadUserSessionData();
+    loadAppointmentSessionData();
+}
+
+
 
 function confirmLogin() {
-    let user = getStorage("session");
+    let user = getStorage("userSession");
     if(!user){
         redirectTo('/login');
-        console.log("No active session: Redirected to login!")
+        console.log("No active userSession: Redirected to login!")
     }
 }
 
 //Super unsecure, but it's for demonstration purposes
 function login(email, password) {
     if(email && password) {
-        for(let user of userData.users){
+        for(let user of data.users){
             //User is logged in with email and password
             if(email === user.email && password === user.password){
-                setStorage("session", user);
+                setStorage("userSession", user);
                 redirectToRelevantSite(user);
                 return true;
             }
@@ -56,16 +69,20 @@ function redirectToRelevantSite(user){
 }
 
 function logout() {
-    localStorage.removeItem("session");
+    localStorage.removeItem("userSession");
     router.push("/");
 }
 
 function updateUsersData() {
-    setStorage("users", userData)
+    setStorage("users", data)
 }
 
 function getCurrentUser() {
-    return getStorage("session");
+    return getStorage("userSession");
+}
+
+function getAppointments() {
+    return getStorage("appointmentSession");
 }
 
 //Saves data to localstorage (Similar to Java hashmaps)
@@ -95,4 +112,5 @@ function clearStorage() {
     localStorage.clear();
 }
 
-export {loadSessionData, login, logout, clearStorage, updateUsersData, confirmLogin, getCurrentUser}
+
+export {loadSessionData, login, logout, clearStorage, updateUsersData, confirmLogin, getCurrentUser, getAppointments}
