@@ -27,19 +27,19 @@ body {
   background-color: #2F5350;
   height: 100%;
   width: 100%;
+  margin: 0px;
 }
 
 #app {
   font-family: 'Libre Franklin', sans-serif;
   height: 100%;
-  width: 100%;
-  background-color: #E0F2EF ;
+  width: 96%;
+  margin: 1%;
+  background-color: #E0F2EF;
+  padding: 1%;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 5% 10% 70% 10% 5%;
-  grid-template-rows: 10% 80% 10%;
-  justify-content: center;
-  flex-direction: column;
+.centered {
+  text-align: center !important;
+  float: center !important;
 }
