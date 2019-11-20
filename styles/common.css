@@ -12,30 +12,37 @@
 }
 
 .button-medium {
+  background-color: #83C6BF;
+  color: #DBFFF8;
 
 }
 
 .button-light {
+  background-color: #C5E6E0;
+  color: #2F5350;
 
 }
 
 body {
   background-color: #2F5350;
+  height: 100%;
+  width: 100%;
 }
 
 #app {
   background-color: #89D0C8;
   font-family: 'Libre Franklin', sans-serif;
-  height: 400px;
+  height: 100%;
   width: 100%;
-  display: flex;
+  margin: 8px;
 }
 
 .flex-container {
-  height: 50%;
-  width: 50%;
-  position: relative;
+  height: 100%;
+  width: 100%
+  margin: 4px;
+  padding: 4px;
+  justify-content: center;
   flex-direction: column;
-  display: flex;
 }
 
