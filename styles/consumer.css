@@ -1,0 +1,9 @@
+
+.header-consumer-m {
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.button-header-consumer-m {
+    width: 100%;
+}

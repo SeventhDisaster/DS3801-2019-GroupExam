@@ -5,3 +5,27 @@
     flex-direction: column;
     display: flex;
   }
+header {
+    background-image: url(../resources/Anderson-College-PTA-OTA041-2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+
+.heroImage {
+    position: absolute;
+    width: 1140px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    background-color: #A6DBD4;
+    border-radius: 25px;
+    color: #2F5350;
+}  
