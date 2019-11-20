@@ -20,11 +20,10 @@ const FrontPage = {
             </div>
             <div class="group section row">    
                 <div class="col span_1_of_4 test">
-                    <div class="flex">
-                        <div class="circle"><p class="intro">Hi</p></div>
+                    <div class="filling">
+                        <p class="intro">hi</p>
                     </div>
-                    
-                    <h3 class="intro">Osteopati</h3>
+                    <h3 id="oste" class="intro">Osteopati</h3>
                 </div>
                 <div class="col span_1_of_4 test">
                     <h3>Akupunktur</h3>
