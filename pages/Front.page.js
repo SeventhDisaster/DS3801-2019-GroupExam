@@ -8,6 +8,22 @@ const FrontPage = {
                 <a class="btn" href="#">Bestill time</a>
                 </div>
             </header>
+<<<<<<< HEAD
+        
+            <section class="section-features">
+                <div class="row">
+                    <p class="intro">Vi behandler akutte og langvarige plager / ubehag, men kan også hjelpe til med forebyggende tiltak. Du kan forvente en individuell samtale, undersøkelse, behandling og råd rettet mot dine behov.</p>
+                    <div class="services"><h2>Tjenester</h2></div>
+                    <div class="hours"><h2>Åpningstider</h2></div>
+                    <div class="prices"><h2>Priser</h2></div>
+                    <div class="adress"><h2>Adresse</h2></div>
+                </div>
+            </section>
+            
+                
+            
+=======
+>>>>>>> b9a33a9926ee7d49fd86ed75190910bd19aa52ec
                 <button class="button button-dark">Bestill time</button>
             </div>
             <div class="container">
