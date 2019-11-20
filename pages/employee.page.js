@@ -2,9 +2,9 @@ import {confirmLogin, logout} from '../components/Index.js';
 
 const EmployeePage = {
     template: `
-        <div>
+        <div class="flex-container">
             <h1>{{title}}</h1>
-            <button v-on:click="loggut()">Logg Ut</button>
+            <button class="button button-dark" v-on:click="loggut()">Logg Ut</button>
         </div>`,
     data() {
         return {

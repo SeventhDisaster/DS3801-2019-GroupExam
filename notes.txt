@@ -6,10 +6,11 @@ Code standard:
 - CSS-klasser for mobil avsluttes med -m
 
 
-Farger til nettstedet:
+Color scheme:
 - #2F5350 - dark
-- #A6DBD4 - medium dark
-- #8AD0C8 - medium
+- #83C6BF - medium dark
+- #A6DBD4 - medium
+- #8AD0C8 - medium light
 - #C5E6E0 - light
 
 
