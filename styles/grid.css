@@ -1,26 +1,21 @@
 
 /*  SECTIONS  ============================================================================= */
 
-.section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
-}
+
 
 /*  GROUPING  ============================================================================= */
 
-.row:before,
-.row:after,
+
 .group:before,
 .group:after {
     content:"";
     display:table;
 }
-.row:after,
+
 .group:after {
     clear:both;
 }
-.row,
+
 .group {
     zoom:1; /* For IE 6/7 (trigger hasLayout) */
 }

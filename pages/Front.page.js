@@ -18,34 +18,39 @@ const FrontPage = {
             <div class="row">    
                 <h2 class="intro">Tjenester</h2>
             </div>
-            <div class="row">
-                <div class="col">
-                    <h3>Akupunktur</h3>
-                    <p>sdkjcasjkdhfjads</p>
-                </div>
-                <div class="col span-1of-4">
+            <div class="group section row">    
+                <div class="col span_1_of_4">
                     <h3>Osteopati</h3>
+                    <p>Akupunktur er en persontilpasset behandling der diagnostikk, behandling og oppfølging er skreddersydd for hver pasient med sine unike særtrekk og behov under hvert trinn av behandlingen.</p>
                 </div>
-                <div class="col span-1of-4">
+                <div class="col span_1_of_4">
+                    <h3>Akupunktur</h3>
+                    <p>En osteopat undersøker og behandler muskel- og skjelettsmerter med manuelle behandlingsteknikker på benk. Terapeuten fokuserer på å avdekke funksjons- og bevegelsesforstyrrelser som kan være med på å skape smerte. Behandlingen egner seg for pasienter i alle aldere.</p>
+                </div>
+                <div class="col span_1_of_4">
                     <h3>Kostholdveiledning</h3>
+                    <p>Veiledning passer ypperlig for deg som ønsker å forebygge sykdom, gå ned eller opp i vekt, spise optimalt med tanke på trening og prestasjon, har allergier eller intoleranser som krever tilpassing av kosten eller ønsker å ha et generelt sunt kosthold.</p>
                 </div>
-                <div class="col span-1of-4">
+                <div class="col span_1_of_4">
                     <h3>Fysiologisk testlab</h3>
+                    <p>Testing av egen helse er samtidig både motiverende og gir verdifull informasjon for mange andre. Derfor tilbyr vi tester til deg som ønsker å teste din fysiske tilstand og prestasjonsevne.</p>
                 </div>
             </div>
-            
-                <div class="hours"><h2>Åpningstider</h2></div>
-                <div class="prices"><h2>Priser</h2></div>
-                <div class="adress"><h2>Adresse</h2></div>
-            
         </section>
-        
-        <div class="container">
-            <div class="services"><h1>Tjenester</h1></div>
-            <div class="hours"><h1>Åpningstider</h1></div>
-            <div class="prices"><h1>Priser</h1></div>
-            <div class="adress"><h1>Adresse</h1></div>
-        </div>
+        <section class="opening-hours">
+            <div class="group section row">
+                <div class="col span_1_of_2">
+                    <img src="resources/group-satisfied-students-showing-thumbs-up_1098-2827.jpg">
+                </div>
+                <div class="col span_1_of_2">
+                    <h2 class="intro">Priser</h2>
+                    <p>HK studenter får 50% rabatt hos oss!</p>
+                </div>
+            </div>   
+            <div class="row">    
+                <h2 class="intro">Adresse</h2>
+            </div>
+        </section>
         <div class="map"></div>
     </div>
         
@@ -59,3 +64,13 @@ const FrontPage = {
 }
 
 export default FrontPage;
+
+/*  <div class="row">    
+                <h2 class="intro">Åpningstider</h2>
+            </div>
+            <div class="row">    
+                <h2 class="intro">Priser</h2>
+            </div>
+            <div class="row">    
+                <h2 class="intro">Adresse</h2>
+            </div> */
