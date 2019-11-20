@@ -4,6 +4,8 @@ import EmployeePage from './pages/Employee.page.js';
 import ConsumerPage from './pages/Consumer.page.js';
 import RegisterPage from './pages/Register.page.js';
 
+import Testpage from './pages/Test.page.js';
+
 const router = new VueRouter({
     routes: [
         {
@@ -39,6 +41,13 @@ const router = new VueRouter({
             component: ConsumerPage,
             meta: {
                 title: "Bruker Portal"
+            }
+        },
+        {
+            path: '/test',
+            component: Testpage,
+            meta: {
+                title: "Hodeverk og sånn"
             }
         }
 
