@@ -5,6 +5,7 @@
     flex-direction: column;
     display: flex;
   }
+  
 header {
     background-image: url(../resources/Anderson-College-PTA-OTA041-2.jpg);
     background-size: cover;
