@@ -4,7 +4,13 @@ const EmployeePage = {
     template: `
         <div class="flex-container">
             <h1>{{title}}</h1>
-            <button class="button button-dark" v-on:click="loggut()">Logg Ut</button>
+                <div class="bookings-employee">
+                <div></div>
+                <div></div>
+                </div>
+        <div class="something-else"></div>
+            <button class="button button-light button-dark-logout-employee" v-on:click="loggut()">Logg Ut</button>
+            <div></div>
         </div>`,
     data() {
         return {

@@ -8,6 +8,7 @@ const FrontPage = {
                 <a class="btn" href="#">Bestill time</a>
                 </div>
             </header>
+<<<<<<< HEAD
         
             <section class="section-features">
                 <div class="row">
@@ -21,6 +22,8 @@ const FrontPage = {
             
                 
             
+=======
+>>>>>>> b9a33a9926ee7d49fd86ed75190910bd19aa52ec
                 <button class="button button-dark">Bestill time</button>
             </div>
             <div class="container">

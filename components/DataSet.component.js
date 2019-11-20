@@ -111,5 +111,8 @@ function setUsers(userData) {
     users = userData;
 }
 
+function setAppointments(appointmentsData) {
+    appointments = appointmentsData;
+}
 
-export {User, Appointment, users, setUsers};
+export {User, Appointment, users, setUsers, setAppointments, appointments};
