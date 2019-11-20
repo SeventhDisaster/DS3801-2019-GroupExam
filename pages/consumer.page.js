@@ -15,8 +15,10 @@ const ConsumerPage = {
                     <template v-for="item of appointments">
                         <div class="apmtbox-consumer-m">
                             <div class="apmtbox-type-consumer-m">{{item.type}}</div>
-                            <div class="apmtbox-date-consumer-m">Dato: {{item.date}}</div>
-                            <div class="apmtbox-time-consumer-m">Tid: {{item.time}}</div>
+
+                            <div class="apmtbox-date-value-consumer-m">{{item.date}}</div>
+
+                            <div class="apmtbox-time-value-consumer-m"> {{item.time}}</div>
                             <button :id="item.id" class="cancelbtn-consumer-m" v-on:click="overLayConsumer()">X</button>
                         </div>
                     </template>
