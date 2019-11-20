@@ -1,9 +1,10 @@
 .button {
-    width: 200px;
-    height: 50px;
-    border-radius: 25px;
-    border: none;
-    font-family: 'Libre Franklin', sans-serif;
+  width: 200px;
+  height: 50px;
+  margin: 4px;
+  border-radius: 25px;
+  border: none;
+  font-family: 'Libre Franklin', sans-serif;
 }
 .button-dark {
   background-color: #2F5350;
@@ -19,8 +20,18 @@
 }
 
 #app {
-    background-color: #89D0C8;
-    font-family: 'Libre Franklin', sans-serif;
+  background-color: #89D0C8;
+  font-family: 'Libre Franklin', sans-serif;
+  height: 400px;
+  width: 100%;
+  display: flex;
 }
 
+.flex-container {
+  height: 50%;
+  width: 50%;
+  position: relative;
+  flex-direction: column;
+  display: flex;
+}
 

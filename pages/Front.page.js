@@ -6,11 +6,11 @@ const FrontPage = {
                 <h1>{{title}}</h1>
                 <button class="button button-dark">Bestill time</button>
             </div>
-            <div class="container">
-                <div class="services"><h1>Tjenester</h1></div>
-                <div class="hours"><h1>Åpningstider</h1></div>
-                <div class="prices"><h1>Priser</h1></div>
-                <div class="adress"><h1>Adresse</h1></div>
+            <div class="flex-container">
+                <button class="button button-dark">Tjenester</button>
+                <button class="button button-dark">Åpningstider</button>
+                <button class="button button-dark">Priser</button>
+                <button class="button button-dark">Adresse</button>
             </div>
             <div class="map"></div>
         </div>
