@@ -5,7 +5,6 @@ const FrontPage = {
             <div class="heroImage">
                 <h1>{{title}}</h1>
                 <button class="button button-dark">Bestill time</button>
-                <a href="#">Bestill time</a>
             </div>
             <div class="container">
                 <div class="services"><h1>Tjenester</h1></div>
