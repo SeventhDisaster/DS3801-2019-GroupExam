@@ -4,7 +4,6 @@
     background-position: center;
     height: 90vh;
     width: 100vw;
-    margin-bottom: 0;
 }
 
 .hero-image {
@@ -16,8 +15,7 @@
 }
 
 .section-features {
-    margin-top: 0;
-    background-color: #89D0C8;
+   
 }
 
 .btn {
