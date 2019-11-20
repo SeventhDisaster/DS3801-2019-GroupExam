@@ -1,11 +1,11 @@
-header {
+.front-page-header {
     background-image: url(../resources/Anderson-College-PTA-OTA041-2.jpg);
     background-size: cover;
     background-position: center;
     height: 90vh;
 }
 
-.heroImage {
+.hero-image {
     position: absolute;
     width: 1140px;
     top:50%;

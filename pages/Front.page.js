@@ -2,18 +2,13 @@ const FrontPage = {
     template: `
         <div>
             <div><router-link to=login>Logg inn</router-link></div>
-            <header>
-                <div class="heroImage">
+            <header class="front-page-header">
+                <div class="hero-image">
                 <h1>{{title}}</h1>
-<<<<<<< HEAD
                 <a class="btn" href="#">Bestill time</a>
                 </div>
             </header>
         
-=======
-                <button class="button button-dark">Bestill time</button>
-            </div>
->>>>>>> d79a69ab4dfb706ad287363eed59440835eaeb9b
             <div class="container">
                 <div class="services"><h1>Tjenester</h1></div>
                 <div class="hours"><h1>Åpningstider</h1></div>
