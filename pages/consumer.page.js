@@ -1,21 +1,31 @@
-import {confirmLogin, logout} from '../components/index.js'
+import {confirmLogin, logout, getCurrentUser} from '../components/index.js'
 
 const ConsumerPage = {
     template: `
         <div>
-            <h1>{{title}}</h1>
-            <button v-on:click="loggut()">Logg Ut</button>
+            <header class="header-consumer-m">
+                <h3 >{{name}}</h3>
+                <button class="button-header-consumer-m button" v-on:click="userLoggingOut()">Logg ut</button>
+            </header<
+            <div>
+            <div>
+                <h1>{{title}}</h1>
+            </div>
+
         </div>`,
     data() {
         return {
-            title: "Velkommen til brukersiden"
+            title: "Dine kommende bookinger",
+            name: ""
         }
     },
     mounted() {
         confirmLogin(); //Makes sure the user is logged in in order to access this site.
+        let userObject = getCurrentUser();
+        this.name = userObject.name;
     },
     methods: {
-        loggut(){
+        userLoggingOut() {
             logout();
         }
     }
