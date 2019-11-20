@@ -17,7 +17,7 @@ export default Vue.component('appointment-form-preview', {
             //If a user is logged in
             let newAppointment = new Appointment(this.type, this.date, this.time, this.comment);
             console.log(newAppointment);
-            if(getCurrentUser()){
+            if (getCurrentUser()) {
                 let user = getCurrentUser();
                 user.appointmentIds.push(newAppointment.id);
                 appointments.push(newAppointment);

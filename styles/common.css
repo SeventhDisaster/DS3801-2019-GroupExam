@@ -9,17 +9,20 @@
 .button-dark {
   background-color: #2F5350;
   color: #C5E6E0;
+  cursor: pointer;
 }
 
 .button-medium {
   background-color: #83C6BF;
   color: #DBFFF8;
+  cursor: pointer;
 
 }
 
 .button-light {
   background-color: #C5E6E0;
   color: #2F5350;
+  cursor: pointer;
 
 }
 
@@ -42,4 +45,11 @@ body {
 .centered {
   text-align: center !important;
   float: center !important;
+}
+
+.bookings-employee {
+  border-radius: 20px;
+  height: 50%;
+  margin: 1%;
+  padding: 1%;
 }
