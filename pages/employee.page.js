@@ -7,6 +7,7 @@ const EmployeePage = {
                 <div class="bookings-employee">
                 <div></div>
                 <div></div>
+                <div></div>
                 </div>
         <div class="something-else"></div>
             <button class="button button-light button-dark-logout-employee" v-on:click="loggut()">Logg Ut</button>
