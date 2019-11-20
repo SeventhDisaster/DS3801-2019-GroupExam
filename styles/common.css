@@ -31,6 +31,9 @@ body {
 
 #app {
   font-family: 'Libre Franklin', sans-serif;
+  height: 100%;
+  width: 100%;
+  background-color: #83C6BF;
 }
 
 .flex-container {
