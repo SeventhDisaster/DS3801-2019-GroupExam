@@ -1,5 +1,5 @@
 .row {
-    max-width: 1140px;
+    max-width: 1240px;
     margin: 0 auto;
 }
 
@@ -14,6 +14,10 @@ section {
     width: 100vw;
 }
 
+.box {
+    
+}
+
 
 .hero-image {
     position: absolute;
@@ -23,14 +27,34 @@ section {
     transform: translate(-25%, -25%);
 }
 
-.section-features, .opening-hours {
+.section-features, .opening-hours, .last-class {
     margin-top: 20px;
     font-size: 20px;
 }
 
+.section-features h3 {
+    font-size: 100%;
+}
 .intro{
     line-height: 145%;
     text-align: center;
+}
+
+.feature-p {
+    font-size: 80%;
+}
+
+.hours-p {
+    text-align: center;
+}
+
+.opening-hours {
+    background-color: #8AD0C8;
+}
+
+.test {
+    min-height: 230px;
+    background-color: brown;
 }
 
 .btn {
