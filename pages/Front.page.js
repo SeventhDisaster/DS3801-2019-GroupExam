@@ -20,9 +20,11 @@ const FrontPage = {
             </div>
             <div class="group section row">    
                 <div class="col span_1_of_4 test">
-                    <h3>Osteopati</h3>
-                    <p class="feature-p">Akupunktur er en persontilpasset behandling der diagnostikk, behandling og oppfølging er skreddersydd for hver pasient med sine unike særtrekk og behov under hvert trinn av behandlingen.</p>
-                    <a href>Les mer</a>
+                    <div class="flex">
+                        <div class="circle"><p class="intro">Hi</p></div>
+                    </div>
+                    
+                    <h3 class="intro">Osteopati</h3>
                 </div>
                 <div class="col span_1_of_4 test">
                     <h3>Akupunktur</h3>
@@ -70,11 +72,5 @@ const FrontPage = {
 export default FrontPage;
 
 /*  <div class="row">    
-                <h2 class="intro">Åpningstider</h2>
-            </div>
-            <div class="row">    
-                <h2 class="intro">Priser</h2>
-            </div>
-            <div class="row">    
-                <h2 class="intro">Adresse</h2>
+           <p class="feature-p">Akupunktur er en persontilpasset behandling der diagnostikk, behandling og oppfølging er skreddersydd for hver pasient med sine unike særtrekk og behov under hvert trinn av behandlingen.</p>
             </div> */
