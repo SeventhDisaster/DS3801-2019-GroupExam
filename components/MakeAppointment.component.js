@@ -1,17 +1,26 @@
-export default Vue.component('make-appointment',{
+export default Vue.component('make-appointment', {
     template: `
         <div>
             <button>Cancel</button>
-            <appointment-form-type @selected="setType"></appointment-form-type>
-            <appointment-form-datetime @inputDate="setDate" @inputTime="setTime"></appointment-form-datetime>
-            <appointment-form-comment @inputComment="setComment"></appointment-form-comment>
-            <appointment-form-preview :type="type" :date="date" :time="time" :comment="comment"></appointment-form-preview>
-            <button v-on:click="back()" :disabled="selectedTemplate == 0"><</button><button v-on:click="forwards()"  :disabled="selectedTemplate == 3">></button>
+            <div :style='{display: (currentSection == 0 ? "block" : "none")}'>
+                <appointment-form-type @selected="setType"></appointment-form-type>
+            </div>
+            <div :style='{display: (currentSection == 1 ? "block" : "none")}'>
+                <appointment-form-datetime @inputDate="setDate" @inputTime="setTime" @enter="enter"></appointment-form-datetime>
+            </div>
+            <div :style='{display: (currentSection == 2 ? "block" : "none")}'>
+                <appointment-form-comment @inputComment="setComment" @key="enter" @enter="enter"></appointment-form-comment>
+            </div>
+            <div :style='{display: (currentSection == 3 ? "block" : "none")}'>
+                <appointment-form-preview :type="type" :date="date" :time="time" :comment="comment"></appointment-form-preview>
+            </div>
+            <button @click="back" :style='{display: (currentSection > 0 ? "inline-block" : "none")}'> < </button>
+            <button @click="forward" :style='{display: (currentSection < 3 ? "inline-block" : "none")}'> > </button>
         </div>`,
     props: [],
     data() {
         return {
-            selectedTemplate: 0,
+            currentSection: 0,
             type: "",
             date: "",
             time: "",
@@ -20,14 +29,13 @@ export default Vue.component('make-appointment',{
     },
     methods: {
         back() {
-            if(this.selectedTemplate > 0) {
-                this.selectedTemplate--;
-                console.log(this.selectedTemplate);
+            if(this.currentSection > 0){
+                this.currentSection--;
             }
         },
-        forwards() {
-            if(this.selectedTemplate < 3) {
-                this.selectedTemplate++;
+        forward() {
+            if(this.currentSection < 3){
+                this.currentSection++;
             }
         },
         setType(type) {
@@ -38,7 +46,7 @@ export default Vue.component('make-appointment',{
                 case 'Fys': this.type = "Fysiolab"; break;
                 default: this.type = "Undefined";
             }
-            this.forwards();
+            this.forward();
         },
         setDate(date) {
             this.date = date;
@@ -48,6 +56,9 @@ export default Vue.component('make-appointment',{
         },
         setComment(comment) {
             this.comment = comment;
+        },
+        enter(){
+            this.forward();
         }
     }
 });

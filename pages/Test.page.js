@@ -5,7 +5,6 @@ const TestPage = {
         <div>
             <h1>{{title}}</h1>
             <make-appointment></make-appointment>
-            <button v-on:click="loggut()">Logg Ut</button>
         </div>`,
     data() {
         return {
