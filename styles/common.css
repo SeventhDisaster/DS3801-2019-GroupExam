@@ -19,6 +19,10 @@
 
 }
 
+body {
+  background-color: #2F5350;
+}
+
 #app {
   background-color: #89D0C8;
   font-family: 'Libre Franklin', sans-serif;
