@@ -3,25 +3,27 @@ import {confirmLogin, logout, getCurrentUser, getAppointments, appointments} fro
 const ConsumerPage = {
     template: `
         <div>
-            <header class="header-consumer-m">
-                <h3 class="username-consumer-m">{{name}}</h3>
-                <button class="button-header-consumer-m button" v-on:click="userLoggingOut()">Logg ut</button>
-            </header>
-            <div>
-                <h1>{{title}}</h1>
-            </div>
-            <div class="booking-container-consumer-m">
-                <div class="upcoming-container-m">
-                    <template v-for="item of appointments">
-                        <div class="apmtbox-consumer-m">
-                            <div class="apmtbox-type-consumer-m">{{item.type}}</div>
+            <div id="consumer-container">
+                <header id="consumerHeader" class="header-consumer-m">
+                    <h3 class="username-consumer-m">{{name}}</h3>
+                    <button class="button-header-consumer-m button" @click="userLoggingOut()">Logg ut</button>
+                </header>
+                <div>
+                    <h1>{{title}}</h1>
+                </div>
+                <div class="booking-container-consumer-m">
+                    <div class="upcoming-container-m">
+                        <template v-for="item of appointments">
+                            <div class="apmtbox-consumer-m">
+                                <div class="apmtbox-type-consumer-m">{{item.type}}</div>
 
-                            <div class="apmtbox-date-value-consumer-m">{{item.date}}</div>
+                                <div class="apmtbox-date-value-consumer-m">{{item.date}}</div>
 
-                            <div class="apmtbox-time-value-consumer-m"> {{item.time}}</div>
-                            <button :id="item.id" class="cancelbtn-consumer-m" v-on:click="overLayConsumer()">X</button>
-                        </div>
-                    </template>
+                                <div class="apmtbox-time-value-consumer-m"> {{item.time}}</div>
+                                <button :id="item.id" class="cancelbtn-consumer-m" @click="overLayConsumer()">X</button>
+                            </div>
+                        </template>
+                    </div>
                 </div>
             </div>
         </div>`,
@@ -29,12 +31,7 @@ const ConsumerPage = {
         return {
             title: "Dine kommende bookinger",
             name: "", 
-            appointmentBox: { //Can be used if needed
-                type: "Kake",
-                date: "Lalala",
-                time: "2324"
-            },
-            appointments: appointments //has the arrays
+            appointments: ""
         }
     },
     mounted() {
@@ -42,7 +39,7 @@ const ConsumerPage = {
         let userObject = getCurrentUser();
         this.name = userObject.name;
         this.sortDate();
-        
+        //make function to sort appointments
     },
     methods: {
         userLoggingOut() {
@@ -54,11 +51,14 @@ const ConsumerPage = {
                 const finalDate = date[0]+"."+date[1]+"."+date[2];
                 appointments[i].date = finalDate;
             }
+
+            //Assign to appointments above do sort out correct appointments
             console.log(appointments);
         },
-        overLayConsumer() {
-            
+        closeOverlay() {
+            alert("Hello there");
         }
+    
     }
 }
 

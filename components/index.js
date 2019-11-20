@@ -14,3 +14,6 @@ export * from './AppointmentType.component.js';
 export * from './AppointmentDateTime.component.js';
 export * from './AppointmentComment.component.js';
 export * from './AppointmentPreview.component.js';
+
+//Common Components
+export * from './Overlay.component.js';
