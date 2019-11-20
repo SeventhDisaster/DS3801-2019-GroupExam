@@ -1,3 +1,5 @@
+import { updateUsersData , updateAppointmentsData} from "./Index.js";
+
 //This file contains a sample dataset of users
 //Constructor for user object (Applicable only for regular users) Our project does not allow creating employees
 
@@ -31,7 +33,7 @@ class Appointment {
         this.date = date;
         this.time = time;
         this.comment = comment;
-        for(user of users){
+        for(let user of users){
             if(this.type === user.inField && user.isEmployed){
                 this.assigned = user.name; //Assigned auto applies to the employee in the field
             }
@@ -109,10 +111,12 @@ let appointments = [
 
 function setUsers(userData) {
     users = userData;
+    updateUsersData();
 }
 
 function setAppointments(appointmentsData) {
     appointments = appointmentsData;
+    updateAppointmentsData();
 }
 
 export {User, Appointment, users, setUsers, setAppointments, appointments};

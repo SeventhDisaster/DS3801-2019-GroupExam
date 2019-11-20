@@ -3,6 +3,7 @@ import LoginPage from './pages/Login.page.js';
 import EmployeePage from './pages/Employee.page.js';
 import ConsumerPage from './pages/Consumer.page.js';
 import RegisterPage from './pages/Register.page.js';
+import BookingPage from './pages/Booking.page.js';
 
 import Testpage from './pages/Test.page.js';
 
@@ -44,6 +45,14 @@ const router = new VueRouter({
             }
         },
         {
+            path: '/booking',
+            component: BookingPage,
+            meta: {
+                title: "Timebestilling"
+            }
+        },
+        {
+            //Delete test-page later
             path: '/test',
             component: Testpage,
             meta: {

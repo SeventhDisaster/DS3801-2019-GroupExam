@@ -12,29 +12,31 @@ This file handles log-in and user-userSessios by utilizing localstorage as a way
 
 import * as data from './Index.js';
 import { router } from '../router.js';
+import { appointments } from './DataSet.component.js';
 
 //Used to load in all userSessio data
-function loadUserSessionData() {
-    if(!getStorage("userSession")) {
-        setStorage("userSession", data.users);
+function loadUsersData() {
+    if(!getStorage("users")) {
+        setStorage("users", data.users);
     } else {
-        data.setUsers(getStorage("userSession"));
+        data.setUsers(getStorage("users"));
     }
 }
 
-function loadAppointmentSessionData() {
-    if(!getStorage("appointmentSession")) {
-        setStorage("appointmentSession", data.appointments);
+function loadAppointmentsData() {
+    if(!getStorage("appointments")) {
+        setStorage("appointments", data.appointments);
     } else {
-        data.setAppointments(getStorage("appointmentSession"));
+        data.setAppointments(getStorage("appointments"));
     }
 }
-function loadSessionData() {
-    loadUserSessionData();
-    loadAppointmentSessionData();
+
+function loadData() {
+    loadUsersData();
+    loadAppointmentsData();
 }
 
-
+loadData();
 
 function confirmLogin() {
     let user = getStorage("userSession");
@@ -51,6 +53,13 @@ function login(email, password) {
             //User is logged in with email and password
             if(email === user.email && password === user.password){
                 setStorage("userSession", user);
+                if(localStorage.getItem("holdingAppointment")){
+                    let newAppointment = JSON.parse(localStorage.getItem("holdingAppointment"));
+                    user.appointmentIds.push(newAppointment.id);
+                    data.appointments.push(newAppointment);
+                    updateAppointmentsData()
+                    localStorage.removeItem("holdingAppointment");
+                }
                 redirectToRelevantSite(user);
                 return true;
             }
@@ -74,7 +83,11 @@ function logout() {
 }
 
 function updateUsersData() {
-    setStorage("users", data)
+    setStorage("users", data.users)
+}
+
+function updateAppointmentsData() {
+    setStorage("appointments", data.appointments)
 }
 
 function getCurrentUser() {
@@ -113,4 +126,4 @@ function clearStorage() {
 }
 
 
-export {loadSessionData, login, logout, clearStorage, updateUsersData, confirmLogin, getCurrentUser, getAppointments}
+export {loadData, login, logout, clearStorage, updateUsersData, updateAppointmentsData, confirmLogin, getCurrentUser, getAppointments}
