@@ -36,11 +36,10 @@ body {
   background-color: #83C6BF;
 }
 
-.flex-container {
+.grid-container {
   display: grid;
   grid-template-columns: 5% 10% 70% 10% 5%;
   grid-template-rows: 10% 80% 10%;
   justify-content: center;
   flex-direction: column;
 }
-
