@@ -5,13 +5,18 @@ const ConsumerPage = {
         <div>
 
             <header class="header-consumer-m">
-                <h3>{{name}}</h3>
+                <h3 class="username-consumer-m">{{name}}</h3>
                 <button class="button-header-consumer-m button" v-on:click="userLoggingOut()">Logg ut</button>
             </header>
             <div>
                 <h1>{{title}}</h1>
             </div>
 
+            <div class="booking-container-consumer-m">
+                <div class="upcoming-container-m">
+                </div>
+
+            </div>
         </div>`,
     data() {
         return {

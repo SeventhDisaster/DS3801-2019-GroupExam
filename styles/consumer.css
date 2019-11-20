@@ -2,8 +2,19 @@
 .header-consumer-m {
     display: grid;
     grid-template-columns: 75% 25%;
+    padding: 0.5em;
+    border-bottom: solid 2px grey;
+}
+
+.username-consumer-m {
+    margin: 0px;
 }
 
 .button-header-consumer-m {
     width: 100% !important;
+    height: 100% !important;
+}
+
+.booking-container-consumer-m {
+    
 }
