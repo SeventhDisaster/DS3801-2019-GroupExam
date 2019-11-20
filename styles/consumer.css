@@ -15,6 +15,28 @@
     height: 100% !important;
 }
 
-.booking-container-consumer-m {
-    
+.apmtbox-consumer-m {
+    border: solid 2px;
+    margin: 1em;
+    padding: 0.5em;
+    background-color: aqua;
+    height: 3em;
+}
+
+.apmtbox-type-consumer-m {
+    margin-bottom: 0.3em;
+    font-weight: bolder;
+}
+
+.apmtbox-date-consumer-m {
+    display: inline-flex;
+}
+
+.apmtbox-time-consumer-m {
+    display: inline-flex;
+}
+
+.cancelbtn-consumer-m {
+    display: inline-flex;
+    justify-content: right;
 }
