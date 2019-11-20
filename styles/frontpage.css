@@ -1,3 +1,8 @@
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
 .front-page-header {
     background-image: url(../resources/Anderson-College-PTA-OTA041-2.jpg);
     background-size: cover;
@@ -14,8 +19,8 @@
     transform: translate(-50%, -50%);
 }
 
-.section-features {
-   
+.section-features p{
+   text-align: center;
 }
 
 .btn {
