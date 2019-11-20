@@ -2,10 +2,13 @@ const FrontPage = {
     template: `
         <div>
             <div><router-link to=login>Logg inn</router-link></div>
-            <div class="heroImage">
+            <header>
+                <div class="heroImage">
                 <h1>{{title}}</h1>
-                <a href="#">Bestill time</a>
-            </div>
+                <a class="btn" href="#">Bestill time</a>
+                </div>
+            </header>
+        
             <div class="container">
                 <div class="services"><h1>Tjenester</h1></div>
                 <div class="hours"><h1>Åpningstider</h1></div>
