@@ -38,7 +38,7 @@ body {
   margin: 0px;
 }
 
-#app {
+.content-box {
   font-family: 'Libre Franklin', sans-serif;
   height: 100%;
   width: 96%;
@@ -46,6 +46,12 @@ body {
   border-radius: 1em;;
   background-color: #E0F2EF;
   padding: 1%;
+}
+
+#app {
+  font-family: 'Libre Franklin', sans-serif;
+  height: 100%;
+  width: 100%;
 }
 
 .centered {

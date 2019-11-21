@@ -2,7 +2,7 @@ import {confirmLogin, logout} from '../components/Index.js';
 
 const EmployeePage = {
     template: `
-        <div>
+        <div class="content-box">
             <div class="group section row">
                 <div class="col span_1_of_3 centered"></div>
                         <h1 class="col span_1_of_3 centered">{{title}}</h1>
