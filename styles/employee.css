@@ -48,6 +48,18 @@
       border-color: #2F5350;
   }
 
+  .logout-employee {
+    width: 6em;
+    height: 2em;
+    border-radius: 25px;
+    border: none;
+    font-family: 'Libre Franklin', sans-serif;
+  }
+
+.employee-title {
+    font-size: 29px;
+}
+
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
   @media only screen and (max-width: 480px) {
 	.span_3_of_3 {
