@@ -1,0 +1,19 @@
+.register-button {
+    width: 6em;
+    height: 2em;
+    border-radius: 25px;
+    border: none;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.input-form {
+    width: 25em;
+    height: 2em;
+    border: none;
+    margin: 1%;
+    padding: 0.5%;
+    font-family: 'Libre Franklin', sans-serif;
+    border-radius: 6px;
+    background-color: #C5E6E0;
+    color: #2F5350;
+}
