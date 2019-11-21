@@ -92,7 +92,15 @@ const ConsumerPage = {
             this.visible = false;
         }, 
         deleteAppointment() {
-            console.log("i ran")
+            console.log(this.id)
+            let array = this.userAppointments;
+            
+            for(let item of array) {
+                if(item.id === this.id) {
+                    const index = array.indexOf(item);
+                    this.userAppointments.splice(index, 1); // deleting wrong
+                }
+            }
         }
     }
 }
