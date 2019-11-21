@@ -1,0 +1,22 @@
+.bookings-employee {
+    border-radius: 20px;
+    height: 3em;
+    width: 95%;
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+    border: none;
+    font-family: 'Libre Franklin', sans-serif;
+  }
+
+.bookings-employee:focus {
+    background-color: rgb(90, 129, 127);
+    color: rgb(210, 241, 236);
+    outline: none;
+  }
+  
+  .bookings-employee:hover {
+    background-color: rgb(174, 212, 209);
+    color: #2F5350;
+  }
+  
