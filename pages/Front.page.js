@@ -53,9 +53,30 @@ const FrontPage = {
         <section class="last-class">
             <div class="row">    
                 <h2 class="intro">Adresse</h2>
+                <div class="group section row">
+                    <div class="col span_1_of_2">
+                        <p class="intro"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.261076351581!2d10.74266541566557!3d59.9112143712732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e88371902fb%3A0x4812bb829faca24d!2sH%C3%B8yskolen%20Kristiania%20%7C%20Campus%20Kvadraturen!5e0!3m2!1sno!2sno!4v1574352027972!5m2!1sno!2sno" 
+                        width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe></p>
+                    </div>
+                    <!-- lag stengt åpen knappen -->
+                    <div class="col span_1_of_2">
+                        <h3>Oslo Kvadraturen</h3>
+                        <p>Prinsens gate 9</p>
+                        <p>0153 Oslo</p>
+                        <p>Henvend deg alltid i Besøksresepsjonen før konsultasjonen.</p>
+                        <p>Klinikken med venterom ligger i 3. etg. i samme bygg. Vi har heis.</p>
+                        <p>Mandag – torsdag 07.30 – 19.00</p>
+                        <p>Fredag 08.00 – 16.00</p>
+
+                    </div>
+                </div>
             </div>
         </section>
-        <div class="map"></div>
+        <div class="map">
+            <a href="#">Tjenester</a>
+            <a href="#">Kontakt</a>
+            <a href="#">Pasientopplysninger</a>
+        </div>
     </div>
         
         
