@@ -14,18 +14,24 @@ export default Vue.component('appointment-form-preview', {
     props: ['type', 'date', 'time', 'comment'],
     methods: {
         makeAppointment() {
-            //If a user is logged in
-            let newAppointment = new Appointment(this.type, this.date, this.time, this.comment);
-            console.log(newAppointment);
-            if (getCurrentUser()) {
-                let user = getCurrentUser();
-                user.appointmentIds.push(newAppointment.id);
-                appointments.push(newAppointment);
-                router.push('/brukerside')
-                
+            //Make sure all required fields are filled
+            if(this.type && this.date && this.time) {
+                let newAppointment = new Appointment(this.type, this.date, this.time, this.comment);
+                console.log(newAppointment);
+
+                //If a user is logged in
+                if (getCurrentUser()) {
+                    let user = getCurrentUser();
+                    user.appointmentIds.push(newAppointment.id);
+                    appointments.push(newAppointment);
+                    router.push('/brukerside')
+                    
+                } else {
+                    localStorage.setItem("holdingAppointment", JSON.stringify(newAppointment));
+                    router.push('/login');
+                }
             } else {
-                localStorage.setItem("holdingAppointment", JSON.stringify(newAppointment));
-                router.push('/login');
+                alert("Et påkrevd felt er ikke fyllt inn!")
             }
         }
     }

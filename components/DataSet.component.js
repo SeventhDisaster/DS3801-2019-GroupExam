@@ -50,7 +50,8 @@ let users = [
         inField: null,
         contactPhone: "12345678",
         email: "bruker@epost.no",
-        appointmentIds: [0, 1]
+        appointmentIds: [0, 1],
+        notes: ["Er veldig Norsk", "Drikker for lite kaffe"],
     },
     {
         name: "Kari Kroppsbrekker",
@@ -94,7 +95,7 @@ let appointments = [
     {
         id: 0,
         type: "Osteopati",
-        date: "19.11.25",
+        date: "2019-11-25",
         time: "09:00",
         comment: "Dette er en kommentar fra bruker",
         assigned: "Kari Kroppsbrekker"
@@ -102,7 +103,7 @@ let appointments = [
     {
         id: 1,
         type: "Akupunktur",
-        date: "19.12.07",
+        date: "2019-12-07",
         time: "12:00",
         comment: "Kommer til å bli stabbet!",
         assigned: "James Stabsalot"

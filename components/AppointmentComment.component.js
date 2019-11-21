@@ -1,8 +1,9 @@
 export default Vue.component('appointment-form-comment', {
     template: `
     <div>
-        <h3>Skriv en kommentar:</h3>
+        <h3>[Valgfritt] Skriv en kommentar:</h3>
         <textarea type="text" @input="setComment($event.target.value)" @keyup.enter="enter" placeholder="Din kommentar her"> </textarea>
+        <button @click="$emit('enter')"> Fortsett </button>
     </div>
     `,
     props: ['comment'],
