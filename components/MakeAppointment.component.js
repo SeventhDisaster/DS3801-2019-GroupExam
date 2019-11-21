@@ -1,7 +1,7 @@
 export default Vue.component('make-appointment', {
     template: `
         <div>
-            <button>Cancel</button>
+            <button>Avbryt</button>
             <div :style='{display: (currentSection == 0 ? "block" : "none")}'>
                 <appointment-form-type @selected="setType"></appointment-form-type>
             </div>
@@ -46,13 +46,14 @@ export default Vue.component('make-appointment', {
                 case 'Fys': this.type = "Fysiolab"; break;
                 default: this.type = "Undefined";
             }
-            this.forward();
+            this.forward(); //Move forward on type selection
         },
         setDate(date) {
             this.date = date;
         },
         setTime(time) {
             this.time = time;
+            this.forward(); //Move forward on time selection
         },
         setComment(comment) {
             this.comment = comment;
