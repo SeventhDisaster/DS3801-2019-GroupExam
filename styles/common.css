@@ -50,8 +50,11 @@ body {
 
 .bookings-employee {
   border-radius: 20px;
-  height: 2em;
+  height: 3em;
+  width: 95%;
   margin: 1%;
   padding: 1%;
   text-align: center;
+  border: none;
+  font-family: 'Libre Franklin', sans-serif;
 }

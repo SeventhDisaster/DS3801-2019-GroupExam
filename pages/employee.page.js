@@ -11,61 +11,61 @@ const EmployeePage = {
 
                 <div class="group section row">
                     <div class="col span_1_of_5 centered">Mandag
-                    <div class="button-dark centered bookings-employee">08.00</div>
-                    <div class="button-dark centered bookings-employee">09.00</div>
-                    <div class="button-dark centered bookings-employee">10.00</div>
-                    <div class="button-dark centered bookings-employee">10.45</div>
-                    <div class="button-dark centered bookings-employee">12.00</div>
-                    <div class="button-dark centered bookings-employee">13.00</div>
-                    <div class="button-dark centered bookings-employee">14.00</div>
-                    <div class="button-dark centered bookings-employee">15.00</div>
+                    <div><button class="button-dark centered bookings-employee">08.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">09.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">10.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">11.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">12.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">13.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">14.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">15.00</button></div>
                     </div>
 
                     <div class="col span_1_of_5 centered">Tirsdag
-                    <div class="button-dark centered bookings-employee">08.00</div>
-                    <div class="button-dark centered bookings-employee">09.00</div>
-                    <div class="button-dark centered bookings-employee">10.00</div>
-                    <div class="button-dark centered bookings-employee">10.45</div>
-                    <div class="button-dark centered bookings-employee">12.00</div>
-                    <div class="button-dark centered bookings-employee">13.00</div>
-                    <div class="button-dark centered bookings-employee">14.00</div>
-                    <div class="button-dark centered bookings-employee">15.00</div>
+                    <div><button class="button-dark centered bookings-employee">08.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">09.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">10.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">11.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">12.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">13.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">14.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">15.00</button></div>
                     </div>
 
 
                     <div class="col span_1_of_5 centered">Onsdag
-                    <div class="button-dark centered bookings-employee">08.00</div>
-                    <div class="button-dark centered bookings-employee">09.00</div>
-                    <div class="button-dark centered bookings-employee">10.00</div>
-                    <div class="button-dark centered bookings-employee">10.45</div>
-                    <div class="button-dark centered bookings-employee">12.00</div>
-                    <div class="button-dark centered bookings-employee">13.00</div>
-                    <div class="button-dark centered bookings-employee">14.00</div>
-                    <div class="button-dark centered bookings-employee">15.00</div>
+                    <div><button class="button-dark centered bookings-employee">08.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">09.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">10.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">11.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">12.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">13.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">14.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">15.00</button></div>
                     </div>
 
 
                     <div class="col span_1_of_5 centered">Torsdag
-                    <div class="button-dark centered bookings-employee">08.00</div>
-                    <div class="button-dark centered bookings-employee">09.00</div>
-                    <div class="button-dark centered bookings-employee">10.00</div>
-                    <div class="button-dark centered bookings-employee">10.45</div>
-                    <div class="button-dark centered bookings-employee">12.00</div>
-                    <div class="button-dark centered bookings-employee">13.00</div>
-                    <div class="button-dark centered bookings-employee">14.00</div>
-                    <div class="button-dark centered bookings-employee">15.00</div>
+                    <div><button class="button-dark centered bookings-employee">08.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">09.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">10.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">11.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">12.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">13.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">14.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">15.00</button></div>
                     </div>
 
 
                     <div class="col span_1_of_5 centered">Fredag
-                    <div class="button-dark centered bookings-employee">08.00</div>
-                    <div class="button-dark centered bookings-employee">09.00</div>
-                    <div class="button-dark centered bookings-employee">10.00</div>
-                    <div class="button-dark centered bookings-employee">10.45</div>
-                    <div class="button-dark centered bookings-employee">12.00</div>
-                    <div class="button-dark centered bookings-employee">13.00</div>
-                    <div class="button-dark centered bookings-employee">14.00</div>
-                    <div class="button-dark centered bookings-employee">15.00</div>
+                    <div><button class="button-dark centered bookings-employee">08.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">09.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">10.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">11.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">12.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">13.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">14.00</button></div>
+                    <div><button class="button-dark centered bookings-employee">15.00</button></div>
                     </div>
                 </div>
 
