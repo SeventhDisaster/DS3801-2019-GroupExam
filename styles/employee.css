@@ -1,12 +1,13 @@
 .bookings-employee {
-    border-radius: 20px;
+    border-radius: 7px;
     height: 3em;
     width: 95%;
-    margin: 1%;
+    margin: 3%;
     padding: 1%;
     text-align: center;
     border: none;
     font-family: 'Libre Franklin', sans-serif;
+    box-shadow: 0 1px 1px 0 rgb(108, 146, 144), 0 2px 1px -1px rgb(108, 146, 144), 0 1px 3px 0 rgb(108, 146, 144);
   }
 
 .bookings-employee:focus {
@@ -19,4 +20,43 @@
     background-color: rgb(174, 212, 209);
     color: #2F5350;
   }
+
+  .button-employee {
+    border-radius: 7px;
+    background-color: #2F5350;
+    color: #C5E6E0;
+    height: 4em;
+    text-align: center;
+    border: none;
+    font-family: 'Libre Franklin', sans-serif;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
+  }
+
+  .button-employee:hover {
+    background-color: rgb(174, 212, 209);
+    color: #2F5350;
+  }
+
+  .button-employee:focus {
+    background-color: rgb(174, 212, 209);
+    color: #2F5350;
+    outline: none;
+  }
   
+  .section-border {
+      border: 2px !important;
+      border-color: #2F5350;
+  }
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+  @media only screen and (max-width: 480px) {
+	.span_3_of_3 {
+		width: 100%; 
+	}
+	.span_2_of_3 {
+		width: 100%; 
+	}
+	.span_1_of_3 {
+		width: 100%;
+	}
+}

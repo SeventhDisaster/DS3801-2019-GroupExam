@@ -16,5 +16,5 @@ Color scheme:
 
 CSS grid:
 - remember to use class="group section row" 
-and grid element within this div with class="col span_1_of_3
+and grid element within this div with class="col span_1_of_3"
 -

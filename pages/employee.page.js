@@ -5,73 +5,81 @@ const EmployeePage = {
         <div class="content-box">
             <div class="group section row">
                 <div class="col span_1_of_3 centered"></div>
-                        <h1 class="col span_1_of_3 centered">{{title}}</h1>
-                        <div class="col span_1_of_3 centered"></div>
+                    <h1 class="col span_1_of_3 centered">{{title}}</h1>
+                    <div class="col span_1_of_3 centered"></div>
                 </div>
 
                 <div class="group section row">
-                <div class="col span_1_of_3 centered"></div>
-                        <h2 class="col span_1_of_3 centered">Dager</h2>
-                        <div class="col span_1_of_3 centered"></div>
+                <button class="col span_1_of_4 centered button-employee">Profil</button>
+                <button class="col span_1_of_4 centered button-employee">Dagens timer</button>
+                <button class="col span_1_of_4 centered button-employee">Mailboks</button>
+                <button class="col span_1_of_4 centered button-employee">Klienter</button>
+                </div>
+
+
+                <div class="group section row">
+                    <div class="col span_1_of_3 centered"></div>
+                    <h2 class="col span_1_of_3 centered">Dager</h2>
+                    <div class="col span_1_of_3 centered"></div>
                 </div>
 
                 <div class="group section row">
-                    <div class="col span_1_of_5 centered">Mandag
-                    <button class="button-light centered bookings-employee">08.00</button>
-                    <button class="button-light centered bookings-employee">09.00</button>
-                    <button class="button-light centered bookings-employee">10.00</button>
-                    <button class="button-light centered bookings-employee">11.00</button>
-                    <button class="button-light centered bookings-employee">12.00</button>
-                    <button class="button-light centered bookings-employee">13.00</button>
-                    <button class="button-light centered bookings-employee">14.00</button>
-                    <button class="button-light centered bookings-employee">15.00</button>
+                    <div class="col span_1_of_5 centered">Mandag 25.11
+                        <button class="button-light centered bookings-employee">08.00</button>
+                        <button class="button-light centered bookings-employee">09.00</button>
+                        <button class="button-light centered bookings-employee">10.00</button>
+                        <button class="button-light centered bookings-employee">11.00</button>
+                        <button class="button-light centered bookings-employee">12.00</button>
+                        <button class="button-light centered bookings-employee">13.00</button>
+                        <button class="button-light centered bookings-employee">14.00</button>
+                        <button class="button-light centered bookings-employee">15.00</button>
                     </div>
 
-                    <div class="col span_1_of_5 centered">Tirsdag
-                    <button class="button-light centered bookings-employee">08.00</button>
-                    <button class="button-light centered bookings-employee">09.00</button>
-                    <button class="button-light centered bookings-employee">10.00</button>
-                    <button class="button-light centered bookings-employee">11.00</button>
-                    <button class="button-light centered bookings-employee">12.00</button>
-                    <button class="button-light centered bookings-employee">13.00</button>
-                    <button class="button-light centered bookings-employee">14.00</button>
-                    <button class="button-light centered bookings-employee">15.00</button>
-                    </div>
-
-
-                    <div class="col span_1_of_5 centered">Onsdag
-                    <button class="button-light centered bookings-employee">08.00</button>
-                    <button class="button-light centered bookings-employee">09.00</button>
-                    <button class="button-light centered bookings-employee">10.00</button>
-                    <button class="button-light centered bookings-employee">11.00</button>
-                    <button class="button-light centered bookings-employee">12.00</button>
-                    <button class="button-light centered bookings-employee">13.00</button>
-                    <button class="button-light centered bookings-employee">14.00</button>
-                    <button class="button-light centered bookings-employee">15.00</button>
+                    <div class="col span_1_of_5 centered">Tirsdag 26.11
+                        <button class="button-light centered bookings-employee">08.00</button>
+                        <button class="button-light centered bookings-employee">09.00</button>
+                        <button class="button-light centered bookings-employee">10.00</button>
+                        <button class="button-light centered bookings-employee">11.00</button>
+                        <button class="button-light centered bookings-employee">12.00</button>
+                        <button class="button-light centered bookings-employee">13.00</button>
+                        <button class="button-light centered bookings-employee">14.00</button>
+                        <button class="button-light centered bookings-employee">15.00</button>
                     </div>
 
 
-                    <div class="col span_1_of_5 centered">Torsdag
-                    <button class="button-light centered bookings-employee">08.00</button>
-                    <button class="button-light centered bookings-employee">09.00</button>
-                    <button class="button-light centered bookings-employee">10.00</button>
-                    <button class="button-light centered bookings-employee">11.00</button>
-                    <button class="button-light centered bookings-employee">12.00</button>
-                    <button class="button-light centered bookings-employee">13.00</button>
-                    <button class="button-light centered bookings-employee">14.00</button>
-                    <button class="button-light centered bookings-employee">15.00</button>
+                    <div class="col span_1_of_5 centered">Onsdag 27.11
+                        <button class="button-light centered bookings-employee">08.00</button>
+                        <button class="button-light centered bookings-employee">09.00</button>
+                        <button class="button-light centered bookings-employee">10.00</button>
+                        <button class="button-light centered bookings-employee">11.00</button>
+                        <button class="button-light centered bookings-employee">12.00</button>
+                        <button class="button-light centered bookings-employee">13.00</button>
+                        <button class="button-light centered bookings-employee">14.00</button>
+                        <button class="button-light centered bookings-employee">15.00</button>
                     </div>
 
 
-                    <div class="col span_1_of_5 centered">Fredag
-                    <button class="button-light centered bookings-employee">08.00</button>
-                    <button class="button-light centered bookings-employee">09.00</button>
-                    <button class="button-light centered bookings-employee">10.00</button>
-                    <button class="button-light centered bookings-employee">11.00</button>
-                    <button class="button-light centered bookings-employee">12.00</button>
-                    <button class="button-light centered bookings-employee">13.00</button>
-                    <button class="button-light centered bookings-employee">14.00</button>
-                    <button class="button-light centered bookings-employee">15.00</button>
+                    <div class="col span_1_of_5 centered">Torsdag 28.11
+                        <button class="button-light centered bookings-employee">08.00</button>
+                        <button class="button-light centered bookings-employee">09.00</button>
+                        <button class="button-light centered bookings-employee">10.00</button>
+                        <button class="button-light centered bookings-employee">11.00</button>
+                        <button class="button-light centered bookings-employee">12.00</button>
+                        <button class="button-light centered bookings-employee">13.00</button>
+                        <button class="button-light centered bookings-employee">14.00</button>
+                        <button class="button-light centered bookings-employee">15.00</button>
+                    </div>
+
+
+                    <div class="col span_1_of_5 centered">Fredag 29.11
+                        <button class="button-light centered bookings-employee">08.00</button>
+                        <button class="button-light centered bookings-employee">09.00</button>
+                        <button class="button-light centered bookings-employee">10.00</button>
+                        <button class="button-light centered bookings-employee">11.00</button>
+                        <button class="button-light centered bookings-employee">12.00</button>
+                        <button class="button-light centered bookings-employee">13.00</button>
+                        <button class="button-light centered bookings-employee">14.00</button>
+                        <button class="button-light centered bookings-employee">15.00</button>
                     </div>
                 </div>
 
