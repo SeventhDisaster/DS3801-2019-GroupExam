@@ -5,10 +5,22 @@
   border-radius: 25px;
   border: none;
   font-family: 'Libre Franklin', sans-serif;
+  transition: .05s ease;
 }
 
 .button:focus {
   outline: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  filter: brightness(105%);
+}
+
+.button:active {
+  transform: scale(0.98);
+  filter: brightness(90%);
 }
 
 .button-dark {
@@ -43,7 +55,7 @@ body {
   height: 100%;
   width: 96%;
   margin: 1%;
-  border-radius: 0.5em;;
+  border-radius: 1em;;
   background-color: #E0F2EF;
   padding: 1%;
 }
