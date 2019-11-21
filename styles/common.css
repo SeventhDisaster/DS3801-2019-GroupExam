@@ -38,6 +38,7 @@ body {
   height: 100%;
   width: 96%;
   margin: 1%;
+  border-radius: 1em;;
   background-color: #E0F2EF;
   padding: 1%;
 }
@@ -49,7 +50,8 @@ body {
 
 .bookings-employee {
   border-radius: 20px;
-  height: 50%;
+  height: 2em;
   margin: 1%;
   padding: 1%;
+  text-align: center;
 }
