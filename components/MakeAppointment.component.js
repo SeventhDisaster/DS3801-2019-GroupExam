@@ -1,21 +1,24 @@
 export default Vue.component('make-appointment', {
     template: `
-        <div>
-            <button>Avbryt</button>
-            <div :style='{display: (currentSection == 0 ? "block" : "none")}'>
-                <appointment-form-type @selected="setType"></appointment-form-type>
+        <div id="booking-grid-template" class="content-box centered">
+            <button class="button booking-cancel">X</button>
+            <h2 class="booking-header">Timeplanlegger:</h2>
+            <div id="booking-component-container">
+                <div :style='{display: (currentSection == 0 ? "block" : "none")}'>
+                    <appointment-form-type @selected="setType"></appointment-form-type>
+                </div>
+                <div :style='{display: (currentSection == 1 ? "block" : "none")}'>
+                    <appointment-form-datetime @inputDate="setDate" @inputTime="setTime" @enter="enter"></appointment-form-datetime>
+                </div>
+                <div :style='{display: (currentSection == 2 ? "block" : "none")}'>
+                    <appointment-form-comment @inputComment="setComment" @key="enter" @enter="enter"></appointment-form-comment>
+                </div>
+                <div :style='{display: (currentSection == 3 ? "block" : "none")}'>
+                    <appointment-form-preview :type="type" :date="date" :time="time" :comment="comment"></appointment-form-preview>
+                </div>
             </div>
-            <div :style='{display: (currentSection == 1 ? "block" : "none")}'>
-                <appointment-form-datetime @inputDate="setDate" @inputTime="setTime" @enter="enter"></appointment-form-datetime>
-            </div>
-            <div :style='{display: (currentSection == 2 ? "block" : "none")}'>
-                <appointment-form-comment @inputComment="setComment" @key="enter" @enter="enter"></appointment-form-comment>
-            </div>
-            <div :style='{display: (currentSection == 3 ? "block" : "none")}'>
-                <appointment-form-preview :type="type" :date="date" :time="time" :comment="comment"></appointment-form-preview>
-            </div>
-            <button @click="back" :style='{display: (currentSection > 0 ? "inline-block" : "none")}'> < </button>
-            <button @click="forward" :style='{display: (currentSection < 3 ? "inline-block" : "none")}'> > </button>
+            <button class="booking-nav-button booking-nav-back" @click="back" :style='{display: (currentSection > 0 ? "inline-block" : "none")}'> < </button>
+            <button class="booking-nav-button booking-nav-forw" @click="forward" :style='{display: (currentSection < 3 ? "inline-block" : "none")}'> > </button>
         </div>`,
     props: [],
     data() {

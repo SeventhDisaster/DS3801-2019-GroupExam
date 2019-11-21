@@ -2,7 +2,7 @@ import {getCurrentUser} from '../components/Index.js';
 
 const BookingPage = {
     template: `
-        <div>
+        <div class="content-box">
             <div>
                 <p>{{status}} {{user.name}}</p>
             </div>
