@@ -3,7 +3,8 @@ import {confirmLogin, logout, getCurrentUser, getAppointments, appointments} fro
 const ConsumerPage = {
     template: `
         <div>
-            <div id="consumer-container">
+            <cancel-overlay></cancel-overlay>
+            <div id="consumer-container-m">
                 <header id="consumerHeader" class="header-consumer-m">
                     <h3 class="username-consumer-m">{{name}}</h3>
                     <button class="button-header-consumer-m button" @click="userLoggingOut()">Logg ut</button>
@@ -13,7 +14,7 @@ const ConsumerPage = {
                 </div>
                 <div class="booking-container-consumer-m">
                     <div class="upcoming-container-m">
-                        <template v-for="item of appointments">
+                        <template v-for="item of userAppointments">
                             <div class="apmtbox-consumer-m">
                                 <div class="apmtbox-type-consumer-m">{{item.type}}</div>
 
@@ -31,32 +32,62 @@ const ConsumerPage = {
         return {
             title: "Dine kommende bookinger",
             name: "", 
-            appointments: ""
+            userAppointments: []
         }
     },
     mounted() {
         confirmLogin(); //Makes sure the user is logged in in order to access this site.
         let userObject = getCurrentUser();
         this.name = userObject.name;
+        this.assignAppointments(userObject);
         this.sortDate();
-        //make function to sort appointments
     },
     methods: {
         userLoggingOut() {
             logout();
-        }, 
+        },
         sortDate() {
+            //Reordering date format for readability
             for(let i = 0; i < appointments.length; i++){
-                const date = appointments[i].date.split(".").reverse();
-                const finalDate = date[0]+"."+date[1]+"."+date[2];
+                const date = appointments[i].date.split("-").reverse();
+                const finalDate = date[0]+"-"+date[1]+"-"+date[2];
                 appointments[i].date = finalDate;
             }
-
-            //Assign to appointments above do sort out correct appointments
-            console.log(appointments);
         },
-        closeOverlay() {
-            alert("Hello there");
+        assignAppointments(userObject) {
+            // Assigning correct user appointments
+            for(let i = 0; i < appointments.length; i++) {
+                for(let j = 0; j < userObject.appointmentIds.length; j++) {
+                    if(appointments[i].id === userObject.appointmentIds[j]) {
+                        const item = appointments[i];
+                        this.userAppointments.push(item);
+                    } else { /*do nothing*/ }
+                }
+            }
+            
+            // sorting by date
+            const arrayLength = this.userAppointments.length;
+            let uaArray = this.userAppointments;
+            
+            console.log(uaArray);
+            for(let n = 0; n < arrayLength; n++) {
+                for(let m = 0; m < arrayLength; m++) {
+                   if(uaArray[n].date < uaArray[m].date) {
+                       let a = uaArray[m];
+                       uaArray[m] = uaArray[n];
+                       uaArray[n] = a;
+                    } else { 
+                       // do nothing
+                    }
+                }
+            }
+            this.userAppointments = uaArray;
+            console.log(this.userAppointments);
+
+        },
+        overLayConsumer() {
+            let greyArea = document.getElementById("greyarea-m");
+            greyArea.style.opacity = 1;
         }
     
     }

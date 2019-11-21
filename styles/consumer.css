@@ -1,4 +1,8 @@
 
+.consumer-container-m {
+    z-index: 2;
+}
+
 .header-consumer-m {
     display: grid;
     grid-template-columns: 75% 25%;
@@ -33,7 +37,6 @@
     grid-row: 1;
 }
 
-
 .apmtbox-time-value-consumer-m::before {
     content: url(../resources/clockIcon.png);
 }
@@ -54,4 +57,3 @@
     grid-column: 3;
     margin-bottom: 0.3em;
 }
-

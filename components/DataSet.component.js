@@ -50,7 +50,7 @@ let users = [
         inField: null,
         contactPhone: "12345678",
         email: "bruker@epost.no",
-        appointmentIds: [0, 1],
+        appointmentIds: [0, 1, 3],
         notes: ["Er veldig Norsk", "Drikker for lite kaffe"],
     },
     {
@@ -107,6 +107,22 @@ let appointments = [
         time: "12:00",
         comment: "Kommer til å bli stabbet!",
         assigned: "James Stabsalot"
+    }, 
+    {
+        id: 2,
+        type: "Fysiologisk Testlab",
+        date: "2019-06-21",
+        time: "13:00",
+        comment: "Ingen kommentar",
+        assigned: "Anita Hakkekondis"
+    },
+    {
+        id: 3,
+        type: "Kostholdsveiledning",
+        date: "2019-03-01",
+        time: "18:00",
+        comment: "Jeg er sulten, veiled meg",
+        assigned: "Sten Gomlefjes"
     }
 ]
 

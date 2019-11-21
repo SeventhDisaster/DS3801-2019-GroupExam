@@ -1,21 +1,23 @@
 export default Vue.component("cancel-overlay", {
     template: `
-    <div class="greyaera-m" v-on:click="closeOverlay()">
-        <div class="cancel-appointment-box-m">
-            <div class="cancel-message-m">Er du sikker på at du vil kansellere timen din?</div>
-            <div class="infobox-m">
-                <div class="detail-appointment-m">{{}} den {{}}, kl {{}}</div>
-            </div>
-            <div class="button-container-m">
-                <button class="button">Ja, kanseller</button>
-                <button class="button">Nei, behold</button>
-            </div>
+    <div id="greyaera-m" class="greyarea-container-m overlay-common">
+        <div class="cancel-appointment-box-m overlay-common">
+            <div class="cancel-message-m overlay-common">Er du sikker på at du vil kansellere timen din?</div>
+            <div class="detail-appointment-m overlay-common"> den , kl</div>
+            <input type="text" class="commentbox-overlay-m">
+            <button class="button cancel-button-overlay-m" @click="cancelAppointment()">Ja, kanseller</button>
+            <button class="button abort-button-overlay-m" @click="remove()">Nei, behold</button>
         </div>
     </div>
     `,
-    method: {
-        delete() {
-            this.$emit("delete");
+    methods: {
+        cancelAppointment() {
+            console.log("pressed cancel appointment");
+            
+            //this.$emit("cancel");
+        },
+        remove() {
+            console.log("pressed remove overlay");
         }
 
         //making on click to send back when pressed to delete the appointment
