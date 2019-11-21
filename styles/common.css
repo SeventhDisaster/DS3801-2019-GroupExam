@@ -6,6 +6,10 @@
   border: none;
   font-family: 'Libre Franklin', sans-serif;
 }
+
+.button:focus {
+  outline: none;
+}
 .button-dark {
   background-color: #2F5350;
   color: #C5E6E0;
@@ -57,4 +61,16 @@ body {
   text-align: center;
   border: none;
   font-family: 'Libre Franklin', sans-serif;
+
+}
+
+.bookings-employee:focus {
+  background-color: rgb(90, 129, 127);
+  color: rgb(210, 241, 236);
+  outline: none;
+}
+
+.bookings-employee:hover {
+  background-color: rgb(180, 219, 215);
+  color: #2F5350;
 }
