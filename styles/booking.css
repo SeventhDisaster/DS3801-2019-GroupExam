@@ -1,0 +1,8 @@
+.type-selection-container{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: row; 
+    justify-content: start;
+    background-color: red;
+}
