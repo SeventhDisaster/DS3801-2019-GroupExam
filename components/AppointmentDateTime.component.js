@@ -7,8 +7,8 @@ export default Vue.component('appointment-form-datetime', {
         </div>
 
         <div>
-            <h3>Velg Tid: *</h3>
             <form :style="{display: (dateSelected ? 'block' : 'none')}">
+                <h3>Velg Tid: *</h3>
                 <label v-for="time in times">
                     <input type="radio" name="time" :value="time" @change="$emit('inputTime' , $event.target.value)"/> {{time}}
                 </label>
