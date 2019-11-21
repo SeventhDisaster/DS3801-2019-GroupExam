@@ -5,16 +5,21 @@ export default Vue.component('user-login-form',{
     <div class="content-box">
 
         <div id="group section row">
-            <div class="col span_1_of_3"></div>
-            <div class="col span_1_of_3">
-                <form>
-                    <h1 class="">Login:</h1>
+            <div class="col span_1_of_5 centered"></div>
+                <form class="col span_3_of_5 centered">
+                    <h1 class="centered">Logg inn:</h1>
                     <p>{{info}}</p>
-                    <input type="text" class="input-form" name="email" v-model="email" placeholder="E-post Adresse"></input>
+                    <input type="text" class="input-form" name="email" v-model="email" placeholder="E-post adresse"></input>
                     <input type="password" class="input-form" name="password" v-model="password" placeholder="Passord"></input>
-                    <button type="button" class="button button-light button-login" v-on:click="loginWith()">Logg inn</button>
                 </form>
-                <div class="col span_1_of_3"></div>
+                <div class="col span_1_of_5"></div>
+        </div>
+
+        <div class="group section row">
+        <div class="col span_1_of_3"></div>
+        <button type="button" class="button button-light centered col span_1_of_3" v-on:click="loginWith()">Logg inn</button>
+        <div class="col span_1_of_3"></div>
+        
         </div>
 
         <div class="group section row">

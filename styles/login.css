@@ -7,13 +7,14 @@
 }
 
 .input-form {
-    width: 25em;
+    width: 70%;
     height: 2em;
     border: none;
     margin: 1%;
-    padding: 0.5%;
+    padding: 2% 4%;
     font-family: 'Libre Franklin', sans-serif;
     border-radius: 6px;
     background-color: #C5E6E0;
     color: #2F5350;
+    float: center;
 }
