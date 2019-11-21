@@ -17,21 +17,21 @@ export default Vue.component('user-login-form',{
 
         <div class="group section row">
         <div class="col span_1_of_3"></div>
-        <button type="button" class="button button-light centered col span_1_of_3" v-on:click="loginWith()">Logg inn</button>
+        <button type="button" class="button button-light login-button centered col span_1_of_3" v-on:click="loginWith()">Logg inn</button>
         <div class="col span_1_of_3"></div>
         
         </div>
 
         <div class="group section row">
-            <div class="col span_1_of_4"></div>
-            <div class="col span_2_of_4">
+            <div class="col span_1_of_3"></div>
+            <div class="col span_1_of_3">
                 <p>Eksempel Bruker: bruker@epost.no - Test123</p>
                 <p>Eksempel Ansatt 1: ansatt1@clinic.no - Osteopop</p>
                 <p>Eksempel Ansatt 2: ansatt2@clinic.no - ProStabber1337</p>
                 <p>Eksempel Ansatt 2: ansatt3@clinic.no - FastFud4Life</p>
                 <p>Eksempel Ansatt 2: ansatt4@clinic.no - 123456</p>
             </div>
-            <div class="col span_1_of_4"></div>
+            <div class="col span_1_of_3"></div>
         </div>
 
             <div id="group section row">

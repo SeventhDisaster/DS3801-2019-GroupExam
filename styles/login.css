@@ -14,7 +14,16 @@
     padding: 2% 4%;
     font-family: 'Libre Franklin', sans-serif;
     border-radius: 6px;
-    background-color: #C5E6E0;
-    color: #2F5350;
+    background-color: #2F5350;
+    color: #C5E6E0;
     float: center;
+}
+
+.input-form::placeholder {
+    color: #C5E6E0;
+}
+
+.login-button {
+    background-color: #2F5350;
+    color: #C5E6E0;
 }
