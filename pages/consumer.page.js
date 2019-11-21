@@ -1,9 +1,9 @@
-import {confirmLogin, logout, getCurrentUser, getAppointments, appointments} from '../components/index.js'
+import {confirmLogin, logout, getCurrentUser, getAppointments, appointments, } from '../components/index.js'
 
 const ConsumerPage = {
     template: `
         <div>
-            <cancel-overlay></cancel-overlay>
+            <cancel-overlay v-if="visible" @hideOverlay="hideOverlay" :visible="visible"></cancel-overlay>
             <div id="consumer-container-m">
                 <header id="consumerHeader" class="header-consumer-m">
                     <h3 class="username-consumer-m">{{name}}</h3>
@@ -21,7 +21,7 @@ const ConsumerPage = {
                                 <div class="apmtbox-date-value-consumer-m">{{item.date}}</div>
 
                                 <div class="apmtbox-time-value-consumer-m"> {{item.time}}</div>
-                                <button :id="item.id" class="cancelbtn-consumer-m" @click="overLayConsumer()">X</button>
+                                <button :id="item.id" class="cancelbtn-consumer-m" @click="showOverlay">X</button>
                             </div>
                         </template>
                     </div>
@@ -32,7 +32,8 @@ const ConsumerPage = {
         return {
             title: "Dine kommende bookinger",
             name: "", 
-            userAppointments: []
+            userAppointments: [],
+            visible: false
         }
     },
     mounted() {
@@ -69,7 +70,6 @@ const ConsumerPage = {
             const arrayLength = this.userAppointments.length;
             let uaArray = this.userAppointments;
             
-            console.log(uaArray);
             for(let n = 0; n < arrayLength; n++) {
                 for(let m = 0; m < arrayLength; m++) {
                    if(uaArray[n].date < uaArray[m].date) {
@@ -82,14 +82,14 @@ const ConsumerPage = {
                 }
             }
             this.userAppointments = uaArray;
-            console.log(this.userAppointments);
-
         },
-        overLayConsumer() {
-            let greyArea = document.getElementById("greyarea-m");
-            greyArea.style.opacity = 1;
+        showOverlay() {
+            console.log("I ran")
+            this.visible = true;
+        },
+        hideOverlay() {
+            this.visible = false;
         }
-    
     }
 }
 

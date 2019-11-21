@@ -1,6 +1,6 @@
 export default Vue.component("cancel-overlay", {
     template: `
-    <div id="greyaera-m" class="greyarea-container-m overlay-common">
+    <div id="greyarea-m" class="greyarea-container-m overlay-common">
         <div class="cancel-appointment-box-m overlay-common">
             <div class="cancel-message-m overlay-common">Er du sikker på at du vil kansellere timen din?</div>
             <div class="detail-appointment-m overlay-common"> den , kl</div>
@@ -12,14 +12,13 @@ export default Vue.component("cancel-overlay", {
     `,
     methods: {
         cancelAppointment() {
+            this.$emit("hideOverlay");
             console.log("pressed cancel appointment");
-            
-            //this.$emit("cancel");
         },
         remove() {
+            this.$emit("hideOverlay");
             console.log("pressed remove overlay");
         }
-
-        //making on click to send back when pressed to delete the appointment
     }
 });
+
