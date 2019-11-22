@@ -71,3 +71,23 @@ body {
   text-align: center !important;
   float: center !important;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #E0F2EF; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2F5350; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(77, 124, 120); 
+}

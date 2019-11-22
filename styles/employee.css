@@ -67,6 +67,8 @@
     font-size: 29px;
 }
 
+
+
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
   @media only screen and (max-width: 480px) {
 	.span_3_of_3 {

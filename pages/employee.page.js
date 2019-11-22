@@ -44,6 +44,9 @@ const EmployeePage = {
                         <button class="button-light centered bookings-employee">13.00</button>
                         <button class="button-light centered bookings-employee">14.00</button>
                         <button class="button-light centered bookings-employee">15.00</button>
+                        <button class="button-light centered bookings-employee">16.00</button>
+                        <button class="button-light centered bookings-employee">17.00</button>
+                        <button class="button-light centered bookings-employee">18.00</button>
                     </div>
 
                     <div class="col span_1_of_5 centered">Tirsdag 26.11
@@ -55,6 +58,9 @@ const EmployeePage = {
                         <button class="button-light centered bookings-employee">13.00</button>
                         <button class="button-light centered bookings-employee">14.00</button>
                         <button class="button-light centered bookings-employee">15.00</button>
+                        <button class="button-light centered bookings-employee">16.00</button>
+                        <button class="button-light centered bookings-employee">17.00</button>
+                        <button class="button-light centered bookings-employee">18.00</button>
                     </div>
 
 
@@ -67,6 +73,9 @@ const EmployeePage = {
                         <button class="button-light centered bookings-employee">13.00</button>
                         <button class="button-light centered bookings-employee">14.00</button>
                         <button class="button-light centered bookings-employee">15.00</button>
+                        <button class="button-light centered bookings-employee">16.00</button>
+                        <button class="button-light centered bookings-employee">17.00</button>
+                        <button class="button-light centered bookings-employee">18.00</button>
                     </div>
 
 
@@ -79,6 +88,9 @@ const EmployeePage = {
                         <button class="button-light centered bookings-employee">13.00</button>
                         <button class="button-light centered bookings-employee">14.00</button>
                         <button class="button-light centered bookings-employee">15.00</button>
+                        <button class="button-light centered bookings-employee">16.00</button>
+                        <button class="button-light centered bookings-employee">17.00</button>
+                        <button class="button-light centered bookings-employee">18.00</button>
                     </div>
 
 
