@@ -1,10 +1,10 @@
-import {Appointment, appointments, getCurrentUser} from './Index.js';
+import {Appointment, appointments, getCurrentUser, updateAppointmentsData} from './Index.js';
 import { router } from "../router.js";
 
 export default Vue.component('appointment-form-preview', {
     template: `
     <div>
-        <h3>Din Bestilling:</h3>
+        <h3>Din Nåværende Bestilling:</h3>
         <h5><strong>Behandling:</strong></h5><p> {{type}} </h5>
         <h5><strong>Dato og Tid: </strong></h5><p> {{date}} - {{time}} </p>
         <h5><strong>Din Kommentar:</strong></h5><p> {{comment}} </p>
@@ -24,6 +24,7 @@ export default Vue.component('appointment-form-preview', {
                     let user = getCurrentUser();
                     user.appointmentIds.push(newAppointment.id);
                     appointments.push(newAppointment);
+                    updateAppointmentsData();
                     router.push('/brukerside')
                     
                 } else {

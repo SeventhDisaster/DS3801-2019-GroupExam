@@ -57,7 +57,7 @@ function login(email, password) {
                     let newAppointment = JSON.parse(localStorage.getItem("holdingAppointment"));
                     user.appointmentIds.push(newAppointment.id);
                     data.appointments.push(newAppointment);
-                    updateAppointmentsData()
+                    updateAppointmentsData();
                     localStorage.removeItem("holdingAppointment");
                 }
                 redirectToRelevantSite(user);

@@ -6,7 +6,7 @@ const BookingPage = {
             <div>
                 <p>{{status}} {{user.name}}</p>
             </div>
-            <make-appointment></make-appointment>
+            <make-appointment class="booking"></make-appointment>
         </div>
         `,
     data() {

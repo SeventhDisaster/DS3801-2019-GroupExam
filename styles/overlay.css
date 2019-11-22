@@ -1,26 +1,26 @@
 
 #greyarea-m {
     position: absolute;
-    background-color: black;
-    opacity: 0.5;
+    background-color:rgb(0, 0, 0, 0.5);
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-columns: 10% 80% 10%;
 }
 
 .cancel-appointment-box-m {
     background-color: white;
     position: relative;
     opacity: 1;
-    width: 70%;
-    height: 70%;
-    top: 15%;
-    left: 15%;
     display: grid;
     grid-template-rows: 20% 20% 40% 20%;
     grid-template-columns: 33% 33% 33%;
     padding: 0.5em;
+    grid-row: 2;
+    grid-column: 2;
 }
 
 .cancel-message-m {

@@ -3,7 +3,7 @@ import {confirmLogin, logout, getCurrentUser, getAppointments, appointments, } f
 const ConsumerPage = {
     template: `
         <div>
-            <cancel-overlay v-if="visible" @hideOverlay="hideOverlay" :visible="visible"></cancel-overlay>
+            <cancel-overlay v-if="visible" @deleteAppointment="deleteAppointment" @hideOverlay="hideOverlay" :visible="visible"></cancel-overlay>
             <div id="consumer-container-m">
                 <header id="consumerHeader" class="header-consumer-m">
                     <h3 class="username-consumer-m">{{name}}</h3>
@@ -21,7 +21,7 @@ const ConsumerPage = {
                                 <div class="apmtbox-date-value-consumer-m">{{item.date}}</div>
 
                                 <div class="apmtbox-time-value-consumer-m"> {{item.time}}</div>
-                                <button :id="item.id" class="cancelbtn-consumer-m" @click="showOverlay">X</button>
+                                <button :id="item.id" class="cancelbtn-consumer-m" @click="showOverlay(item.id)">X</button>
                             </div>
                         </template>
                     </div>
@@ -33,7 +33,8 @@ const ConsumerPage = {
             title: "Dine kommende bookinger",
             name: "", 
             userAppointments: [],
-            visible: false
+            visible: false, 
+            id: ""
         }
     },
     mounted() {
@@ -83,12 +84,23 @@ const ConsumerPage = {
             }
             this.userAppointments = uaArray;
         },
-        showOverlay() {
-            console.log("I ran")
+        showOverlay(id) {
+            this.id = id;
             this.visible = true;
         },
         hideOverlay() {
             this.visible = false;
+        }, 
+        deleteAppointment() {
+            console.log(this.id)
+            let array = this.userAppointments;
+            
+            for(let item of array) {
+                if(item.id === this.id) {
+                    const index = array.indexOf(item);
+                    this.userAppointments.splice(index, 1); // deleting wrong
+                }
+            }
         }
     }
 }
