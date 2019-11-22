@@ -16,34 +16,36 @@ const ConsumerPage = {
                     <div class="upcoming-container-m">
                         <!-- Upcoming bookings -->
                         <div v-if="userAppointments.length != 0"> <!-- Run if user has appointments -->
-                        <template v-for="item of userAppointments">
-                            <div class="apmtbox-consumer-m">
-                                <div class="apmtbox-type-consumer-m">{{item.type}}</div>
-                                <div class="apmtbox-date-value-consumer-m">{{item.date}}</div>
-                                <div class="apmtbox-time-value-consumer-m"> {{item.time}}</div>
-                                <button :id="item.id" class="cancelbtn-consumer-m" @click="showOverlay(item.id)">X</button>
+                            <template v-for="item of userAppointments">
+                                <div class="apmtbox-consumer-m">
+                                    <div class="apmtbox-type-consumer-m">{{item.type}}</div>
+                                    <div class="apmtbox-date-value-consumer-m">{{item.date}}</div>
+                                    <div class="apmtbox-time-value-consumer-m"> {{item.time}}</div>
+                                    <button :id="item.id" class="cancelbtn-consumer-m" @click="showOverlay(item.id)">X</button>
+                                </div>
+                            </template>
+                        </div>
+                        <div v-else> <!-- Run if there is no appointments -->
+                            <h4>{{noAppointmentsText}}</h4>
+                        </div>
+                        </div>
+                        <div v-if="oldAppointments.length != 0">
+                            <!-- Split between upcoming and previous bookings -->
+                            <div class="previous-split-container-consumer-m">
+                                <div class="splitline-consumer-m"></div>
+                                <h4 class="previous-title-consumer-m">Tidligere bookinger</h4>
                             </div>
-                        </template>
-                    </div>
-                    <div v-else> <!-- Run if there is no appointments -->
-                        <h4>{{noAppointmentsText}}</h4>
-                    </div>
-                    </div>
-                    <!-- Split between upcoming and previous bookings -->
-                    <div class="previous-split-container-consumer-m">
-                        <div class="splitline-consumer-m"></div>
-                        <h4 class="previous-title-consumer-m">Tidligere bookinger</h4>
-                    </div>
-                    <!-- Previous bookings -->
-                    <div class="previus-bookings-consumer-m">
-                        <template v-for="preBooking of oldAppointments">
-                            <div class="apmtbox-consumer-m previous-consumer-m">
-                                <div class="apmtbox-type-consumer-m">{{preBooking.type}}</div>
-                                <div class="apmtbox-date-value-consumer-m">{{preBooking.date}}</div>
-                                <div class="apmtbox-time-value-consumer-m"> {{preBooking.time}}</div>
-                            </div>
-                        </template>
-                    </div>
+                            <!-- Previous bookings -->
+                                <div class="previus-bookings-consumer-m">
+                                    <template v-for="preBooking of oldAppointments">
+                                        <div class="apmtbox-consumer-m previous-consumer-m">
+                                            <div class="apmtbox-type-consumer-m">{{preBooking.type}}</div>
+                                            <div class="apmtbox-date-value-consumer-m">{{preBooking.date}}</div>
+                                            <div class="apmtbox-time-value-consumer-m"> {{preBooking.time}}</div>
+                                        </div>
+                                    </template>
+                                </div>
+                        </div>
                 </div>
             </div>
         </div>`,
@@ -51,7 +53,7 @@ const ConsumerPage = {
         return {
             title: "Dine bookinger",
             name: "", 
-            noAppointmentsText: "Du har ingen bookinger enda",
+            noAppointmentsText: "Du har ingen bookinger.",
             previousText: "",
             userAppointments: [],
             oldAppointments: [],
