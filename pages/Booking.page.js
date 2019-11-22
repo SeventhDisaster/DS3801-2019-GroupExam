@@ -4,7 +4,7 @@ const BookingPage = {
     template: `
         <div class="content-box">
             <div>
-                <p>{{status}} {{user.name}}</p>
+                <p class="booking-login-status">{{status}} {{user.name}}</p>
             </div>
             <make-appointment class="booking"></make-appointment>
         </div>
@@ -17,7 +17,7 @@ const BookingPage = {
     },
     mounted() {
         if(getCurrentUser()){
-            this.status = "Du er innlogget som:";
+            this.status = "Pålogget:";
             this.user = getCurrentUser();
         }
     },

@@ -1,24 +1,29 @@
+import { router } from "../router.js";
+
 export default Vue.component('make-appointment', {
     template: `
-        <div id="booking-grid-template" class="content-box centered">
-            <button class="button booking-cancel cancel"></button>
-            <h2 class="booking-header">Timeplanlegger:</h2>
+        <div id="booking-grid-template" class="content-box">
+            <button class="button booking-cancel cancel" @click="cancel"></button>
+            <h2 class="booking-header">Bestilling av Time</h2>
             <div id="booking-component-container">
-                <div :style='{display: (currentSection == 0 ? "block" : "none")}'>
+                <div class="booking-component" :style='{display: (currentSection == 0 ? "block" : "none")}'>
                     <appointment-form-type @selected="setType"></appointment-form-type>
                 </div>
-                <div :style='{display: (currentSection == 1 ? "block" : "none")}'>
+                <div class="booking-component" :style='{display: (currentSection == 1 ? "block" : "none")}'>
                     <appointment-form-datetime @inputDate="setDate" @inputTime="setTime" @enter="enter"></appointment-form-datetime>
                 </div>
-                <div :style='{display: (currentSection == 2 ? "block" : "none")}'>
+                <div class="booking-component" :style='{display: (currentSection == 2 ? "block" : "none")}'>
                     <appointment-form-comment @inputComment="setComment" @key="enter" @enter="enter"></appointment-form-comment>
                 </div>
-                <div :style='{display: (currentSection == 3 ? "block" : "none")}'>
+                <div class="booking-component" :style='{display: (currentSection == 3 ? "block" : "none")}'>
                     <appointment-form-preview :type="type" :date="date" :time="time" :comment="comment"></appointment-form-preview>
                 </div>
             </div>
-            <button class="booking-nav-button booking-nav-back" @click="back" :style='{display: (currentSection > 0 ? "inline-block" : "none")}'> < </button>
-            <button class="booking-nav-button booking-nav-forw" @click="forward" :style='{display: (currentSection < 3 ? "inline-block" : "none")}'> > </button>
+            <button class="booking-nav-button booking-nav-back" @click="back" :style='{display: (currentSection > 0 ? "inline-block" : "none")}' alt></button>
+            <div>
+
+            </div>
+            <button class="booking-nav-button booking-nav-forw" @click="forward" :style='{display: (currentSection < 3 ? "inline-block" : "none")}'></button>
         </div>`,
     props: [],
     data() {
@@ -63,6 +68,9 @@ export default Vue.component('make-appointment', {
         },
         enter(){
             this.forward();
+        },
+        cancel(){
+            router.push('/')
         }
     }
 });

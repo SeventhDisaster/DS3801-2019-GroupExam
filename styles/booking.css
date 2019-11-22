@@ -1,10 +1,19 @@
+html {
+    height: 100%;
+}
+
+.booking-login-status{
+    margin: 0% auto 0px auto;
+    width: fit-content;
+}
+
 #booking-grid-template{
     display: grid;
-    height: 90%;
+    height: 80%;
     width: 90%;
     margin: auto;
-    grid-template-columns: 10% 20% auto 20% 10%;
-    grid-template-rows: 10% auto 20%;
+    grid-template-columns: 10% 20% 40% 20% 10%;
+    grid-template-rows: 7% auto 10%;
 }
 
 .booking {
@@ -14,6 +23,11 @@
 .cancel {
     background-image: url(../resources/xicon.png);
     background-size: contain;
+}
+
+.booking-component{
+    height: 100%;
+    width: 100%;
 }
 
 #booking-component-container{
@@ -31,15 +45,28 @@
     border-radius: 20px;
 }
 
+.booking-type-button {
+    font-size: 1rem;
+}
+
+.booking-date-warning {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.booking-date-input {
+    display: block;
+    width: 70% !important;
+    margin: auto;
+    font-size: 1.3rem;
+}
+
 .booking-time-radio {
-    display: flex;
-    margin: 4px auto;
-    width: 45%;
-    height: 100%;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-flow: column;
-    flex-direction: row;
+    display: inline-block;
+    width: 47%;
+    margin: 8px 1px !important;
 }
 
 .booking-time-radio input {
@@ -48,13 +75,21 @@
 
 .booking-time-radio div {
     text-align: center;
-    width: 100%;
     padding: 1rem;
 }
 
-.booking-header{
+.booking-header {
     grid-column: 2/5;
     grid-row: 1;
+    font-size: 1.6rem;
+    margin: 0px auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+.booking-component-header {
+    width: fit-content;
+    margin: 16px auto 8px auto;
 }
 
 .booking-cancel {
@@ -76,24 +111,88 @@
     text-decoration: underline;
 }
 
+.booking-comment {
+    display: block;
+    width: 70%;
+    height: 40vh;
+    margin: 4% auto;
+    resize: none;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.booking-comment-continue {
+    width: 50%;
+    margin: 4% auto;
+}
+
+.booking-preview h3{
+    font-size: 2rem;
+    margin: 8px auto;
+}
+
+.booking-preview-receipt {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0,50,30,.5);
+    border-radius: 20px;
+    padding: 5%;
+}
+
+.booking-preview h5{
+    font-size: 1.3rem;
+    margin: 8px auto;
+}
+
+.booking-preview p{
+    font-size: 1rem;
+    margin: 8px auto;
+}
+
+.booking-preview button{
+    width: 80%;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
 .booking-nav-button {
     grid-row: 3;
-    width: 100%;
-    height: 100%;
+    min-width: 50px;
+    max-width: 80px;
+    min-height: 50px;
+    max-height: 80px;
+    margin: auto;
+    border: none;
+    background-size: contain;
+    opacity: .5;
+}
+
+.booking-nav-button:hover {
+    cursor: pointer;
+    opacity: .9;
+    transform: scale(1.1);
+}
+
+.booking-nav-button:active {
+    opacity: 1;
+    transform: scale(.9);
 }
 
 .booking-nav-back{
     grid-column: 2;
+    background-image: url(../resources/arrowLeft.png);
+    background-color: rgba(0,0,0,0);
 }
 
 .booking-nav-forw{
     grid-column: 4;
+    background-image: url(../resources/arrowRight.png);
+    background-color: rgba(0,0,0,0);
 }
 
 .type-selection-container{
-    height: 100%;
+    height: 80%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
 }
