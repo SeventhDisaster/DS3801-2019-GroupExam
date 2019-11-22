@@ -196,3 +196,20 @@ html {
     justify-content: space-between;
     align-items: center;
 }
+
+
+/* The clearlocalstorage button */
+#clearStorage {
+    position: absolute;
+    opacity: 0;
+    width: 30px;
+    height: 30px;
+    bottom: 0px;
+    left: 0px;
+}
+
+#clearStorage:hover {
+    cursor: pointer;
+    opacity: .6;
+    background-color: red;
+}
