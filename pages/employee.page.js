@@ -11,7 +11,7 @@ const EmployeePage = {
                 <div class="col span_1_of_5 centered"></div>
                 <div class="col span_1_of_5 centered"></div>
                 <div class="col span_1_of_5 centered"></div>
-                <button class="button-dark logout-employee-button left-float col span_1_of_5" v-on:click="loggut()">Logg Ut</button>
+                <button class="button-dark logout-employee-button left-float col span_1_of_5" v-on:click="loggut()">Logg ut</button>
         </div>
             
                 <div class="group section row">
