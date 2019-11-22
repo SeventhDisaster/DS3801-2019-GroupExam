@@ -1,7 +1,43 @@
 const FrontPage = {
     template: `
     <div>
-        <div><router-link to=login>Logg inn</router-link></div>
+        <nav> 
+            <div class="logo">
+                <h4>LOGO</h4>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Om oss</a>
+                </li>
+                <li>
+                    <a href="#">Akupunktur</a>
+                </li>
+                <li>
+                    <a href="#">Osteopati</a>
+                </li>
+                <li>
+                    <a href="#">Kosthold</a>
+                </li>
+                <li>
+                    <a href="#">Fysisk lab</a>
+                </li>
+                <li>
+                    <a href="#">Priser</a>
+                </li>
+                <li>
+                    <div><router-link to=login>Logg inn</router-link></div>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+            </div>
+        </nav>
+        
         <header class="front-page-header">
             <div class="hero-image">
             <h1>Du kan forvente behandling av høy kvalitet, <br>hvor ditt behov står sentralt.</h1>
