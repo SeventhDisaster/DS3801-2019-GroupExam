@@ -72,11 +72,6 @@ body {
   float: center !important;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 13px;
-}
-
 /* Track */
 ::-webkit-scrollbar-track {
   background: #E0F2EF; 
