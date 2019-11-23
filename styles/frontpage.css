@@ -1,5 +1,5 @@
 body {
-    background-color: #E0F2EF;
+    background-color: #8AD0C8;
     color: #294B48 ;
 }
 
@@ -7,17 +7,24 @@ body {
 /* NAVIGATION MENU SECTION */
 
 nav {
-    position: fixed;
+    max-width: 1240px;
     display: flex;
     min-height: 8vh;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    background-color: #C5E6E0;
     width: 100%;
     z-index: 99;
+    margin: 0 auto;
+    padding-top: 20px;
 }
 
+.logo {
+    height: 100px;
+    width: auto;
+    
+}
 .nav-links {
+    
     display: flex;
     justify-content: space-around;
     width: 50%;
@@ -29,8 +36,17 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #294B48;
+    color: #fff;
+    font-size: 100%;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
 }
+
+.nav-links a:hover,
+.nav-links a:active {
+    border-bottom: 2px solid #2a6e69  ;
+} 
 
 .burger {
     display: none;
@@ -60,7 +76,7 @@ nav {
         position: absolute;
         right: 0px;
         top: 8vh;
-        height: 100vh;
+        height: 92vh;
         flex-direction: column;
         align-items: center;
         width: 50%;
@@ -70,9 +86,9 @@ nav {
     }
     .nav-links li {
         opacity: 0;
+        
     }
     .burger {
-        margin-left: 40px;
         display: block;
     }
 }
@@ -116,13 +132,25 @@ nav {
 section {
     padding: 5px 0;
 }
+
 .front-page-header {
-    background-image: url(../resources/Anderson-College-PTA-OTA041-2.jpg);
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../resources/Anderson-College-PTA-OTA041-2.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
     width: 100vw;
-    color: #000000;
+    
+}
+
+.hero-image h1 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 250%;
+    font-weight: 300;
+    
+    letter-spacing: 1px;
+    word-spacing: 4px;
 }
 
 
@@ -176,11 +204,16 @@ section {
     display: inline-block;
     padding: 15px 35px;
     text-decoration: none;
-    background-color: #83C6BF;
+    background-color: #2a6e69 ;
     border-radius: 25px;
-    color: #2F5350;
+    color: #E0F2EF;
     font-size: 120%;
+    transition: all 0.5s ease;
 }  
+
+.btn:hover {
+    background-color: #3a9993;
+}
 
 .map {
     width: 100%;

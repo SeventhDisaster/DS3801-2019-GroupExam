@@ -1,7 +1,15 @@
+//to do    make background grey when burger menu is clicked
+
+//features en fullverdig konsultasjon
+// ingen ventetid
+//
+
+
+
 const FrontPage = {
     template: `
     <div>
-        <nav> 
+        <!--<nav> 
             <div class="logo">
                 <h4>LOGO</h4>
             </div>
@@ -10,22 +18,48 @@ const FrontPage = {
                     <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="#">Om oss</a>
+                    <a href="#tjenester">Tjenester</a>
                 </li>
                 <li>
-                    <a href="#">Akupunktur</a>
+                    <a href="#priser">Priser</a>
                 </li>
                 <li>
-                    <a href="#">Osteopati</a>
+                    <a href="#adresse">Addresse</a>
                 </li>
                 <li>
-                    <a href="#">Kosthold</a>
+                    <a href="#">Sign up</a>
                 </li>
                 <li>
-                    <a href="#">Fysisk lab</a>
+                    <div><router-link to=login>Logg inn</router-link></div>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+            </div>
+        </nav> -->
+        
+        <header class="front-page-header">
+        <nav> 
+            <div class="logo-pic">
+                <img class="logo" src="./resources/KristianiaUniversityCollege_hvit_rgb.png">
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="#">Priser</a>
+                    <a href="#tjenester">Tjenester</a>
+                </li>
+                <li>
+                    <a href="#priser">Priser</a>
+                </li>
+                <li>
+                    <a href="#adresse">Addresse</a>
+                </li>
+                <li>
+                    <a href="#">Sign up</a>
                 </li>
                 <li>
                     <div><router-link to=login>Logg inn</router-link></div>
@@ -37,11 +71,9 @@ const FrontPage = {
                 <div class="line-3"></div>
             </div>
         </nav>
-        
-        <header class="front-page-header">
             <div class="hero-image">
-            <h1>Du kan forvente behandling av høy kvalitet, <br>hvor ditt behov står sentralt.</h1>
-            <a class="btn" href="#">Bestill time</a>
+                <h1>Du kan forvente behandling av høy kvalitet, <br>hvor ditt behov står sentralt.</h1>
+                <a class="btn" href="#">Bestill time</a>
             </div>
         </header>
 
@@ -52,18 +84,17 @@ const FrontPage = {
                 <p class="intro">Du trenger ikke henvisning fra lege.</p>
             </div>
             <div class="row">    
-                <h2 class="intro">Tjenester</h2>
+                <h2 id="tjenester" class="intro">Tjenester</h2>
             </div>
             <div class="group section row">    
                 <div class="col span_1_of_4 test">
                 <h3 class="intro">Osteopat</h3>
                     <p class="feature-p">En osteopat undersøker og behandler muskel- og skjelettsmerter med manuelle behandlingsteknikker på benk. Terapeuten fokuserer på å avdekke funksjons- og bevegelsesforstyrrelser som kan være med på å skape smerte. </p>
-                    <a href>Les mer</a>
+                    
                 </div>
                 <div class="col span_1_of_4 test">
                     <h3 class="intro">Akupunktur</h3>
                     <p class="feature-p">Akupunktur er en persontilpasset behandling der diagnostikk, behandling og oppfølging er skreddersydd for hver pasient med sine unike særtrekk og behov under hvert trinn av behandlingen.</p>
-                    <a href="#adresse">Les mer</a>
                 </div>
                 <div class="col span_1_of_4 box">
                     <h3 class="intro">Kostholdveiledning</h3>
@@ -75,7 +106,7 @@ const FrontPage = {
                 </div>
             </div>
         </section>
-        <section class="opening-hours">
+        <section id="priser" class="opening-hours">
             <div class="group section row">
                 <div class="col span_1_of_2 box">
                     <img src="resources/group-satisfied-students-showing-thumbs-up_1098-2827.jpg">
