@@ -183,6 +183,20 @@ html {
     background-color: rgba(0,0,0,0);
 }
 
+.booking-step-indicator{
+    grid-column: 3;
+    grid-row: 3;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 3rem;
+    transition: .2s ease;
+}
+
+.booking-step-indicator span {
+    transition: .2s ease;
+}
+
 .booking-nav-forw{
     grid-column: 4;
     background-image: url(../resources/arrowRight.png);

@@ -20,8 +20,11 @@ export default Vue.component('make-appointment', {
                 </div>
             </div>
             <button class="booking-nav-button booking-nav-back" @click="back" :style='{display: (currentSection > 0 ? "inline-block" : "none")}' alt></button>
-            <div>
-
+            <div class="booking-step-indicator">
+                <span @click="setSection('0')" :style='{opacity: (currentSection == 0 ? "1" : "0.4"), transform: (currentSection == 0 ? "scale(1)" : "scale(.5)")}'>•</span>
+                <span @click="setSection('1')" :style='{opacity: (currentSection == 1 ? "1" : "0.4"), transform: (currentSection == 1 ? "scale(1)" : "scale(.5)")}'>•</span>
+                <span @click="setSection('2')" :style='{opacity: (currentSection == 2 ? "1" : "0.4"), transform: (currentSection == 2 ? "scale(1)" : "scale(.5)")}'>•</span>
+                <span @click="setSection('3')" :style='{opacity: (currentSection == 3 ? "1" : "0.4"), transform: (currentSection == 3 ? "scale(1)" : "scale(.5)")}'>•</span>
             </div>
             <button class="booking-nav-button booking-nav-forw" @click="forward" :style='{display: (currentSection < 3 ? "inline-block" : "none")}'></button>
         </div>`,
@@ -45,6 +48,9 @@ export default Vue.component('make-appointment', {
             if(this.currentSection < 3){
                 this.currentSection++;
             }
+        },
+        setSection(section) {
+            this.currentSection = parseInt(section);
         },
         setType(type) {
             switch(type) {
