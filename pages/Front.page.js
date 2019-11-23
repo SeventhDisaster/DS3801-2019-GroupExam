@@ -73,7 +73,8 @@ const FrontPage = {
         </nav>
             <div class="hero-image">
                 <h1>Du kan forvente behandling av høy kvalitet, <br>hvor ditt behov står sentralt.</h1>
-                <a class="btn" href="#">Bestill time</a>
+                <router-link class="btn" to=booking>Bestill time</router-link>
+                
             </div>
         </header>
 
@@ -109,7 +110,7 @@ const FrontPage = {
         <section id="priser" class="opening-hours">
             <div class="group section row">
                 <div class="col span_1_of_2 box">
-                    <img src="resources/group-satisfied-students-showing-thumbs-up_1098-2827.jpg">
+                    <img class="priser-img" src="resources/group-satisfied-students-showing-thumbs-up_1098-2827.jpg">
                 </div>
                 <div class="col span_1_of_2">
                     <h2 class="intro">Priser</h2>
