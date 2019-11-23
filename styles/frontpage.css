@@ -34,6 +34,7 @@ nav {
 
 .burger {
     display: none;
+    cursor: pointer;
 }
 
 .burger div {
@@ -41,6 +42,7 @@ nav {
     height: 3px;
     margin: 5px;
     background-color: #294B48;
+    transition: all 0.3s ease;
 }
 
 @media screen and (max-width:1024px) {
@@ -58,20 +60,50 @@ nav {
         position: absolute;
         right: 0px;
         top: 8vh;
-        height: 70vh;
+        height: 100vh;
         flex-direction: column;
         align-items: center;
         width: 50%;
         background-color: #C5E6E0;
-        /* transform: translateX(100%); */
+        transform: translateX(100%); 
+        transition: transform 0.5s ease-in;
     }
     .nav-links li {
-        opacity: 1;
+        opacity: 0;
     }
     .burger {
+        margin-left: 40px;
         display: block;
     }
 }
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinksFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line-1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line-2 {
+    opacity: 0;
+}
+
+.toggle .line-3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
 
 
 
@@ -88,7 +120,7 @@ section {
     background-image: url(../resources/Anderson-College-PTA-OTA041-2.jpg);
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     color: #000000;
 }
