@@ -48,6 +48,11 @@ export default Vue.component('user-login-form',{
             info: ""
         }
     },
+    mounted() {
+        if(localStorage.getItem("holdingAppointment")){
+            this.info = "Du må være pålogget for å bestille en time";
+        }
+    },
     methods:{
         loginWith() {
             console.log("Attempted login with: " + this.email + " - " + this.password)
