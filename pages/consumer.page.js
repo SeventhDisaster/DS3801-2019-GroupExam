@@ -1,4 +1,4 @@
-import {confirmLogin, logout, getCurrentUser, getAppointments, appointments, } from '../components/index.js'
+import {confirmLogin, logout, getCurrentUser, getAppointments, appointments} from '../components/index.js'
 
 const ConsumerPage = {
     template: `
@@ -6,7 +6,7 @@ const ConsumerPage = {
             <cancel-overlay v-if="visible" @deleteAppointment="deleteAppointment" @hideOverlay="hideOverlay" :visible="visible"></cancel-overlay>
             <div id="consumer-container-m">
                 <header id="consumerHeader" class="header-consumer-m">
-                    <h3 class="username-consumer-m">{{name}}</h3>
+                    <h4 class="username-consumer-m">{{name}}</h4>
                     <button class="button-header-consumer-m button" @click="userLoggingOut()">Logg ut</button>
                 </header>
                 <div>
@@ -74,7 +74,6 @@ const ConsumerPage = {
         },
         assignAppointments(userObject) {
             let arr = [];
-            console.log(arr.length);
 
             // Assigning correct user appointments
             for(let i = 0; i < appointments.length; i++) {
