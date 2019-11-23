@@ -1,9 +1,11 @@
 //to do    make background grey when burger menu is clicked
+// make background unscrollable when burger menu is on
+// make burger disappear after clickin on a link
+// try to make menu follow only when scrolling up
 
 //features en fullverdig konsultasjon
 // ingen ventetid
 //
-
 
 
 const FrontPage = {
@@ -161,3 +163,5 @@ export default FrontPage;
 /*  <div class="row">    
            <p class="feature-p">Akupunktur er en persontilpasset behandling der diagnostikk, behandling og oppfølging er skreddersydd for hver pasient med sine unike særtrekk og behov under hvert trinn av behandlingen.</p>
             </div> */
+
+            

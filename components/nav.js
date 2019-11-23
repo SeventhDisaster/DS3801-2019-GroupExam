@@ -20,4 +20,12 @@ const navSlide = () => {
   
 }
 
+
+document.querySelector(".btn").addEventListener("click", () => {
+    console.log("I love u");
+});
+
+window.addEventListener("click", e => {
+    console.log(e);
+});
 navSlide();
