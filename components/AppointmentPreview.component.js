@@ -1,4 +1,4 @@
-import {Appointment, appointments, getCurrentUser, updateAppointmentsData} from './Index.js';
+import {Appointment, appointments, users, getCurrentUser,  updateAll } from './Index.js';
 import { router } from "../router.js";
 
 export default Vue.component('appointment-form-preview', {
@@ -23,12 +23,15 @@ export default Vue.component('appointment-form-preview', {
 
                 //If a user is logged in
                 if (getCurrentUser()) {
-                    let user = getCurrentUser();
-                    user.appointmentIds.push(newAppointment.id);
-                    appointments.push(newAppointment);
-                    updateAppointmentsData();
-                    router.push('/brukerside')
-                    
+                    let currentUser = getCurrentUser();
+                    for(let user of users) {
+                        if(user.email === currentUser.email){
+                            user.appointmentIds.push(newAppointment.id);
+                            appointments.push(newAppointment);
+                            updateAll();
+                            router.push('/brukerside')
+                        }
+                    }
                 } else {
                     localStorage.setItem("holdingAppointment", JSON.stringify(newAppointment));
                     router.push('/login');

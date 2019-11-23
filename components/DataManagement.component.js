@@ -57,7 +57,7 @@ function login(email, password) {
                     let newAppointment = JSON.parse(localStorage.getItem("holdingAppointment"));
                     user.appointmentIds.push(newAppointment.id);
                     data.appointments.push(newAppointment);
-                    updateAppointmentsData();
+                    updateAll();
                     localStorage.removeItem("holdingAppointment");
                 }
                 redirectToRelevantSite(user);
@@ -90,12 +90,29 @@ function updateAppointmentsData() {
     setStorage("appointments", data.appointments)
 }
 
+function updateCurrentSession() {
+    if(getStorage("userSession")){
+        let current = getStorage("userSession");
+        for(let user of data.users){
+            if(user.email == current.email){
+                setStorage("userSession", user);
+            }
+        }
+    }
+}
+
+function updateAll() {
+    updateUsersData();
+    updateAppointmentsData();
+    updateCurrentSession();
+}
+
 function getCurrentUser() {
     return getStorage("userSession");
 }
 
 function getAppointments() {
-    return getStorage("appointmentSession");
+    return getStorage("appointments");
 }
 
 //Saves data to localstorage (Similar to Java hashmaps)
@@ -126,4 +143,4 @@ function clearStorage() {
 }
 
 
-export {loadData, login, logout, clearStorage, updateUsersData, updateAppointmentsData, confirmLogin, getCurrentUser, getAppointments}
+export {loadData, login, logout, clearStorage, updateAll, confirmLogin, getCurrentUser, getAppointments}

@@ -1,4 +1,4 @@
-import {User, users, login, updateUsersData} from './Index.js';
+import {User, users, login, updateAll} from './Index.js';
 
 export default Vue.component('user-register-form',{
     template: ` 
@@ -44,8 +44,7 @@ export default Vue.component('user-register-form',{
                             this.phone ? this.phone : "", 
                             this.email);
                         users.push(newUser);
-                        updateUsersData();
-                        console.log(users);
+                        updateAll();
                         login(this.email, this.password1);
                     } else {
                         this.info = "Passordene du skrev in matcher ikke!"

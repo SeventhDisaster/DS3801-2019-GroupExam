@@ -1,4 +1,4 @@
-import { updateUsersData , updateAppointmentsData} from "./Index.js";
+import { updateAll } from "./Index.js";
 
 //This file contains a sample dataset of users
 //Constructor for user object (Applicable only for regular users) Our project does not allow creating employees
@@ -128,12 +128,12 @@ let appointments = [
 
 function setUsers(userData) {
     users = userData;
-    updateUsersData();
+    updateAll();
 }
 
 function setAppointments(appointmentsData) {
     appointments = appointmentsData;
-    updateAppointmentsData();
+    updateAll();
 }
 
 export {User, Appointment, users, setUsers, setAppointments, appointments};

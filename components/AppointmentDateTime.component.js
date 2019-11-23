@@ -1,10 +1,12 @@
+import { appointments } from "./Index.js";
+
 export default Vue.component('appointment-form-datetime', {
     template: `
     <div>
         <div :style="{display: (dateSelected ? 'none' : 'block')}">
             <h3 class="booking-component-header">Velg Dato</h3>
             <p class="booking-date-warning">{{invalidDateInfo}}</p>
-            <input class="booking-date-input" type="date" :value="dateInput" @input="setDate($event.target.value)" placeholder="Dato" required/>
+            <input class="booking-date-input" type="date" :min="currentDate" :value="dateInput" @input="setDate($event.target.value)" placeholder="Dato" required/>
         </div>
 
         <div>
@@ -31,15 +33,21 @@ export default Vue.component('appointment-form-datetime', {
             month: "",
             year: "",
             invalidDateInfo: "",
+            currentDate: "",
             times: ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00'],
             days: ['Søndag', 'Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag'],
             months: ['Januar', 'Februar', 'Mars', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Desember']
         }
     },
+    mounted() {
+        let currentDate = `${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()}`
+        this.currentDate = currentDate;
+    },
     methods: {
         setDate(date) {
             this.dateInput = date;
             this.date = new Date(date);
+            this.findOpenTimes();
             let dayIndex = this.date.getDay();
             this.dayName = this.days[dayIndex];
             this.day = this.date.getDate();
@@ -50,14 +58,27 @@ export default Vue.component('appointment-form-datetime', {
             let tomorrowDate = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${parseInt(currentDate.getDate()) + 1}`;
             if(isWeekend || date < tomorrowDate){
                 this.dateSelected = false; //No appointments during weekends
-                this.invalidDateInfo = "Klinikken er ikke åpen i helgene"
+                this.invalidDateInfo = "Klinikken er ikke åpen i helgene";
                 if(date < tomorrowDate){
-                    this.invalidDateInfo = "Kan ikke bestille timer tidligere enn 1 dag i forkant"
+                    this.invalidDateInfo = "Kan ikke bestille timer tidligere enn 1 dag i forkant";
                 }
                 this.dateInput = "";
             } else {
+                this.invalidDateInfo = "";
                 this.dateSelected = true;
                 this.$emit('inputDate', date);
+            }
+        },
+        findOpenTimes() {
+            for(let appointment of appointments) {
+                if(appointment.date == this.date) {
+                    alert(appointment);
+                    for(let time in this.times) {
+                        if(this.times[time] == appointment.time) {
+                            this.times.splice(time,1);
+                        }
+                    }
+                }
             }
         },
         setTime(time) {
