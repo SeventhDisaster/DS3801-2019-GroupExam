@@ -7,19 +7,13 @@
     text-align: center;
     border: none;
     font-family: 'Libre Franklin', sans-serif;
-    
 }
 
-.bookings-employee:focus {
+/* .bookings-employee:focus {
     background-color: rgb(90, 129, 127);
     color: rgb(210, 241, 236);
     outline: none;
-}
-  
-.bookings-employee:hover {
-    background-color: rgb(174, 212, 209);
-    color: #2F5350;
-}
+} */
 
 .button-employee {
     border-radius: 7px;
@@ -30,6 +24,7 @@
     border: none;
     font-family: 'Libre Franklin', sans-serif;
     font-size: 100%;
+    cursor: pointer;
 }
 
   .button-employee:hover {

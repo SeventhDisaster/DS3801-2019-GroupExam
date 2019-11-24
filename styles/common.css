@@ -6,6 +6,7 @@
   border: none;
   font-family: 'Libre Franklin', sans-serif;
   transition: .05s ease;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -27,20 +28,17 @@
 .button-dark {
   background-color: #2F5350;
   color: #C5E6E0;
-  cursor: pointer;
 }
 
 .button-medium {
   background-color: #83C6BF;
   color: #DBFFF8;
-  cursor: pointer;
 
 }
 
 .button-light {
   background-color: #C5E6E0;
   color: #2F5350;
-  cursor: pointer;
 
 }
 
@@ -69,6 +67,11 @@ body {
 .centered {
   text-align: center !important;
   float: center !important;
+}
+
+.no-padding-no-margin {
+  padding: 0;
+  margin: 0;
 }
 
 /* Track */
