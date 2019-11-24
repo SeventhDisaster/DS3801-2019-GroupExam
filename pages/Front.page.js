@@ -11,15 +11,15 @@
 const FrontPage = {
     template: `
     <div>  
-        <header class="front-page-header">
-        <nav class="sticky"> 
+        <header id="home" class="front-page-header">
+        <nav > 
             <div class="logo-pic">
                 <img class="logo" src="./resources/KristianiaUniversityCollege_hvit_rgb.png" alt="Kristiania logo">
                 <img class="logo-black" src="./resources/KristianiaUniversityCollege_sort_rgb.png" alt="Kristiania logo">
             </div>
             <ul class="nav-links">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="#home">Home</a>
                 </li>
                 <li>
                     <a href="#tjenester">Tjenester</a>
@@ -50,7 +50,7 @@ const FrontPage = {
             </div>
         </header>
 
-        <section  class="section-features">
+        <section  class="section-features js--section-features">
             <div class="introduction row">
                 <p class="intro">Vi behandler akutte og langvarige plager / ubehag, men kan også hjelpe til med forebyggende tiltak. <br> Du kan forvente en individuell samtale, undersøkelse, behandling og råd rettet mot dine behov.</p>
                 <p class="intro">Studentene har selv ansvar for konsultasjonene, men har alltid en erfaren veileder tilgjengelig..</p>
@@ -66,7 +66,7 @@ const FrontPage = {
                     <p class="feature-p">En osteopat undersøker og behandler muskel- og skjelettsmerter med manuelle behandlingsteknikker på benk. Terapeuten fokuserer på å avdekke funksjons- og bevegelsesforstyrrelser som kan være med på å skape smerte. </p>
                 </div>
                 <div class="col span_1_of_4 test">
-                    <ion-icon class="ion-icon" name="snow"></ion-icon>
+                    <ion-icon id="hu" class="ion-icon" name="snow"></ion-icon>
                     <h3 class="service-title">Akupunktur</h3>
                     <p class="feature-p">Akupunktur er en persontilpasset behandling der diagnostikk, behandling og oppfølging er skreddersydd for hver pasient med sine unike særtrekk og behov under hvert trinn av behandlingen.</p>
                 </div>
