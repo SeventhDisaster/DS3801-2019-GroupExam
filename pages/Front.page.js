@@ -10,42 +10,12 @@
 
 const FrontPage = {
     template: `
-    <div>
-        <!--<nav> 
-            <div class="logo">
-                <h4>LOGO</h4>
-            </div>
-            <ul class="nav-links">
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#tjenester">Tjenester</a>
-                </li>
-                <li>
-                    <a href="#priser">Priser</a>
-                </li>
-                <li>
-                    <a href="#adresse">Addresse</a>
-                </li>
-                <li>
-                    <a href="#">Sign up</a>
-                </li>
-                <li>
-                    <div><router-link to=login>Logg inn</router-link></div>
-                </li>
-            </ul>
-            <div class="burger">
-                <div class="line-1"></div>
-                <div class="line-2"></div>
-                <div class="line-3"></div>
-            </div>
-        </nav> -->
-        
+    <div>  
         <header class="front-page-header">
-        <nav> 
+        <nav class="sticky"> 
             <div class="logo-pic">
-                <img class="logo" src="./resources/KristianiaUniversityCollege_hvit_rgb.png">
+                <img class="logo" src="./resources/KristianiaUniversityCollege_hvit_rgb.png" alt="Kristiania logo">
+                <img class="logo-black" src="./resources/KristianiaUniversityCollege_sort_rgb.png" alt="Kristiania logo">
             </div>
             <ul class="nav-links">
                 <li>
@@ -115,7 +85,7 @@ const FrontPage = {
         <section id="priser" class="opening-hours">
             <div class="group section row">
                 <div class="col span_1_of_2 box">
-                    <img class="priser-img" src="resources/group-satisfied-students-showing-thumbs-up_1098-2827.jpg">
+                    <img class="priser-img" src="resources/group-satisfied-students-showing-thumbs-up_1098-2827.jpg" alt="Happy students">
                 </div>
                 <div class="col span_1_of_2">
                     <h2 class="section-title">Priser</h2>

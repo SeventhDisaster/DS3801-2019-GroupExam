@@ -7,7 +7,7 @@ body {
 /* NAVIGATION MENU SECTION */
 
 nav {
-    max-width: 1240px;
+    width: 100%;
     display: flex;
     min-height: 8vh;
     justify-content: space-between;
@@ -16,11 +16,20 @@ nav {
     z-index: 99;
     margin: 0 auto;
     padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
 }
 
-.logo {
+.logo{
     height: 100px;
     width: auto;
+}
+
+.logo-black {
+    height: 50px;
+    width: auto;
+    display: none;
 }
 
 .nav-links {
@@ -48,6 +57,29 @@ nav {
     border-bottom: 2px solid #2a6e69  ;
 } 
 
+
+/* STICKY NAVIGATION*/
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #C5E6E0;
+    padding-top: 0px;
+    box-shadow: 0 2px 2px rgb(175, 204, 199);
+}
+
+.sticky .nav-links a {
+    text-decoration: none;
+    color: #294B48;
+}
+
+.sticky .logo {display: none;}
+.sticky .logo-black {display: block;}
+
+
+
+/* BURGER NAVIGATION*/
 .burger {
     display: none;
     cursor: pointer;
