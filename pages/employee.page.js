@@ -113,9 +113,6 @@ const EmployeePage = {
                     <div class="col span_1_of_3"></div>
                 </div>
 
-                <div class="group section row">
-                    <div class="col span_1_of_3"></div>
-                </div>
         </div>`,
     data() {
         return {
