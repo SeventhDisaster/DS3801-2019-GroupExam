@@ -1,0 +1,94 @@
+
+
+/* PICTURE SIDE*/
+
+.signup-picture {
+    display: block;
+    background-image:linear-gradient(rgb(47, 83, 80,0.5), rgba(47, 83, 80, 0.5)), url(../resources/Akupunktur2.jpg);
+    background-position: center;
+    height: 100vh;
+}
+
+.signup-logo {
+    position: relative;
+    min-width: 320px;
+    top:40%;
+    left: 30%;
+    transform: translate(-25%, -25%);
+}
+
+.signup-logo-kristiania {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.signup-logo h2 {
+    color: #fff;
+    font-weight: 50;
+    text-align: center;
+}
+
+/* FORM SIDE*/
+
+.signup-form {
+    margin: 0 auto;
+    width: 400px;
+    margin-top:20%;
+    box-sizing: border-box;
+}
+
+.signup-form h2, p{
+   text-align: center;
+}
+
+.signup-form p {
+    font-size: 80%;
+}
+
+.signup-input {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    left: 10%;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    font-size: 90%;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 25px;
+    box-shadow: 0 2px 2px rgb(150, 148, 148);
+}
+
+.signup-btn {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    left: 25%;
+    box-sizing: border-box;
+    padding: 15px 80px;
+    text-decoration: none;
+    border: none;
+    background-color: #2F5350 ;
+    border-radius: 25px;
+    color: #E0F2EF;
+    font-size: 90%;
+    transition: all 0.5s ease;
+    
+}
+
+.signup-login {
+    margin-top: 10px;
+    margin-left: 26%;
+    display: inline-block;
+    font-size: 80%;
+    text-decoration: none;
+    color: #2F5350;
+}
+
+@media screen and (max-width: 768px) {
+    .signup-picture {
+        display: none;
+    }
+}
