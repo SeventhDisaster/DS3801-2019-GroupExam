@@ -119,7 +119,11 @@ const FrontPage = {
                 </div>
                 <div class="col span_1_of_2">
                     <h2 class="section-title">Priser</h2>
-                    <p class="hours-p">HK studenter får 50% rabatt hos oss!</p>
+                    <p>Første behandling ordinær 300,- / rabatt* 150,-</p>
+                    <p>Oppfølgende behandling ordinær 220,- / rabatt*100,-</p>
+                    <p>*Rabatten gjelder: Honnør over 60 år, ungdom under 18 år, studenter og HK ansatte</p>
+                    <p>Kostveiledning er gratis</p>
+                    <p>Sommerklinikken for akupunktur og osteopati har egen priser</p>
                 </div>
             </div>   
         </section>
