@@ -15,7 +15,7 @@ export default Vue.component('client-list-element', {
             </ul>
             <form>
                 <textarea v-model="newNote" placeholder="Skriv nytt notat her" @keyup.enter="addNote(user.email)"></textarea>
-                <button action="submit" @click="addNote(user.email)">Add new note</button>
+                <button class="" action="submit" @click="addNote(user.email)">Add new note</button>
             </form>
         </div>
     </div>

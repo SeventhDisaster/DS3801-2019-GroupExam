@@ -5,15 +5,14 @@ const EmployeeClientsPage = {
     <div class="content-box">
         <div class="group section row">
             <div class="col span_1_of_3"></div>
-            <h1 class="col span_1_of_3">{{title}}</h1>
+            <h1 class="col span_1_of_3 centered">{{title}}</h1>
             <div class="col span_1_of_3"></div>
+        </div>
 
-            <div class="group section row">
-                <div v-for="client in clients" :key="client.email">
-                    <client-list-element :user="client"></client-list-element>
+            <div class="" v-for="client in clients" :key="client.email">
+                <client-list-element :user="client"></client-list-element>
                 </div>
             </div>
-        </div>
     </div>`,
     data() {
         return {
