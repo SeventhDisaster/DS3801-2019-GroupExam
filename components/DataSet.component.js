@@ -44,14 +44,24 @@ class Appointment {
 //Sample userlist, obviously login information would not be stored this openly in a real scenario
 let users = [
     {
-        name: "Ole Nordmann",
+        name: "Ola Nordmann",
         password: "Test123",
         isEmployed: false,
         inField: null,
         contactPhone: "12345678",
-        email: "bruker@epost.no",
+        email: "brukermann@epost.no",
         appointmentIds: [0, 1, 3],
         notes: ["Er veldig Norsk", "Drikker for lite kaffe"],
+    },
+    {
+        name: "Nora Nordkvinne",
+        password: "Test456",
+        isEmployed: false,
+        inField: null,
+        contactPhone: "23456789",
+        email: "brukerdame@epost.no",
+        appointmentIds: [],
+        notes: ["Litt for eksentrisk", "Drikker bare vann og sprit"],
     },
     {
         name: "Kari Kroppsbrekker",
