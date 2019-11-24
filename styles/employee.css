@@ -9,11 +9,9 @@
     font-family: 'Libre Franklin', sans-serif;
 }
 
-/* .bookings-employee:focus {
-    background-color: rgb(90, 129, 127);
-    color: rgb(210, 241, 236);
+.bookings-employee:focus {
     outline: none;
-} */
+}
 
 .button-employee {
     border-radius: 7px;
@@ -32,11 +30,9 @@
     color: #2F5350;
   }
 
-  /* .button-employee:focus {
-    background-color: rgb(174, 212, 209);
-    color: #2F5350;
+  .button-employee:focus {
     outline: none;
-  } */
+  } 
 
   .logout-employee-button {
     width: 6em;
