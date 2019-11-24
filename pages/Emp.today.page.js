@@ -5,15 +5,39 @@ components.appointments
 
 const EmployeeTodayPage = {
     template: `
-        <div>
-            <h1>{{title}}</h1>
-            <div v-for="myAppointment in myAppointments">
-                {{myAppointment.date}} - {{myAppointment.time}}
+    <div class="content-box">
+
+        <div class="group section row">
+            <button class="col span_1_of_6 button-dark button back-button">Tilbake</button>
+            <div class="col span_1_of_6"></div>
+            <div class="col span_1_of_6"></div>
+            <div class="col span_1_of_6"></div>
+            <div class="col span_1_of_6"></div>
+            <div class="col span_1_of_6"></div>
+        </div>
+
+        <div class="group section row">
+            <div class="col span_1_of_3"></div>
+            <div class="col span_1_of_3 centered"><h1>{{title}}</h1></div>
+            <div class="col span_1_of_3"></div>
+        </div>
+
+            <div class="group section row">
+                <div class="col span_1_of_3 centered"></div>
+                <div class="col span_1_of_3 centered"><h2>Timer</h2></div>
+                <div class="col span_1_of_3 centered"></div>
             </div>
-        </div>`,
+
+            <div class="group section row">
+                <div class="col span_1_of_3 centered"></div>
+                <div class="col span_1_of_3 emp-today-style centered" v-for="myAppointment in myAppointments">
+                    {{myAppointment.time}} - {{myAppointment.date}}</div>
+                <div class="col span_1_of_3"></div>
+            </div>
+    </div>`,
     data() {
         return {
-            title: "Employee day schedule page",
+            title: "Dagens timeavtaler",
             myAppointments: []
         }
     },
@@ -23,7 +47,10 @@ const EmployeeTodayPage = {
 
         for (let appointment of components.appointments) {
             if (appointment.type == field) {
-            this.myAppointments.push(appointment)
+                let editedAppointment = appointment;
+                let date = editedAppointment.date.split("-");
+                editedAppointment.date = `${date[2]}-${date[1]}-${date[0]}`; 
+            this.myAppointments.push(editedAppointment)
             }
         }
     }

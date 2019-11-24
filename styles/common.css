@@ -70,6 +70,11 @@ body {
   float: center !important;
 }
 
+.no-padding-no-margin {
+  padding: 0;
+  margin: 0;
+}
+
 /* Track */
 ::-webkit-scrollbar-track {
   background: #E0F2EF; 
