@@ -13,7 +13,7 @@ const EmployeePage = {
                 <div class="col span_1_of_5 centered"></div>
                 <div class="col span_1_of_5 centered"></div>
                 <div class="col span_1_of_5 centered"></div>
-                <button class="button-dark logout-employee-button left-float col span_1_of_5" v-on:click="loggut()">Logg ut</button>
+                <button class="button-dark button logout-employee-button left-float col span_1_of_5" v-on:click="loggut()">Logg ut</button>
         </div>
             
                 <div class="group section row">
@@ -39,7 +39,7 @@ const EmployeePage = {
                 <div class="group section row">
                     <div class="col span_1_of_5 centered">Mandag 25.11
                         <button class="button-light centered bookings-employee">08.00</button>
-                        <button class="button-light centered bookings-employee">09.00</button>
+                        <button class="button-dark centered bookings-employee">09.00</button>
                         <button class="button-light centered bookings-employee">10.00</button>
                         <button class="button-light centered bookings-employee">11.00</button>
                         <button class="button-light centered bookings-employee">12.00</button>
