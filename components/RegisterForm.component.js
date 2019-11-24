@@ -3,7 +3,7 @@ import {User, users, login, updateAll} from './Index.js';
 export default Vue.component('user-register-form',{
     template: ` 
     <div>
-        <form>
+        <form class="signup-form">
             <h2>Register Deg:</h2>
             <p>{{info}}</p>
             <input class="signup-input" type="text" name="name" v-model="name" placeholder="Fullt Navn*">

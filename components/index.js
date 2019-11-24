@@ -15,6 +15,9 @@ export * from './AppointmentDateTime.component.js';
 export * from './AppointmentComment.component.js';
 export * from './AppointmentPreview.component.js';
 
+//Employee Site Components
+export * from './Emp.clients.list.component.js';
+
 //Common Components
 export * from './Overlay.component.js';
 
