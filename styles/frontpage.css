@@ -1,5 +1,5 @@
 body {
-    background-color: #8AD0C8;
+    background-color: #C5E6E0 ;
     color: #294B48 ;
 }
 
@@ -169,11 +169,37 @@ section {
     font-size: 20px;
 }
 
-.section-features h3 {
-    font-size: 100%;
+.section-features {
+    margin-bottom: 120px;
 }
+
+.section-features h3 {
+    font-size: 115%;
+    text-align: center;
+}
+
+.introduction {
+    margin-bottom: 80px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title:after {
+    display: block;
+    height: 2px;
+    background-color :#294B48;
+    content: " ";
+    width: 120px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+
 .intro{
-    line-height: 145%;
+    line-height: 155%;
     text-align: center;
 }
 
@@ -198,7 +224,6 @@ section {
 
 .test {
     min-height: 242px;
-    background-color: #ffffff;
 }
 
 .btn {
@@ -221,6 +246,15 @@ section {
     height: 300px;
     background-color: #2F5350;
 }
+
+/* IKONER */
+
+.ion-icon {
+    font-size: 300%;
+    display: block;
+    margin: auto;
+}
+
 
 @media screen and (max-width: 1070px) {
     .nav-links {

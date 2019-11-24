@@ -80,31 +80,34 @@ const FrontPage = {
             </div>
         </header>
 
-        <section class="section-features">
-            <div class="row">
-                <p class="intro">Vi behandler akutte og langvarige plager / ubehag, men kan også hjelpe til med forebyggende tiltak. Du kan forvente en individuell samtale, undersøkelse, behandling og råd rettet mot dine behov.</p>
+        <section  class="section-features">
+            <div class="introduction row">
+                <p class="intro">Vi behandler akutte og langvarige plager / ubehag, men kan også hjelpe til med forebyggende tiltak. <br> Du kan forvente en individuell samtale, undersøkelse, behandling og råd rettet mot dine behov.</p>
                 <p class="intro">Studentene har selv ansvar for konsultasjonene, men har alltid en erfaren veileder tilgjengelig..</p>
-                <p class="intro">Du trenger ikke henvisning fra lege.</p>
+                <p id="tjenester" class="intro">Du trenger ikke henvisning fra lege.</p>
             </div>
-            <div class="row">    
-                <h2 id="tjenester" class="intro">Tjenester</h2>
+            <div  class="row">    
+                <h2  class="section-title">Tjenester</h2>
             </div>
             <div class="group section row">    
                 <div class="col span_1_of_4 test">
-                <h3 class="intro">Osteopat</h3>
+                    <ion-icon class="ion-icon" name="heart"></ion-icon>
+                    <h3 class="service-title">Osteopat</h3>
                     <p class="feature-p">En osteopat undersøker og behandler muskel- og skjelettsmerter med manuelle behandlingsteknikker på benk. Terapeuten fokuserer på å avdekke funksjons- og bevegelsesforstyrrelser som kan være med på å skape smerte. </p>
-                    
                 </div>
                 <div class="col span_1_of_4 test">
-                    <h3 class="intro">Akupunktur</h3>
+                    <ion-icon class="ion-icon" name="snow"></ion-icon>
+                    <h3 class="service-title">Akupunktur</h3>
                     <p class="feature-p">Akupunktur er en persontilpasset behandling der diagnostikk, behandling og oppfølging er skreddersydd for hver pasient med sine unike særtrekk og behov under hvert trinn av behandlingen.</p>
                 </div>
                 <div class="col span_1_of_4 box">
-                    <h3 class="intro">Kostholdveiledning</h3>
+                    <ion-icon class="ion-icon" name="magnet"></ion-icon>
+                    <h3 class="service-title">Kostholdveiledning</h3>
                     <p class="feature-p">Veiledning passer ypperlig for deg som ønsker å forebygge sykdom, gå ned eller opp i vekt, spise optimalt med tanke på trening og prestasjon, har allergier eller intoleranser som krever tilpassing av kosten.</p>
                 </div>
                 <div class="col span_1_of_4 box">
-                    <h3 class="intro">Fysiologisk testlab</h3>
+                    <ion-icon class="ion-icon" name="leaf"></ion-icon>
+                    <h3 class="service-title">Fysiologisk testlab</h3>
                     <p class="feature-p">Testing av egen helse er samtidig både motiverende og gir verdifull informasjon for mange andre. Derfor tilbyr vi tester til deg som ønsker å teste din fysiske tilstand og prestasjonsevne.</p>
                 </div>
             </div>
@@ -115,14 +118,14 @@ const FrontPage = {
                     <img class="priser-img" src="resources/group-satisfied-students-showing-thumbs-up_1098-2827.jpg">
                 </div>
                 <div class="col span_1_of_2">
-                    <h2 class="intro">Priser</h2>
+                    <h2 class="section-title">Priser</h2>
                     <p class="hours-p">HK studenter får 50% rabatt hos oss!</p>
                 </div>
             </div>   
         </section>
         <section class="last-class">
             <div class="row">    
-                <h2 id="adresse" class="intro">Adresse</h2>
+                <h2 id="adresse" class="section-title">Adresse</h2>
                 <div class="group section row">
                     <div class="col span_1_of_2">
                         <p class="intro"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.261076351581!2d10.74266541566557!3d59.9112143712732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e88371902fb%3A0x4812bb829faca24d!2sH%C3%B8yskolen%20Kristiania%20%7C%20Campus%20Kvadraturen!5e0!3m2!1sno!2sno!4v1574352027972!5m2!1sno!2sno" 
