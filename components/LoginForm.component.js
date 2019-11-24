@@ -34,21 +34,6 @@ export default Vue.component('user-login-form',{
             <div class="col span_1_of_3"></div>
         </div>
 
-            <div id="group section row">
-            <div class="col span_1_of_3"></div>
-            <div class="col span_1_of_3"></div>
-            <div class="col span_1_of_3"></div>
-
-            <div id="group section row">
-            <div class="col span_1_of_3"></div>
-            <div class="col span_1_of_3"></div>
-            <div class="col span_1_of_3"></div>
-
-            <div id="group section row">
-            <div class="col span_1_of_3"></div>
-            <div class="col span_1_of_3"></div>
-            <div class="col span_1_of_3"></div>
-
         </div>
     </div>`,
     data: function() {
