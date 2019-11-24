@@ -67,6 +67,7 @@ nav {
     background-color: #C5E6E0;
     padding-top: 0px;
     box-shadow: 0 2px 2px rgb(175, 204, 199);
+    z-index: 9999;
 }
 
 .sticky .nav-links a {
