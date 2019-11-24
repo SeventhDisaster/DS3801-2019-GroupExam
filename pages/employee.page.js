@@ -3,6 +3,8 @@ import {
     logout
 } from '../components/Index.js';
 
+import {router} from '../router.js';
+
 const EmployeePage = {
     template: `
         <div class="content-box">
@@ -21,10 +23,10 @@ const EmployeePage = {
                 </div>
 
                 <div class="group section row">
-                    <button class="col span_1_of_4 centered button-employee">Profil</button>
-                    <button class="col span_1_of_4 centered button-employee">Dagens timer</button>
-                    <button class="col span_1_of_4 centered button-employee">Mailboks</button>
-                    <button class="col span_1_of_4 centered button-employee">Klienter</button>
+                    <button @click="toProfile" class="col span_1_of_4 centered button-employee">Profil</button>
+                    <button @click="toToday" class="col span_1_of_4 centered button-employee">Dagens timer</button>
+                    <button @click="toMail" class="col span_1_of_4 centered button-employee">Mailboks</button>
+                    <button @click="toClient" class="col span_1_of_4 centered button-employee">Klienter</button>
                 </div>
 
 
@@ -125,6 +127,18 @@ const EmployeePage = {
     methods: {
         loggut() {
             logout();
+        },
+        toProfle() {
+            //Not yet
+        },
+        toToday() {
+            router.push('/ansattidag');
+        },
+        toMail(){
+            //Not yet
+        },
+        toClient() {
+            router.push('/clientdata')
         }
     }
 }
