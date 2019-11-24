@@ -9,6 +9,8 @@ import EmployeeTodayPage from './pages/Emp.today.page.js';
 
 import Testpage from './pages/Test.page.js';
 
+router.push("/register")
+
 const router = new VueRouter({
     routes: [
         {
