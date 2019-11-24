@@ -123,13 +123,13 @@ const EmployeePage = {
             logout();
         },
         toProfile() {
-            //Not yet
+            router.push('/ansattprofil');
         },
         toToday() {
             router.push('/ansattidag');
         },
         toMail(){
-            //Not yet
+            router.push('/ansattmail');
         },
         toClient() {
             router.push('/klientdata')
