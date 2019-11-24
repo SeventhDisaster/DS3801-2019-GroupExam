@@ -3,10 +3,10 @@ import * as components from './index.js';
 export default Vue.component('client-list-element', {
     template: `
     <div>
-        <label>{{user.name}}
-            <input type="checkbox" :checked="isActive">
+        <label>{{user.name}}    
+            <input type="checkbox" v-model="isActive">
         </label>
-        <div v-if="isActive">
+        <div v-show="isActive">
             <ul>
                 <li v-for="(note, index) in user.notes">
                     <input @keyup="setNoteChange(user.email, index, $event.target.value)" :value="note">
@@ -49,6 +49,7 @@ export default Vue.component('client-list-element', {
             for(let user of components.users) {
                 if(user.email == userEmail){
                     user.notes.push(this.newNote);
+                    this.newNote = "";
                 }
             }
         }
