@@ -31,7 +31,7 @@ const FrontPage = {
                     <a href="#adresse">Addresse</a>
                 </li>
                 <li>
-                    <a href="#">Sign up</a>
+                <div><router-link to=register>Register deg</router-link></div>
                 </li>
                 <li>
                     <div><router-link to=login>Logg inn</router-link></div>

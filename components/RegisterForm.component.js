@@ -4,14 +4,14 @@ export default Vue.component('user-register-form',{
     template: ` 
     <div>
         <form>
-            <h1>Register Deg:</h1>
+            <h2>Register Deg:</h2>
             <p>{{info}}</p>
-            <p>Fullt Navn: *</p><input type="text" name="name" v-model="name" placeholder="Fullt Navn"></input>
-            <p>E-Post: *</p><input type="text" name="email" v-model="email" placeholder="E-post Adresse"></input>
-            <p>Mobil:</p><input type="text" name="phone" v-model="phone" placeholder="+47 987 65 432"></input>
-            <p>Passord: *</p><input type="password" name="password1" v-model="password1" placeholder="Passord"></input>
-            <p>Gjenta Passord: *</p><input type="password" name="password2" v-model="password2" placeholder="Passord"></input>
-            <button type="button" v-on:click="register()">Registrer</button>
+            <input class="signup-input" type="text" name="name" v-model="name" placeholder="Fullt Navn*">
+            <input class="signup-input" type="text" name="email" v-model="email" placeholder="E-post Adresse*">
+            <input class="signup-input" type="text" name="phone" v-model="phone" placeholder="+47 987 65 432*">
+            <input class="signup-input" type="password" name="password1" v-model="password1" placeholder="Passord*">
+            <input class="signup-input" type="password" name="password2" v-model="password2" placeholder="Passord*">
+            <button class="signup-btn" type="button" v-on:click="register()">Registrer</button>
         </form>
     </div>`,
     data: function() {
@@ -21,7 +21,7 @@ export default Vue.component('user-register-form',{
             password2: "",
             name: "",
             phone: "",
-            info: "Registerer deg i klinikkens system!"
+            info: "Registrer deg i klinikkens system!"
         }
     },
     methods:{
