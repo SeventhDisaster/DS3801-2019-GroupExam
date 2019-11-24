@@ -16,6 +16,8 @@ export default Vue.component('appointment-form-preview', {
     props: ['type', 'date', 'time', 'comment'],
     methods: {
         makeAppointment() {
+            updateAll();
+
             //Make sure all required fields are filled
             if(this.type && this.date && this.time) {
                 let newAppointment = new Appointment(this.type, this.date, this.time, this.comment);

@@ -122,7 +122,7 @@ const EmployeePage = {
         loggut() {
             logout();
         },
-        toProfle() {
+        toProfile() {
             //Not yet
         },
         toToday() {
@@ -132,7 +132,7 @@ const EmployeePage = {
             //Not yet
         },
         toClient() {
-            router.push('/clientdata')
+            router.push('/klientdata')
         }
     }
 }
