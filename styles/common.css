@@ -74,6 +74,15 @@ body {
   margin: 0;
 }
 
+.low-opacity {
+  opacity: 0.7;
+}
+
+
+
+
+
+
 /* Track */
 ::-webkit-scrollbar-track {
   background: #E0F2EF; 

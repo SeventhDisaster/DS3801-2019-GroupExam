@@ -37,11 +37,6 @@
     color: #2F5350;
     outline: none;
   }
-  
-  .section-border {
-      border: 2px !important;
-      border-color: #2F5350;
-  }
 
   .logout-employee-button {
     width: 6em;
