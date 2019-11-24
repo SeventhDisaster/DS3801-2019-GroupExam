@@ -29,17 +29,22 @@
 .col {
 	display: block;
 	float:left;
-	margin: 0% 0 0% 1.6%;
+	margin: 1% 0 1% 1.6%;
+}
 
+.col-margin {
+	display: block;
+	float:left;
+	margin: 0% 0 0% 1.6%;
 }
 
 .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
-
+.col-margin:first-child { margin-left: 0; }
 
 /*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
-	.col { 
+	.col, .col-margin { 
 		margin: 1% 0 1% 0%;
 	}
 }
