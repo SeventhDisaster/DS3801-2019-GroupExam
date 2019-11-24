@@ -9,8 +9,8 @@ export default Vue.component('user-login-form',{
                 <form class="col span_3_of_5 centered">
                     <h1 class="centered">Logg inn:</h1>
                     <p>{{info}}</p>
-                    <input type="text" class="input-form" name="email" v-model="email" placeholder="E-post adresse"></input>
-                    <input type="password" class="input-form" name="password" v-model="password" placeholder="Passord"></input>
+                    <input type="text" class="input-form" name="email" v-model="email" placeholder="E-post adresse"/>
+                    <input type="password" class="input-form" name="password" v-model="password" placeholder="Passord" @keyup.enter="loginWith()"/>
                 </form>
                 <div class="col span_1_of_5"></div>
         </div>
