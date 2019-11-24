@@ -44,7 +44,7 @@ export default Vue.component('user-login-form',{
         }
     },
     mounted() {
-        if(localStorage.getItem("holdingAppointment")){
+        if (localStorage.getItem("holdingAppointment")) {
             this.info = "Du må være pålogget for å bestille en time";
         }
     },
