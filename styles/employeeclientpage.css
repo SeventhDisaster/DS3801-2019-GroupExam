@@ -56,3 +56,16 @@ textarea {
 .new-note-form {
     margin: 5px;
 }
+
+.background-image-employee {
+    background-image: url("../resources/KristianiaUniversityCollege_hvit_rgb.png");
+    min-height: 100px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right top;
+    
+}
+
+.background-invisible {
+    visibility: hidden;
+}

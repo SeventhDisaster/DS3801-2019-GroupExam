@@ -3,6 +3,7 @@ import * as components from './index.js';
 export default Vue.component('client-list-element', {
     template: `
     <div class="group section row">
+        
         <div class="col span_1_of_2 user-info-box">
 
             <div class="group section row">
@@ -10,6 +11,7 @@ export default Vue.component('client-list-element', {
                     <label class="user-info-label">{{user.name}}    
                         <input type="checkbox" style="display:none" v-model="isActive">
                     </label>
+
                 
 
                 <div v-show="isActive">
@@ -20,7 +22,7 @@ export default Vue.component('client-list-element', {
                         </li>
                     </ul>
 
-                    <form class="new-note-form group section row">
+                    <form class="new-note-form group section row centered">
                         <div class="col span_1_of_3 centered"></div>
                             <textarea class="col span_3_of_3 centered form-text-area" v-model="newNote" placeholder="Skriv nytt notat her" @keyup.enter="addNote(user.email)"></textarea>
                         <div class="col span_1_of_3 centered"></div>
@@ -36,8 +38,9 @@ export default Vue.component('client-list-element', {
                 </div>
 
             </div>
-
+            
         </div>
+
     </div>
     `,
     props: ['user'],
