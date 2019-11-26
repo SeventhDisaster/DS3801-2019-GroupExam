@@ -9,7 +9,7 @@ import EmployeeTodayPage from './pages/Emp.today.page.js';
 import EmployeeProfilePage from './pages/Emp.profile.page.js';
 import EmployeeMailPage from './pages/Emp.mail.page.js';
 
-import Testpage from './pages/Test.page.js';
+
 
 const router = new VueRouter({
     routes: [
@@ -82,16 +82,7 @@ const router = new VueRouter({
             meta: {
                 title: "Timebestilling"
             }
-        },
-        {
-            //Delete test-page later
-            path: '/test',
-            component: Testpage,
-            meta: {
-                title: "Hodeverk og sånn"
-            }
         }
-
     ]
 })
 
