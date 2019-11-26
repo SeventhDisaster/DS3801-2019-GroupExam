@@ -85,9 +85,9 @@ const ConsumerPage = {
             let appointments = getAppointments();
             
             // Assigning correct user appointments
-            for(let i = 0; i < appointments.length; i++) {
-                for(let j = 0; j < userObject.appointmentIds.length; j++) {
-                    if(appointments[i].id === userObject.appointmentIds[j]) {
+            for (let i = 0; i < appointments.length; i++) {
+                for (let j = 0; j < userObject.appointmentIds.length; j++) {
+                    if (appointments[i].id === userObject.appointmentIds[j]) {
                         const item = appointments[i];
                         this.appointHolder.push(item);
                     } else { /*do nothing*/ }
@@ -126,7 +126,7 @@ const ConsumerPage = {
         },
         parseDate(appointments) {
             //Reordering date format for readability
-            for(let i = 0; i < appointments.length; i++){
+            for (let i = 0; i < appointments.length; i++) {
                 const date = appointments[i].date.split("-").reverse();
                 const finalDate = date[0]+"-"+date[1]+"-"+date[2];
                 appointments[i].date = finalDate;
@@ -142,8 +142,8 @@ const ConsumerPage = {
         deleteAppointment() {
             let array = this.myAppointments;
             
-            for(let item of array) {
-                if(item.id === this.id) {
+            for (let item of array) {
+                if (item.id === this.id) {
                     const index = array.indexOf(item);
                     this.myAppointments.splice(index, 1); 
                 }

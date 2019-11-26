@@ -6,6 +6,7 @@
     display: block;
     background-image:linear-gradient(rgb(47, 83, 80,0.5), rgba(47, 83, 80, 0.5)), url(../resources/Akupunktur2.jpg);
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
 }

@@ -25,7 +25,7 @@ export default Vue.component('user-login-form',{
         <div class="group section row">
             <div class="col span_1_of_3"></div>
             <div class="col span_1_of_3">
-                <p>Eksempel Bruker: bruker@epost.no - Test123</p>
+                <p>Eksempel Bruker: brukermann@epost.no - Test123</p>
                 <p>Eksempel Ansatt 1: ansatt1@clinic.no - Osteopop</p>
                 <p>Eksempel Ansatt 2: ansatt2@clinic.no - ProStabber1337</p>
                 <p>Eksempel Ansatt 2: ansatt3@clinic.no - FastFud4Life</p>

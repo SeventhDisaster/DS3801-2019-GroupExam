@@ -12,6 +12,7 @@ Color scheme:
 - #A6DBD4 - medium
 - #8AD0C8 - medium light
 - #C5E6E0 - light
+- #D1695C - red button
 
 
 CSS grid:

@@ -16,7 +16,7 @@ import { appointments } from './DataSet.component.js';
 
 //Used to load in all userSessio data
 function loadUsersData() {
-    if(!getStorage("users")) {
+    if (!getStorage("users")) {
         setStorage("users", data.users);
     } else {
         data.setUsers(getStorage("users"));
@@ -24,7 +24,7 @@ function loadUsersData() {
 }
 
 function loadAppointmentsData() {
-    if(!getStorage("appointments")) {
+    if (!getStorage("appointments")) {
         setStorage("appointments", data.appointments);
     } else {
         data.setAppointments(getStorage("appointments"));
@@ -40,7 +40,7 @@ loadData();
 
 function confirmLogin() {
     let user = getStorage("userSession");
-    if(!user){
+    if (!user){
         redirectTo('/login');
         console.log("No active userSession: Redirected to login!")
     }
@@ -48,12 +48,12 @@ function confirmLogin() {
 
 //Super unsecure, but it's for demonstration purposes
 function login(email, password) {
-    if(email && password) {
-        for(let user of data.users){
+    if (email && password) {
+        for (let user of data.users) {
             //User is logged in with email and password
-            if(email === user.email && password === user.password){
+            if (email === user.email && password === user.password) {
                 setStorage("userSession", user);
-                if(localStorage.getItem("holdingAppointment")){
+                if (localStorage.getItem("holdingAppointment")) {
                     let newAppointment = JSON.parse(localStorage.getItem("holdingAppointment"));
                     user.appointmentIds.push(newAppointment.id);
                     data.appointments.push(newAppointment);
@@ -69,8 +69,8 @@ function login(email, password) {
 }
 
 //Redirects user to either employee or client area
-function redirectToRelevantSite(user){
-    if(user.isEmployed){
+function redirectToRelevantSite(user) {
+    if (user.isEmployed){
         redirectTo('/ansatt');
     } else {
         redirectTo('/brukerside');
@@ -91,10 +91,10 @@ function updateAppointmentsData() {
 }
 
 function updateCurrentSession() {
-    if(getStorage("userSession")){
+    if (getStorage("userSession")){
         let current = getStorage("userSession");
-        for(let user of data.users){
-            if(user.email == current.email){
+        for (let user of data.users) {
+            if (user.email == current.email) {
                 setStorage("userSession", user);
             }
         }
@@ -117,7 +117,7 @@ function getAppointments() {
 
 //Saves data to localstorage (Similar to Java hashmaps)
 function setStorage(key, value) {
-    if(typeof value !== "string") {
+    if (typeof value !== "string") {
         value = JSON.stringify(value);
     }
 
