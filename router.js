@@ -8,6 +8,7 @@ import EmployeeClientsPage from './pages/Emp.clients.page.js';
 import EmployeeTodayPage from './pages/Emp.today.page.js';
 import EmployeeProfilePage from './pages/Emp.profile.page.js';
 import EmployeeMailPage from './pages/Emp.mail.page.js';
+import ConsumerSettingPage from './pages/ConsumerSetting.page.js';
 
 
 
@@ -81,6 +82,13 @@ const router = new VueRouter({
             component: BookingPage,
             meta: {
                 title: "Timebestilling"
+            }
+        },
+        {
+            path: '/brukerside/settings',
+            component: ConsumerSettingPage,
+            meta: {
+                title: "Bruker Innstillinger"
             }
         }
     ]

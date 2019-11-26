@@ -1,4 +1,4 @@
-import {confirmLogin, logout, getCurrentUser, getAppointments, appointments, updateAll} from '../components/index.js'
+import {confirmLogin, logout, getCurrentUser, getAppointments, updateAll} from '../components/index.js'
 
 const ConsumerPage = {
     template: `
@@ -48,6 +48,17 @@ const ConsumerPage = {
                                     </div>
                             </div>
                         </div>
+                </div>
+                <div class="footer-navbar-consumer-m">
+                    <a href="/">
+                        <img src="../resources/HKLogo.png" class="home-icon-consumer-m">
+                    </a>
+                    <div>
+                        <a href="#/booking">Book time</a>
+                    </div>
+                    <a href="/brukersetting">
+                        <img class="settings-consumer-m" href>
+                    </a>
                 </div>
             </div>
         </div>`,
