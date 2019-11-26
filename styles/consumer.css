@@ -1,7 +1,8 @@
 /* Consumer page styling */
 .consumer-container-m {
     z-index: 2;
-    
+    width: 100vw;
+    height: 100vh;
 }
 
 .header-consumer-m {
@@ -11,6 +12,10 @@
     border-bottom: solid 2px grey;
 }
 
+.consumer-title-m {
+    text-align: center;
+}
+
 .username-consumer-m {
     margin: 0px;
 }
@@ -18,25 +23,43 @@
 .button-header-consumer-m {
     width: 100% !important;
     height: 100% !important;
+    background-color: #2F5350;
+    color: #C5E6E0;
 }
 
 /* Upcoming bookings styling */
-.apmtbox-consumer-m {
-    border: solid 2px;
-    margin: 1em;
+.booking-container-consumer-m {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 5% 90% 5%;
+}
+
+.upcoming-container-m {
+    grid-column: 2;
+}
+
+.oldAppointments-container-m {
+    grid-template-columns: 5% 90% 5%;
+    grid-column: 2;
+}
+
+.apmtbox-consumer-m {   
     padding: 0.5em;
-    background-color: aqua;
+    color: #C5E6E0;
+    background-color: #2F5350;
     height: 3em;
     display: grid;
     grid-template-rows: 70% auto;
-    grid-template-columns: 30% auto 15%;
+    grid-template-columns: 50% 35% 15%;
     font: 100vw;
-    height: 15vw;
+    width: 100;
+    margin-bottom: 2vh;
+    border-radius: 7px;
 }
 
 .apmtbox-type-consumer-m {
-    font-weight: bolder;
     grid-row: 1;
+    height: 1vh;
 }
 
 .apmtbox-time-value-consumer-m::before {
@@ -46,6 +69,7 @@
 .apmtbox-date-value-consumer-m {
     grid-row: 2;
     grid-column: 1;
+    height: 1vh;
 }
 
 .apmtbox-time-value-consumer-m {
@@ -54,10 +78,12 @@
 }
 
 .cancelbtn-consumer-m {
-    margin-right: 0.6em;
     grid-row: 1/3;
     grid-column: 3;
     margin-bottom: 0.3em;
+    background-color: #d35342;
+    border: none;
+    border-radius: 7px;
 }
 
 /* Previous bookings styling */
@@ -71,17 +97,19 @@
 
 .splitline-consumer-m {
     height: 0px;
-    width: 90%;
+    width: 100%;
     border: solid 2px black;
     border-radius: 40%;
-    grid-column: 2;
+    grid-column: 1/4;
 }
 
 .previous-title-consumer-m {
     grid-column: 2;
-    
+    text-align: center;
 }
 
 .previous-consumer-m {
-    background-color: lightgrey !important;
+    color: #2F5350 !important;
+    background-color: #83C6BF !important;
+    border: none;
 }
