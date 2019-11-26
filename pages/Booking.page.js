@@ -16,7 +16,7 @@ const BookingPage = {
         }
     },
     mounted() {
-        if(getCurrentUser()){
+        if (getCurrentUser()) {
             this.status = "Pålogget:";
             this.user = getCurrentUser();
         }

@@ -33,8 +33,8 @@ class Appointment {
         this.date = date;
         this.time = time;
         this.comment = comment;
-        for(let user of users){
-            if(this.type === user.inField && user.isEmployed){
+        for (let user of users) {
+            if (this.type === user.inField && user.isEmployed) {
                 this.assigned = user.name; //Assigned auto applies to the employee in the field
             }
         }

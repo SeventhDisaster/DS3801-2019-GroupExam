@@ -4,7 +4,7 @@ export default Vue.component('make-appointment', {
     template: `
         <div id="booking-grid-template" class="content-box">
             <button class="button booking-cancel cancel" @click="cancel"></button>
-            <h2 class="booking-header">Bestilling av Time</h2>
+            <h2 class="booking-header">Bestilling av time</h2>
             <div id="booking-component-container">
                 <div class="booking-component" :style='{display: (currentSection == 0 ? "block" : "none")}'>
                     <appointment-form-type @selected="setType"></appointment-form-type>

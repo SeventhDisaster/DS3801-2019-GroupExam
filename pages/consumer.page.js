@@ -76,9 +76,9 @@ const ConsumerPage = {
             let arr = [];
 
             // Assigning correct user appointments
-            for(let i = 0; i < appointments.length; i++) {
-                for(let j = 0; j < userObject.appointmentIds.length; j++) {
-                    if(appointments[i].id === userObject.appointmentIds[j]) {
+            for (let i = 0; i < appointments.length; i++) {
+                for (let j = 0; j < userObject.appointmentIds.length; j++) {
+                    if (appointments[i].id === userObject.appointmentIds[j]) {
                         const item = appointments[i];
                         this.userAppointments.push(item);
                     } else { /*do nothing*/ }
@@ -90,14 +90,14 @@ const ConsumerPage = {
             let uaArray = this.userAppointments;
             let today = "2019-11-22"; //Value checked for bookings already happened
 
-            for(let n = 0; n < arrayLength; n++) {
+            for (let n = 0; n < arrayLength; n++) {
                 //Checks for appointments before todays date
-                if(uaArray[n].date <= today) {
+                if (uaArray[n].date <= today) {
                     this.oldAppointments.push(uaArray[n]);
                     this.userAppointments.splice(n, 1);
                 } else {
                     //Assigns if appointment has not been yet
-                    for(let m = 0; m < arrayLength; m++) {
+                    for (let m = 0; m < arrayLength; m++) {
                         if(uaArray[n].date < uaArray[m].date) {
                         let a = uaArray[m];
                         uaArray[m] = uaArray[n];
@@ -110,7 +110,7 @@ const ConsumerPage = {
         },
         sortDate() {
             //Reordering date format for readability
-            for(let i = 0; i < appointments.length; i++){
+            for (let i = 0; i < appointments.length; i++) {
                 const date = appointments[i].date.split("-").reverse();
                 const finalDate = date[0]+"-"+date[1]+"-"+date[2];
                 appointments[i].date = finalDate;
@@ -126,8 +126,8 @@ const ConsumerPage = {
         deleteAppointment() {
             let array = this.userAppointments;
             
-            for(let item of array) {
-                if(item.id === this.id) {
+            for (let item of array) {
+                if (item.id === this.id) {
                     const index = array.indexOf(item);
                     this.userAppointments.splice(index, 1); 
                 }

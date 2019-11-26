@@ -4,7 +4,7 @@ export default Vue.component('appointment-form-datetime', {
     template: `
     <div>
         <div :style="{display: (dateSelected ? 'none' : 'block')}">
-            <h3 class="booking-component-header">Velg Dato</h3>
+            <h3 class="booking-component-header">Velg dato</h3>
             <p class="booking-date-warning">{{invalidDateInfo}}</p>
             <input class="booking-date-input" type="date" :min="currentDate" :value="dateInput" @input="setDate($event.target.value)" placeholder="Dato" required/>
         </div>
@@ -12,7 +12,7 @@ export default Vue.component('appointment-form-datetime', {
         <div>
             <form class="centered" :style="{display: (dateSelected ? 'block' : 'none')}">
                 <p class="booking-date" @click="editDate"><strong>Dato</strong><br> {{dayName}} {{day}} - {{month}} - {{year}}</p>
-                <h3 class="booking-component-header">Velg Tid</h3>
+                <h3 class="booking-component-header">Velg tid</h3>
                 <label v-for="time in times" class="booking-time-radio button button-dark">
                     <div>
                         <input type="radio" name="time" :value="time" @change="$emit('inputTime' , $event.target.value)"/> {{time}}
@@ -70,11 +70,11 @@ export default Vue.component('appointment-form-datetime', {
             }
         },
         findOpenTimes() {
-            for(let appointment of appointments) {
-                if(appointment.date == this.date) {
+            for (let appointment of appointments) {
+                if (appointment.date == this.date) {
                     alert(appointment);
-                    for(let time in this.times) {
-                        if(this.times[time] == appointment.time) {
+                    for (let time in this.times) {
+                        if (this.times[time] == appointment.time) {
                             this.times.splice(time,1);
                         }
                     }

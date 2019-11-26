@@ -28,10 +28,10 @@ const FrontPage = {
                     <a href="#priser">Priser</a>
                 </li>
                 <li>
-                    <a href="#adresse">Addresse</a>
+                    <a href="#adresse">Adresse</a>
                 </li>
                 <li>
-                <div><router-link to=register>Register deg</router-link></div>
+                <div><router-link to=register>Registrer deg</router-link></div>
                 </li>
                 <li>
                     <div><router-link to=login>Logg inn</router-link></div>
@@ -110,7 +110,7 @@ const FrontPage = {
                         <h3>Oslo Kvadraturen</h3>
                         <p>Prinsens gate 9</p>
                         <p>0153 Oslo</p>
-                        <p>Henvend deg alltid i Besøksresepsjonen før konsultasjonen.</p>
+                        <p>Henvend deg alltid i besøksresepsjonen før konsultasjonen.</p>
                         <p>Klinikken med venterom ligger i 3. etg. i samme bygg. Vi har heis.</p>
                         <p>Mandag – torsdag 07.30 – 19.00</p>
                         <p>Fredag 08.00 – 16.00</p>

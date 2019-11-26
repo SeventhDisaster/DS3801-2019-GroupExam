@@ -38,7 +38,7 @@ const EmployeeClientsPage = {
         }
     },
     mounted() {
-        for(let user of components.users) {
+        for (let user of components.users) {
             if (!user.isEmployed) {
                 this.clients.push(user);
             }

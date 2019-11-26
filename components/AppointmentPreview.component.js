@@ -8,8 +8,8 @@ export default Vue.component('appointment-form-preview', {
         <div class="booking-preview-receipt">
             <h5><strong>Behandlingsform:</strong></h5><p> {{type}} </h5>
             <h5><strong>Dato og Tid: </strong></h5><p> {{date}} - {{time}} </p>
-            <h5 :style="{display: (comment ? 'block' : 'none')}"><strong>Din Kommentar:</strong></h5><p> {{comment}} </p>
-            <button :style="{opacity: ((type) && (date) && (time) ? 1 : 0.3) }" class="button button-dark" @click="makeAppointment">Bestill Time!</button>
+            <h5 :style="{display: (comment ? 'block' : 'none')}"><strong>Din kommentar:</strong></h5><p> {{comment}} </p>
+            <button :style="{opacity: ((type) && (date) && (time) ? 1 : 0.3) }" class="button button-dark" @click="makeAppointment">Bestill time!</button>
         </div>
     </div>
     `,
@@ -19,15 +19,15 @@ export default Vue.component('appointment-form-preview', {
             updateAll();
 
             //Make sure all required fields are filled
-            if(this.type && this.date && this.time) {
+            if (this.type && this.date && this.time) {
                 let newAppointment = new Appointment(this.type, this.date, this.time, this.comment);
                 console.log(newAppointment);
 
                 //If a user is logged in
                 if (getCurrentUser()) {
                     let currentUser = getCurrentUser();
-                    for(let user of users) {
-                        if(user.email === currentUser.email){
+                    for (let user of users) {
+                        if (user.email === currentUser.email) {
                             user.appointmentIds.push(newAppointment.id);
                             appointments.push(newAppointment);
                             updateAll();
