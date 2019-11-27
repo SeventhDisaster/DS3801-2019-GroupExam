@@ -7,6 +7,11 @@
     text-align: center;
     border: none;
     font-family: 'Libre Franklin', sans-serif;
+    transition: all 0.2s;
+}
+
+.bookings-employee:hover {
+  height: 5em;
 }
 
 .bookings-employee:focus {

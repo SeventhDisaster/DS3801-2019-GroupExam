@@ -27,7 +27,7 @@ const EmployeeTodayPage = {
 
             <div class="group section row">
                 <div class="col span_1_of_3 centered"></div>
-                <div class="col span_1_of_3 centered"><h2>Timer</h2></div>
+                <div class="col span_1_of_3 centered"><h2>{{field}}Timer</h2></div>
                 <div class="col span_1_of_3 centered"></div>
             </div>
 

@@ -1,8 +1,9 @@
 import {
     confirmLogin,
-    logout
+    logout,
 } from '../components/Index.js';
-
+import * as components from '../components/Index.js'
+import { getCurrentUser } from '../components/Index.js';
 import {router} from '../router.js';
 
 const EmployeePage = {
@@ -32,7 +33,7 @@ const EmployeePage = {
 
                 <div class="group section row">
                     <div class="col span_1_of_3 centered"></div>
-                    <h2 class="col span_1_of_3 centered">Dager</h2>
+                    <h2 class="col span_1_of_3 centered">{{field[0]}} Timeplan</h2>
                     <div class="col span_1_of_3 centered"></div>
                 </div>
 
@@ -112,11 +113,14 @@ const EmployeePage = {
         </div>`,
     data() {
         return {
-            title: "Velkommen til Ansattportalen"
+            title: "Velkommen til Ansattportalen",
+            field: []
         }
     },
     mounted() {
         confirmLogin(); //Makes sure the user is logged in in order to access this site.
+        let user = components.getCurrentUser();
+        this.field.push(user.inField);
     },
     methods: {
         loggut() {
