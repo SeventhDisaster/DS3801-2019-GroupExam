@@ -1,5 +1,6 @@
-
+/* Overlay background */
 #greyarea-m {
+    z-index: 5;
     position: absolute;
     background-color:rgb(0, 0, 0, 0.5);
     height: 100%;
@@ -11,8 +12,10 @@
     grid-template-columns: 10% 80% 10%;
 }
 
+/* Container of overlay */
 .cancel-appointment-box-m {
-    background-color: white;
+    background-color: #A6DBD4;
+    border-radius: 3px;;
     position: relative;
     opacity: 1;
     display: grid;
@@ -21,14 +24,11 @@
     padding: 0.5em;
     grid-row: 2;
     grid-column: 2;
-}
-
-.cancel-type-overlay-m{
-    grid-row: 2;
-    grid-column: 1/4;
+    text-align: center;
 }
 
 .cancel-message-m {
+    color: #2F5350;
     top: 10%;
     font-size: 6vw;
     font-display: bold;
@@ -36,7 +36,14 @@
     grid-column: 1/4;
 }
 
+.cancel-type-overlay-m{
+    color: #2F5350;
+    grid-row: 2;
+    grid-column: 1/4;
+}
+
 .detail-appointment-m {
+    color: #2F5350;
     grid-row: 3;
     grid-column: 1/4;
     align-self: center;
@@ -47,20 +54,25 @@
     grid-column: 1/4;
     margin: 1.5em;
     border: solid 1px;
+    height: 20vh;
+    resize: none;
+    outline: none;
 }
 
 .cancel-button-overlay-m {
     grid-row: 5;
     grid-column: 1;
     align-self: center;
-    width: 100%
+    width: 100%;
+    color: #C5E6E0;
+    background-color: #D1695C;
 }
 
 .abort-button-overlay-m {
     grid-row: 5;
     grid-column: 3;
     align-self: center;
-    width: 100%
+    width: 100%;
 }
 
 

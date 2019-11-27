@@ -6,9 +6,9 @@ export default Vue.component("cancel-overlay", {
         <div class="cancel-appointment-box-m">
             {{appointment}}
             <div class="cancel-message-m">Er du sikker på at du vil kansellere timen din?</div>
-            <div class="cancel-type-overlay-m">Osteopati</div>
-            <div class="detail-appointment-m">den 11-11-2019, kl 13:00</div>
-            <input type="text" class="commentbox-overlay-m">
+            <h3 class="cancel-type-overlay-m">Osteopati</h3>
+            <div class="detail-appointment-m">Den 11-11-2019, kl 13:00</div>
+            <textarea type="textarea" class="commentbox-overlay-m" placeholder="Skriv grunn for kansellering"></textarea>
             <button class="button cancel-button-overlay-m" @click='cancelAppointment()'>Ja, kanseller</button>
             <button class="button abort-button-overlay-m" @click="remove()">Nei, behold</button>
         </div>
