@@ -7,7 +7,6 @@ import BookingPage from './pages/Booking.page.js';
 import EmployeeClientsPage from './pages/Emp.clients.page.js';
 import EmployeeTodayPage from './pages/Emp.today.page.js';
 import EmployeeProfilePage from './pages/Emp.profile.page.js';
-import EmployeeMailPage from './pages/Emp.mail.page.js';
 import ConsumerSettingPage from './pages/ConsumerSetting.page.js';
 
 
@@ -54,13 +53,6 @@ const router = new VueRouter({
             component: EmployeeTodayPage,
             meta: {
                 title: "Din Timeplan"
-            }
-        },
-        {
-            path: '/ansattmail',
-            component: EmployeeMailPage,
-            meta: {
-                title: "E-post"
             }
         },
         {

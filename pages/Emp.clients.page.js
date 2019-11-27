@@ -1,10 +1,10 @@
 import * as components from '../components/index.js'
-
 import {router} from '../router.js';
 
 const EmployeeClientsPage = {
     template: `
     <div class="content-box">
+        <img src="../resources/KristianiaUniversityCollege_hvit_rgb.png" class="employee-client-page">
         <div class="group section row">
             <button class="col span_1_of_9 button-dark button back-button" @click = "back">Tilbake</button>
             <div class="col span_1_of_9"></div>
@@ -23,17 +23,17 @@ const EmployeeClientsPage = {
             <div class="col span_1_of_3"></div>
         </div>
 
-            <div class="" v-for="client in clients" :key="client.email">
-                <client-list-element :user="client"></client-list-element>
-                </div>
-                <div class="background-image-employee"></div>
+        <div class="" v-for="client in clients" :key="client.email">
+            <client-list-element :user="client"></client-list-element>
+            </div>
+            <div class="background-image-employee"></div>
         </div>
 
         
     </div>`,
     data() {
         return {
-            title: "Employee client page",
+            title: "Klient data side",
             clients: []
         }
     },
