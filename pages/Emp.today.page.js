@@ -25,23 +25,40 @@ const EmployeeTodayPage = {
             <div class="col span_1_of_3"></div>
         </div>
 
+          
+
             <div class="group section row">
-                <div class="col span_1_of_3 centered"></div>
-                <div class="col span_1_of_3 centered"><h2>{{field}}Timer</h2></div>
-                <div class="col span_1_of_3 centered"></div>
+                <div class="col span_1_of_5">
+                    <button @click="check" class="button-light centered bookings-employee">25.11</button>
+                </div>
+                <div class="col span_1_of_5">
+                    <button @click="check" class="button-light centered bookings-employee">26.11</button>
+                </div>
+                <div class="col span_1_of_5">
+                    <button @click="check" class="button-light centered bookings-employee">27.11</button>
+                </div>
+                <div class="col span_1_of_5">
+                    <button @click="check" class="button-light centered bookings-employee">28.11</button>
+                </div>
+                <div class="col span_1_of_5">
+                    <button @click="check" class="button-light centered bookings-employee">29.11</button>
+                </div>
+               
             </div>
 
-            <div class="group section row centered">
-                <div class="col span_1_of_3"></div>
-                <div class="col span_1_of_3 emp-today-style centered" v-for="myAppointment in myAppointments">
-                    {{myAppointment.time}} - {{myAppointment.date}}</div>
-                <div class="col span_1_of_3"></div>
+            <!--//{{myAppointment.date}} -->
+            <div>
+                
+                <div class="emp-today-style centered" v-for="myAppointment in myAppointments">
+                    {{myAppointment.time}} <br> {{myAppointment.klient}}</div>
+                    {{appointmentByDate}}
             </div>
     </div>`,
     data() {
         return {
             title: "Dagens timeavtaler",
-            myAppointments: []
+            myAppointments: [],
+            appointmentByDate: []
         }
     },
     mounted() {
@@ -52,7 +69,7 @@ const EmployeeTodayPage = {
             if (appointment.type == field) {
                 let editedAppointment = appointment;
                 let date = editedAppointment.date.split("-");
-                editedAppointment.date = `${date[2]}-${date[1]}-${date[0]}`; 
+                editedAppointment.date = `${date[2]}.${date[1]}`; 
             this.myAppointments.push(editedAppointment)
             }
         }
@@ -60,6 +77,10 @@ const EmployeeTodayPage = {
     methods: {
         back() {
             router.push('/ansatt');
+        },
+        check: function(event) {
+            this.appointmentByDate = [];
+            this.appointmentByDate.push(event.path[0].innerHTML);
         }
     }
 }

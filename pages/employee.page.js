@@ -33,7 +33,7 @@ const EmployeePage = {
 
                 <div class="group section row">
                     <div class="col span_1_of_3 centered"></div>
-                    <h2 class="col span_1_of_3 centered">{{field[0]}} Timeplan</h2>
+                    <h2 class="col span_1_of_3 centered">{{field[0]}} timeplan</h2>
                     <div class="col span_1_of_3 centered"></div>
                 </div>
 
