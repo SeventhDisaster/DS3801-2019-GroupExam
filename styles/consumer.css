@@ -134,7 +134,9 @@
 .bookin-button-holder-consumer-m {
     height: 6vh;
     max-height: 40px;
-    width: 100%;
+    width: 70%;
+    margin-right: 15%;
+    margin-left: 15%;
     background-color: #2F5350;
     grid-column: 3;
     border-radius: 7px;
