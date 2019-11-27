@@ -1,0 +1,19 @@
+.content-box {
+    text-align: center;
+}
+
+.employee-profile-page {
+    display: grid;
+    grid-template-columns: 33% 33% auto;
+}
+
+.employee-profile-container {
+    width: 100%;
+    text-align: center;
+    grid-column: 2;
+}
+
+.employee-profile-picture {
+    width: 15%;
+}
+

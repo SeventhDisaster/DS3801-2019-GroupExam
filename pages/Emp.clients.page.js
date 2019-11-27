@@ -3,12 +3,7 @@ import {router} from '../router.js';
 
 const EmployeeClientsPage = {
     template: `
-<<<<<<< HEAD
-    <div class="content-box">
-        <img src="../resources/KristianiaUniversityCollege_hvit_rgb.png" class="employee-client-page">
-=======
     <div class="content-box background-image-employee">
->>>>>>> 07dd4e2382975850df0940323f3a1152bcaf9d91
         <div class="group section row">
             <button class="col span_1_of_9 button-dark button back-button" @click = "back">Tilbake</button>
             <div class="col span_1_of_9"></div>
