@@ -1,0 +1,90 @@
+/* title styling */
+.title-settings-m {
+    text-align: center;
+}
+
+/* Input field area styling */
+.main-container-settings-m {
+    display: grid;
+    height: 65vh;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 8% 5% 8% 5% 5% 8% 5% 5% 8% 5% 5% 8% 5% auto;
+}
+
+.status-settings-m {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.user-name-settings-m {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.user-name-settings-input {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.user-mail-settings-m {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.user-mail-settings-input {
+    grid-column: 2;
+    grid-row: 6;
+}
+
+.user-phone-settings-m {
+    grid-column: 2;
+    grid-row: 8;
+}
+
+.user-phone-settings-input {
+    grid-column: 2;
+    grid-row: 9;
+}
+
+.user-password-settings-m {
+    grid-column: 2;
+    grid-row: 11;
+}
+
+.user-password-settings-input {
+    grid-column: 2;
+    grid-row: 12;
+}
+
+.edit-button-settings-m {
+    grid-column: 2;
+    grid-row: 14;
+    text-align: center;
+    background-color: #2F5350;
+    color: #C5E6E0;
+    border-radius: 7px;
+    align-self: center;
+    height: 7vh;
+    max-height: 30px;
+    padding-top: 1.5vh;
+}
+
+/* Footer styling */
+.footer-container-settings-m {
+    position: absolute;
+    bottom: 20px;
+    left: 5vw;
+}
+
+.arrow-settings-m {
+    height: 5vh;
+    min-height: 3vh;
+    max-height: 30px;
+}
+
+.back-link-settings-m {
+    text-decoration: none;
+    color: #2F5350;
+    position: relative;
+    bottom: 1.5vh;
+}

@@ -51,13 +51,13 @@ const ConsumerPage = {
                 </div>
                 <div class="footer-navbar-consumer-m">
                     <a href="/">
-                        <img src="../resources/HKLogo.png" class="home-icon-consumer-m">
+                        <img src="../resources/home.png" class="home-icon-consumer-m">
                     </a>
-                    <div>
-                        <a href="#/booking">Book time</a>
+                    <div class="bookin-button-holder-consumer-m">
+                        <a href="#/booking" class="booking-button-consumer-m">Bestill time</a>
                     </div>
-                    <a href="/brukersetting">
-                        <img class="settings-consumer-m" href>
+                    <a href="#/brukerside/settings" class="settings-holder-consumer-m">
+                        <img class="settings-consumer-m" src="../resources/settings.png">
                     </a>
                 </div>
             </div>
