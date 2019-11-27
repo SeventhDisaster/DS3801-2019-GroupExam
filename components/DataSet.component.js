@@ -129,11 +129,22 @@ let appointments = [
     {
         id: 3,
         type: "Kostholdsveiledning",
-        date: "2019-03-01",
+        date: "2019-11-25",
         time: "18:00",
         comment: "Jeg er sulten, veiled meg",
-        assigned: "Sten Gomlefjes"
+        assigned: "Sten Gomlefjes", 
+        klient: "Bard Bumbur"
+    },
+    {
+        id: 4,
+        type: "Kostholdsveiledning",
+        date: "2019-11-26",
+        time: "18:00",
+        comment: "Jeg er sulten, veiled meg",
+        assigned: "Sten Gomlefjes", 
+        klient: "Bard Bimbur"
     }
+
 ]
 
 function setUsers(userData) {
