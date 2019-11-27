@@ -47,18 +47,17 @@ const EmployeeTodayPage = {
             </div>
 
             <!--//{{myAppointment.date}} -->
-            <div>
+            <div v-for="myAppointment in myAppointments" v-if="myAppointment.date==date">
                 
-                <div class="emp-today-style centered" v-for="myAppointment in myAppointments">
+                <div class="emp-today-style centered">
                     {{myAppointment.time}} <br> {{myAppointment.klient}}</div>
-                    {{appointmentByDate}}
             </div>
     </div>`,
     data() {
         return {
+            date: "25.11",
             title: "Dagens timeavtaler",
             myAppointments: [],
-            appointmentByDate: []
         }
     },
     mounted() {
@@ -79,8 +78,7 @@ const EmployeeTodayPage = {
             router.push('/ansatt');
         },
         check: function(event) {
-            this.appointmentByDate = [];
-            this.appointmentByDate.push(event.path[0].innerHTML);
+           this.date = event.path[0].innerHTML;
         }
     }
 }
