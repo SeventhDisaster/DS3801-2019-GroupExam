@@ -51,7 +51,7 @@ let users = [
         contactPhone: "12345678",
         email: "brukermann@epost.no",
         appointmentIds: [0, 1, 3],
-        notes: ["Er veldig Norsk", "Drikker for lite kaffe"],
+        notes: ["Er veldig norsk", "Drikker for lite kaffe"],
     },
     {
         name: "Nora Nordkvinne",

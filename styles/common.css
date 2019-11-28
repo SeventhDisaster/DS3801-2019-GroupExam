@@ -53,9 +53,9 @@ body {
 .content-box {
   font-family: 'Libre Franklin', sans-serif;
   height: 93vh;
-  width: 96%;
-  margin: 1%;
-  border-radius: 0.5em;;
+  width: 97%;
+  margin: 0.5%;
+  border-radius: 0.5em;
   background-color: #E0F2EF;
   padding: 1%;
 }
