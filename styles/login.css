@@ -28,6 +28,13 @@
 }
 
 .login-button {
+    outline: none;
     background-color: #2F5350;
     color: #C5E6E0;
+}
+
+@media screen and (max-width: 768px) {
+    .login-picture {
+        display: none;
+    }
 }

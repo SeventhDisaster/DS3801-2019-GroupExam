@@ -11,7 +11,7 @@
 
 .content-box2 {
     font-family: 'Libre Franklin', sans-serif;
-    height: 100%;
+    min-height: 100%;
     width: 96%;
     margin: 1%;
     border-radius: 0.5em;;
