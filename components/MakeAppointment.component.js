@@ -76,7 +76,7 @@ export default Vue.component('make-appointment', {
             this.forward();
         },
         cancel(){
-            router.push('/')
+            router.push('/');
         }
     }
 });

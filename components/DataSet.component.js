@@ -105,10 +105,11 @@ let appointments = [
     {
         id: 0,
         type: "Osteopati",
-        date: "2019-11-25",
-        time: "09:00",
+        date: "2019-11-28",
+        time: "14:00",
         comment: "Dette er en kommentar fra bruker",
-        assigned: "Kari Kroppsbrekker"
+        assigned: "Kari Kroppsbrekker",
+        klient: "Josefine Klandux" 
     },
     {
         id: 1,
@@ -137,13 +138,77 @@ let appointments = [
     },
     {
         id: 4,
-        type: "Kostholdsveiledning",
+        type: "Osteopati",
         date: "2019-11-26",
-        time: "18:00",
-        comment: "Jeg er sulten, veiled meg",
-        assigned: "Sten Gomlefjes", 
-        klient: "Bard Bimbur"
-    }
+        time: "11:00",
+        comment: "Dette er en kommentar fra bruker",
+        assigned: "Kari Kroppsbrekker",
+        klient: "Marn Jevelingside"
+    },
+    {
+        id: 5,
+        type: "Osteopati",
+        date: "2019-11-26",
+        time: "13:00",
+        comment: "Dette er en kommentar fra bruker",
+        assigned: "Kari Kroppsbrekker",
+        klient: "Julian Grusom" 
+    },
+    {
+        id: 6,
+        type: "Osteopati",
+        date: "2019-11-26",
+        time: "14:00",
+        comment: "Dette er en kommentar fra bruker",
+        assigned: "Kari Kroppsbrekker",
+        klient: "Ingrid Kobolt" 
+    },
+    {
+        id: 7,
+        type: "Osteopati",
+        date: "2019-11-25",
+        time: "14:00",
+        comment: "Dette er en kommentar fra bruker",
+        assigned: "Kari Kroppsbrekker",
+        klient: "Markus Semen" 
+    },
+    {
+        id: 8,
+        type: "Osteopati",
+        date: "2019-11-25",
+        time: "11:00",
+        comment: "Dette er en kommentar fra bruker",
+        assigned: "Kari Kroppsbrekker",
+        klient: "Marn Jevelingside"
+    },
+    {
+        id: 9,
+        type: "Osteopati",
+        date: "2019-11-27",
+        time: "10:00",
+        comment: "Dette er en kommentar fra bruker",
+        assigned: "Kari Kroppsbrekker",
+        klient: "Ingrid Kobolt" 
+    },
+    {
+        id: 10,
+        type: "Osteopati",
+        date: "2019-11-27",
+        time: "14:00",
+        comment: "Dette er en kommentar fra bruker",
+        assigned: "Kari Kroppsbrekker",
+        klient: "Markus Semen" 
+    },
+    {
+        id: 11,
+        type: "Osteopati",
+        date: "2019-11-29",
+        time: "11:00",
+        comment: "Dette er en kommentar fra bruker",
+        assigned: "Kari Kroppsbrekker",
+        klient: "Marn Jevelingside"
+    },
+
 
 ]
 

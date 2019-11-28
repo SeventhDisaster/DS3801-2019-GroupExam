@@ -4,7 +4,7 @@ export default Vue.component('user-register-form',{
     template: ` 
     <div>
         <form class="signup-form">
-            <h2>Register Deg:</h2>
+            <h2>Registrer Deg:</h2>
             <p>{{info}}</p>
             <input class="signup-input" type="text" name="name" v-model="name" placeholder="Fullt navn*">
             <input class="signup-input" type="text" name="email" v-model="email" placeholder="E-post adresse*">
@@ -21,7 +21,7 @@ export default Vue.component('user-register-form',{
             password2: "",
             name: "",
             phone: "",
-            info: "Registrer deg i klinikkens system!"
+            info: ""
         }
     },
     methods:{
