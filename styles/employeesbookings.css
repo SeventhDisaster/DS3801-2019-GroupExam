@@ -7,9 +7,17 @@
     margin: 0 auto;
     margin-bottom: 10px;
     text-align: left;
-    
-    
 }
+
+.content-box2 {
+    font-family: 'Libre Franklin', sans-serif;
+    height: 100%;
+    width: 96%;
+    margin: 1%;
+    border-radius: 0.5em;;
+    background-color: #E0F2EF;
+    padding: 1%;
+  }
 
 .margin-box {
     margin-right: 30%;

@@ -8,7 +8,7 @@ import {router} from '../router.js';
 
 const EmployeePage = {
     template: `
-        <div class="content-box">
+        <div class="content-box2">
             <div class="group section row">
                 <div class="col span_1_of_5 centered"></div>
                 <div class="col span_1_of_5 centered"></div>
