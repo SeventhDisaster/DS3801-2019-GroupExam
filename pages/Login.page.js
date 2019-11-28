@@ -13,7 +13,7 @@ const LoginPage = {
                 <div class="col-margin span_1_of_2 form-half">
                         <div class="signup-form">
                             <user-login-form></user-login-form>
-                            <router-link to=register class="register-login">Registrer Deg</router-link>
+                            <router-link to=register class="register-login">Registrer deg</router-link>
                             <p>Eksempel Bruker: brukermann@epost.no - Test123</p>
                             <p>Eksempel Ansatt 1: ansatt1@clinic.no - Osteopop</p>
                         </div>

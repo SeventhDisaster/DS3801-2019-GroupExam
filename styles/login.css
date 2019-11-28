@@ -6,6 +6,23 @@
     font-family: 'Libre Franklin', sans-serif;
 }
 
+.login-btn {
+    position: relative;
+    display: inline-block;
+    width: 60%;
+    left: 22%;
+    box-sizing: border-box;
+    padding: 15px 80px;
+    text-decoration: none;
+    border: none;
+    background-color: #2F5350 ;
+    border-radius: 25px;
+    color: #E0F2EF;
+    font-size: 90%;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
 .input-form {
     width: 60%;
     height: 5%;

@@ -24,6 +24,10 @@
   outline: none;
 }
 
+.cursor {
+  cursor: pointer;
+}
+
 
 .button-dark {
   background-color: #2F5350;
