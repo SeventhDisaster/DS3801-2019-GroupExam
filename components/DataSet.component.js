@@ -167,7 +167,7 @@ let appointments = [
         id: 7,
         type: "Osteopati",
         date: "2019-11-25",
-        time: "14:00",
+        time: "11:00",
         comment: "Dette er en kommentar fra bruker",
         assigned: "Kari Kroppsbrekker",
         klient: "Markus Semen" 
@@ -176,7 +176,7 @@ let appointments = [
         id: 8,
         type: "Osteopati",
         date: "2019-11-25",
-        time: "11:00",
+        time: "14:00",
         comment: "Dette er en kommentar fra bruker",
         assigned: "Kari Kroppsbrekker",
         klient: "Marn Jevelingside"

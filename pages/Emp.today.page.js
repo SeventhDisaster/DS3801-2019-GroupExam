@@ -29,19 +29,19 @@ const EmployeeTodayPage = {
             <div class="margin-box">
                 <div class="group section row">
                 <div class="col span_1_of_5">
-                    <button id="btn1" @click="check" class="centered bookings-employee">25.11</button>
+                    <button id="btn1" @click="check" class="centered bookings-employee2">25.11</button>
                 </div>
                 <div class="col span_1_of_5">
-                    <button @click="check" class="centered bookings-employee">26.11</button>
+                    <button @click="check" class=" centered bookings-employee2">26.11</button>
                 </div>
                 <div class="col span_1_of_5">
-                    <button @click="check" class="button-light centered bookings-employee">27.11</button>
+                    <button @click="check" class="centered bookings-employee2">27.11</button>
                 </div>
                 <div class="col span_1_of_5">
-                    <button @click="check" class="button-light centered bookings-employee">28.11</button>
+                    <button @click="check" class="centered bookings-employee2">28.11</button>
                 </div>
                 <div class="col span_1_of_5">
-                    <button @click="check" class="button-light centered bookings-employee">29.11</button>
+                    <button @click="check" class="centered bookings-employee2">29.11</button>
                 </div>
                
             </div>
