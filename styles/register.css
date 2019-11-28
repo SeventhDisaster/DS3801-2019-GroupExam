@@ -94,6 +94,7 @@
     border: none;
     box-sizing: border-box;
     border-radius: 25px;
+    outline: none;
     box-shadow: 0 2px 2px rgb(150, 148, 148);
 }
 
@@ -106,6 +107,7 @@
     padding: 15px 80px;
     text-decoration: none;
     border: none;
+    outline: none;
     background-color: #2F5350 ;
     border-radius: 25px;
     color: #E0F2EF;

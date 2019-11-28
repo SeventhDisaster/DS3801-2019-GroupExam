@@ -371,5 +371,10 @@ section {
     .feature-p {
         font-size: 80%;
     }
+
+    .hero-image h1 {
+        font-size: 180%;
+    } 
+   
   
 }
