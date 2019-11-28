@@ -36,6 +36,11 @@
     outline: none;
 }
 
+.booked-hours {
+  background-color: #2F5350;
+  color: #C5E6E0;
+}
+
 .button-employee {
     border-radius: 7px;
     background-color: #2F5350;
