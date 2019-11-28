@@ -110,7 +110,7 @@ const ConsumerPage = {
             let uaArray = this.appointHolder;
             let comingArray = [];
             let pastArray = [];
-            let today = "2019-11-22"; //Value checked for bookings already happened
+            let today = "2019-11-28"; //Value checked for bookings already happened
             
             for(let i = 0; i < uaArray.length; i++) {
                 if(uaArray[i].date < today) {
