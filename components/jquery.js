@@ -2,7 +2,7 @@ $(document).ready(function() {
 
    // sticky navigation 
    $('.js--section-features').waypoint(function(direction) {
-        if (direction == "down") {
+        if (!(window.matchMedia("(max-width: 768px)").matches) && direction == "down") {
             $('nav').addClass('sticky');
         } else {
             $('nav').removeClass('sticky');
