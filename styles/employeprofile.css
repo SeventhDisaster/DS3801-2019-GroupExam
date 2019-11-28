@@ -1,19 +1,18 @@
-.content-box {
-    text-align: center;
-}
-
-.employee-profile-page {
-    display: grid;
-    grid-template-columns: 33% 33% auto;
-}
-
-.employee-profile-container {
-    width: 100%;
-    text-align: center;
-    grid-column: 2;
-}
-
 .employee-profile-picture {
-    width: 15%;
+    width: 50%;
+    position: right;
 }
 
+.back-button-employee {
+    float: left;
+}
+
+.styling-client-information {
+    background-color: #C5E6E0;
+    border-radius: 8px;
+    padding: 1%;
+}
+.client-information {
+    margin: 0 auto;
+    float: center;
+}
