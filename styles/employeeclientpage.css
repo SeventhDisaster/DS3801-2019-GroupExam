@@ -69,3 +69,13 @@ textarea {
 .background-invisible {
     visibility: hidden;
 }
+
+.esc-button {
+    float: right;
+    background-color: #C5E6E0;
+    border: none;
+    border-radius: 4px;
+    width: 8px;
+    height: 1px;
+
+}

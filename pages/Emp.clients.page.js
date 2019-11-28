@@ -33,7 +33,7 @@ const EmployeeClientsPage = {
     </div>`,
     data() {
         return {
-            title: "Klient data side",
+            title: "Klientjournal",
             clients: []
         }
     },

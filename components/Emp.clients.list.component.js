@@ -7,10 +7,10 @@ export default Vue.component('client-list-element', {
         <div class="col span_1_of_2 user-info-box">
 
             <div class="group section row">
-                <div class="centered">
                     <label class="user-info-label">{{user.name}}    
                         <input type="checkbox" style="display:none" v-model="isActive">
                     </label>
+                    <button class="esc-button" @click="showHide"></button>
 
                 
 
@@ -75,6 +75,9 @@ export default Vue.component('client-list-element', {
                     this.newNote = "";
                 }
             }
+        },
+        showHide() {
+            this.isActive = !this.isActive;
         }
     }
 });
