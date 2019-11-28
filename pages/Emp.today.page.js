@@ -26,13 +26,13 @@ const EmployeeTodayPage = {
         </div>
 
           
-
-            <div class="group section row">
+            <div class="margin-box">
+                <div class="group section row">
                 <div class="col span_1_of_5">
-                    <button @click="check" class="button-light centered bookings-employee">25.11</button>
+                    <button id="btn1" @click="check" class="centered bookings-employee">25.11</button>
                 </div>
                 <div class="col span_1_of_5">
-                    <button @click="check" class="button-light centered bookings-employee">26.11</button>
+                    <button @click="check" class="centered bookings-employee">26.11</button>
                 </div>
                 <div class="col span_1_of_5">
                     <button @click="check" class="button-light centered bookings-employee">27.11</button>
@@ -45,12 +45,14 @@ const EmployeeTodayPage = {
                 </div>
                
             </div>
+            </div>
+            
 
             <!--//{{myAppointment.date}} -->
             <div v-for="myAppointment in myAppointments" v-if="myAppointment.date==date">
-                
-                <div class="emp-today-style centered">
-                    {{myAppointment.time}} <br> {{myAppointment.klient}}</div>
+            
+                <div class="emp-today-style">
+                {{myAppointment.klient}} <br> {{myAppointment.time}}    <img class="del-button" src="./resources/delete-icon.svg"></div>
             </div>
     </div>`,
     data() {
@@ -61,8 +63,8 @@ const EmployeeTodayPage = {
         }
     },
     mounted() {
-    let user = components.getCurrentUser();
-    let field = user.inField;
+        let user = components.getCurrentUser();
+        let field = user.inField;
 
         for (let appointment of components.appointments) {
             if (appointment.type == field) {
@@ -72,13 +74,19 @@ const EmployeeTodayPage = {
             this.myAppointments.push(editedAppointment)
             }
         }
+        document.getElementById("btn1").focus();
+
     },
     methods: {
         back() {
             router.push('/ansatt');
         },
         check: function(event) {
-           this.date = event.path[0].innerHTML;
+            console.log(event);
+            //let element = document.getElementById(event.);
+            this.date = event.path[0].innerHTML;
+            
+           
         }
     }
 }

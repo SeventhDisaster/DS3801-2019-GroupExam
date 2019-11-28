@@ -132,6 +132,9 @@ const FrontPage = {
         return {
             title: "Du kan forvente behandling av høy kvalitet,hvor ditt behov står sentralt."
         }
+    },
+    mounted() {
+        nav.$forceUpdate();
     }
 }
 
